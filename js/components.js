@@ -4,8 +4,11 @@ const NAV_HTML = `
 <nav id="nav">
   <div class="nav-inner">
     <a href="/index.html" class="nav-logo">
-      <span class="nav-logo-name">Jeremy Dubs</span>
-      <span class="nav-logo-sub">Cascade Creatives</span>
+      <img src="/img/mark-white.svg" width="26" height="26" alt="" style="flex-shrink:0;display:block">
+      <div>
+        <span class="nav-logo-name">Jeremy Dubs</span>
+        <span class="nav-logo-sub">Cascade Creatives</span>
+      </div>
     </a>
     <ul class="nav-links">
       <li><a href="/pages/work.html">Work</a></li>
@@ -99,3 +102,45 @@ window.addEventListener('scroll', () => {
     nav.style.background = 'rgba(8,8,8,0.92)';
   }
 });
+
+// ── Vimeo thumbnail loader ──
+// Tries /api/thumbnail proxy first, falls back to direct Vimeo oEmbed (CORS supported)
+async function loadVimeoThumbs() {
+  const tiles = document.querySelectorAll('[data-vimeo]');
+  await Promise.all([...tiles].map(async tile => {
+    const id = tile.dataset.vimeo;
+    if (!id || id.startsWith('VIMEO')) return;
+    try {
+      let thumbnail = null;
+      // Try 1: our Vercel proxy
+      try {
+        const r = await fetch(`/api/thumbnail?id=${id}`);
+        if (r.ok) {
+          const d = await r.json();
+          thumbnail = d.thumbnail;
+        }
+      } catch(e) {}
+      // Try 2: direct Vimeo oEmbed (supports CORS from browser)
+      if (!thumbnail) {
+        const r = await fetch(`https://vimeo.com/api/oembed.json?url=https://vimeo.com/${id}&width=1280`);
+        if (r.ok) {
+          const d = await r.json();
+          thumbnail = d.thumbnail_url;
+        }
+      }
+      if (!thumbnail) return;
+      const bg = (
+        tile.querySelector('.work-tile-bg') ||
+        tile.querySelector('.wt-bg') ||
+        tile.querySelector('.tile-bg') ||
+        tile.querySelector('div:first-child')
+      );
+      if (bg) {
+        bg.style.backgroundImage = `url(${thumbnail})`;
+        bg.style.backgroundSize = 'cover';
+        bg.style.backgroundPosition = 'center';
+      }
+    } catch(e) { /* keep gradient fallback */ }
+  }));
+}
+document.addEventListener('DOMContentLoaded', loadVimeoThumbs);

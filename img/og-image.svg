@@ -1,0 +1,63 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&amp;display=swap');</style>
+    <radialGradient id="g" cx="80%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#1c2d4a" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#080808" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#080808"/>
+  <rect width="1200" height="630" fill="url(#g)"/>
+
+  <!-- Decorative cascade mark — large, right side, watermark -->
+  <rect x="880" y="60"  width="40" height="510" rx="6" fill="white" opacity="0.04"/>
+  <rect x="940" y="150" width="40" height="420" rx="6" fill="white" opacity="0.04"/>
+  <rect x="1000" y="240" width="40" height="330" rx="6" fill="white" opacity="0.04"/>
+  <rect x="1060" y="330" width="40" height="240" rx="6" fill="white" opacity="0.04"/>
+  <rect x="1120" y="420" width="40" height="150" rx="6" fill="white" opacity="0.04"/>
+
+  <!-- Small cascade mark — top left -->
+  <rect x="60" y="56" width="11" height="52" rx="2.5" fill="white"/>
+  <rect x="77" y="69" width="11" height="39" rx="2.5" fill="white" opacity="0.6"/>
+  <rect x="94" y="82" width="11" height="26" rx="2.5" fill="white" opacity="0.3"/>
+
+  <!-- Eyebrow -->
+  <text x="60" y="148"
+    font-family="Inter,system-ui,sans-serif"
+    font-size="15" font-weight="600"
+    letter-spacing="5"
+    fill="white" opacity="0.3">CASCADE CREATIVES</text>
+
+  <!-- Name — two lines, clean and large -->
+  <text x="54" y="310"
+    font-family="Inter,system-ui,sans-serif"
+    font-size="160" font-weight="200"
+    letter-spacing="-6"
+    fill="white">Jeremy</text>
+
+  <text x="54" y="470"
+    font-family="Inter,system-ui,sans-serif"
+    font-size="160" font-weight="200"
+    letter-spacing="-6"
+    fill="white">Dubs</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="510" x2="600" y2="510" stroke="white" stroke-width="0.75" opacity="0.12"/>
+
+  <!-- Tagline -->
+  <text x="60" y="548"
+    font-family="Inter,system-ui,sans-serif"
+    font-size="20" font-weight="300"
+    letter-spacing="0.5"
+    fill="white" opacity="0.4">Video Production &amp; Website Upgrades · Bellingham, WA</text>
+
+  <!-- Domain — bottom right -->
+  <text x="1140" y="590"
+    font-family="Inter,system-ui,sans-serif"
+    font-size="15" font-weight="400"
+    letter-spacing="1"
+    fill="white" opacity="0.18"
+    text-anchor="end">jeremydubs.com</text>
+</svg>
