@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Upgrades for Local Businesses | Cascade Creatives — Bellingham, WA</title>
+  <meta name="description" content="I help local businesses fix the parts of their website that are quietly costing them customers — without a full rebuild. Serving Western Washington.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .offer-grid{display:flex;flex-direction:column;gap:2px;margin-top:48px}
+    .offer-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:border-color 0.2s}
+    .offer-card:hover{border-color:var(--border2)}
+    .offer-header{display:grid;grid-template-columns:1fr auto;align-items:start;gap:24px;padding:36px 40px 0}
+    .offer-tier{font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--text3);margin-bottom:10px}
+    .offer-name{font-size:24px;font-weight:300;letter-spacing:-0.02em;color:var(--text);margin-bottom:10px}
+    .offer-desc{font-size:14px;color:var(--text3);line-height:1.7;max-width:560px}
+    .offer-price{text-align:right;white-space:nowrap}
+    .offer-price-num{font-size:22px;font-weight:400;color:var(--text);letter-spacing:-0.02em}
+    .offer-price-note{font-size:11px;color:var(--text3);margin-top:4px}
+    .offer-body{padding:28px 40px 36px;display:grid;grid-template-columns:1fr 1fr;gap:32px}
+    .offer-includes h4{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
+    .offer-item{font-size:13px;color:var(--text3);display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;line-height:1.5}
+    .offer-item::before{content:'→';color:var(--text3);flex-shrink:0;font-size:11px;margin-top:2px}
+    .offer-footer{padding:0 40px 36px;display:flex;align-items:center;gap:20px}
+    .offer-turnaround{font-size:12px;color:var(--text3)}
+    .offer-turnaround strong{color:var(--text2);font-weight:500}
+    .featured-offer{border-color:var(--border2)}
+    .featured-badge{display:inline-block;font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text);border:1px solid var(--border2);padding:3px 10px;border-radius:2px;margin-bottom:12px}
+
+    .audit-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-top:40px}
+    .audit-step{background:var(--bg);padding:32px 28px}
+    .audit-num{font-size:11px;font-weight:600;letter-spacing:0.1em;color:var(--text3);margin-bottom:16px}
+    .audit-step h3{font-size:15px;font-weight:400;color:var(--text);margin-bottom:10px;letter-spacing:-0.01em}
+    .audit-step p{font-size:13px;color:var(--text3);line-height:1.65}
+
+    .issues-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}
+    .issue-item{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:20px}
+    .issue-item p{font-size:13px;color:var(--text3);line-height:1.5;margin:0}
+
+    .faq-list{display:flex;flex-direction:column;gap:2px;margin-top:40px}
+    .faq-item{border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+    .faq-q{padding:20px 24px;font-size:15px;font-weight:400;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:background 0.2s}
+    .faq-q:hover{background:var(--bg2)}
+    .faq-q span{font-size:18px;color:var(--text3)}
+    .faq-a{display:none;padding:0 24px 20px;font-size:14px;color:var(--text3);line-height:1.7}
+    .faq-a.open{display:block}
+
+    @media(max-width:800px){
+      .offer-body{grid-template-columns:1fr}
+      .offer-header{grid-template-columns:1fr}
+      .offer-price{text-align:left}
+      .audit-steps{grid-template-columns:1fr}
+      .issues-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:500px){.issues-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div id="nav-mount"></div>
+
+<!-- PAGE HERO -->
+<section class="page-hero section--darker">
+  <div class="container">
+    <div class="eyebrow">Cascade Creatives — Website Upgrades</div>
+    <h1>Your Website Is Quietly<br>Costing You Customers</h1>
+    <p>I help local businesses fix the specific parts of their website that are losing leads — without a full rebuild. I look at your site the way a new customer would, identify what's broken or weak, and fix those things fast.</p>
+    <div style="margin-top:32px">
+      <a href="contact.html" class="btn btn-primary">Request a Free Audit</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="section">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-text">
+        <div class="eyebrow">The Problem</div>
+        <h2>Most local business websites were built years ago and haven't been touched since.</h2>
+        <p>They load slowly, look outdated on mobile, bury the phone number, have weak calls to action, and don't give first-time visitors a reason to trust the business. The fix is usually not a full rebuild — it's targeted improvements to the parts that matter most.</p>
+        <p>I specialize in finding those specific problems and fixing them — fast, clearly scoped, and at a price that makes sense for a local business.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;justify-content:center">
+        <div class="issue-item" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:20px">
+          <p style="font-size:13px;color:var(--text3);line-height:1.5;margin:0">"I noticed a few things on your site that I think could be cleaned up pretty quickly to make it feel more polished and convert better."</p>
+          <p style="font-size:11px;color:var(--text3);margin:10px 0 0;opacity:0.6">— What I say in my first message to a new prospect</p>
+        </div>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:20px">
+          <p style="font-size:13px;color:var(--text3);line-height:1.5;margin:0">I don't open with "AI." I open with specific, honest observations about your actual site.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I LOOK FOR -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">The Audit</div>
+      <h2>What I Look For</h2>
+      <p>I review only what's publicly visible — no access to your backend required. Here's what I check:</p>
+    </div>
+    <div class="issues-grid">
+      <div class="issue-item"><p>Weak or missing homepage headline — visitors can't tell what you do in 5 seconds</p></div>
+      <div class="issue-item"><p>No clear call to action above the fold — people don't know what to do next</p></div>
+      <div class="issue-item"><p>Phone number buried or missing — especially damaging on mobile</p></div>
+      <div class="issue-item"><p>Cluttered navigation — too many options, no clear priority</p></div>
+      <div class="issue-item"><p>Weak or absent trust signals — no reviews, credentials, or real photos</p></div>
+      <div class="issue-item"><p>Generic stock photos — makes the site feel impersonal and untrustworthy</p></div>
+      <div class="issue-item"><p>Services poorly described — no explanation of who they're for or how to get started</p></div>
+      <div class="issue-item"><p>Broken or confusing contact forms — the single biggest lead-loss point</p></div>
+      <div class="issue-item"><p>Outdated content — old promotions, wrong hours, stale blog posts from 2019</p></div>
+      <div class="issue-item"><p>Poor mobile experience — layout breaks, text too small, buttons too small to tap</p></div>
+      <div class="issue-item"><p>Weak local SEO basics — wrong page title, no location in meta, unverified Google Business</p></div>
+      <div class="issue-item"><p>Inconsistent contact info — address or phone doesn't match Google Business listing</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">The Process</div>
+      <h2>Simple. Fast. No surprises.</h2>
+    </div>
+    <div class="audit-steps">
+      <div class="audit-step">
+        <div class="audit-num">Step 01</div>
+        <h3>Free Audit</h3>
+        <p>I spend 20–30 minutes reviewing your site and put together a short list of specific observations — what's weak, what's costing you leads, and what I'd fix. You get this for free, with no obligation.</p>
+      </div>
+      <div class="audit-step">
+        <div class="audit-num">Step 02</div>
+        <h3>Quick Call</h3>
+        <p>We spend 20 minutes on the phone walking through what I found. I explain what each issue means for your business and which ones would have the biggest impact to fix first.</p>
+      </div>
+      <div class="audit-step">
+        <div class="audit-num">Step 03</div>
+        <h3>Scoped Proposal</h3>
+        <p>I send you a clear proposal with exactly what's included, what it costs, and how long it takes. No surprises, no scope creep. You approve it, we start.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFERS -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Packages</div>
+      <h2>Three Ways to Work Together</h2>
+      <p>Every project starts with a free audit so I know exactly what your site needs before I propose anything.</p>
+    </div>
+
+    <div class="offer-grid">
+
+      <!-- Offer 1 -->
+      <div class="offer-card">
+        <div class="offer-header">
+          <div>
+            <div class="offer-tier">Tier 01</div>
+            <div class="offer-name">Site Cleanup</div>
+            <p class="offer-desc">A focused cleanup of your homepage and key pages. I fix the first impression — the things a new visitor sees and judges your business by in the first 10 seconds.</p>
+          </div>
+          <div class="offer-price">
+            <div class="offer-price-num">$500 – $800</div>
+            <div class="offer-price-note">Flat rate. 50% upfront.</div>
+          </div>
+        </div>
+        <div class="offer-body">
+          <div class="offer-includes">
+            <h4>Includes</h4>
+            <div class="offer-item">Homepage headline &amp; subheadline rewrite</div>
+            <div class="offer-item">CTA button placement and wording</div>
+            <div class="offer-item">Contact info and form audit</div>
+            <div class="offer-item">Trust signal improvements</div>
+            <div class="offer-item">Placeholder &amp; stale content removal</div>
+          </div>
+          <div class="offer-includes">
+            <h4>&nbsp;</h4>
+            <div class="offer-item">Mobile layout review</div>
+            <div class="offer-item">Basic local SEO: page title, meta description</div>
+            <div class="offer-item">Google Business alignment check</div>
+            <div class="offer-item">Navigation clarity improvements</div>
+          </div>
+        </div>
+        <div class="offer-footer">
+          <div class="offer-turnaround">Turnaround: <strong>3–5 business days</strong></div>
+          <a href="contact.html" class="text-link">Get started →</a>
+        </div>
+      </div>
+
+      <!-- Offer 2 — Featured -->
+      <div class="offer-card featured-offer">
+        <div class="offer-header">
+          <div>
+            <div class="featured-badge">Most Popular</div>
+            <div class="offer-tier">Tier 02</div>
+            <div class="offer-name">Website Upgrade</div>
+            <p class="offer-desc">A comprehensive improvement to your site's structure, content, and conversion flow. Goes beyond the homepage to make the whole site work better for your business.</p>
+          </div>
+          <div class="offer-price">
+            <div class="offer-price-num">$900 – $1,500</div>
+            <div class="offer-price-note">Flat rate. 50% upfront.</div>
+          </div>
+        </div>
+        <div class="offer-body">
+          <div class="offer-includes">
+            <h4>Everything in Site Cleanup, plus</h4>
+            <div class="offer-item">Service section restructure &amp; rewrite</div>
+            <div class="offer-item">Project / gallery presentation improvement</div>
+            <div class="offer-item">Local SEO across all pages</div>
+            <div class="offer-item">Content cleanup and rewrite where needed</div>
+          </div>
+          <div class="offer-includes">
+            <h4>&nbsp;</h4>
+            <div class="offer-item">Stronger conversion flow throughout</div>
+            <div class="offer-item">Consistency audit across all pages</div>
+            <div class="offer-item">About page rewrite</div>
+            <div class="offer-item">Footer and contact page polish</div>
+          </div>
+        </div>
+        <div class="offer-footer">
+          <div class="offer-turnaround">Turnaround: <strong>7–10 business days</strong></div>
+          <a href="contact.html" class="text-link">Get started →</a>
+        </div>
+      </div>
+
+      <!-- Offer 3 -->
+      <div class="offer-card">
+        <div class="offer-header">
+          <div>
+            <div class="offer-tier">Tier 03</div>
+            <div class="offer-name">Growth Upgrade</div>
+            <p class="offer-desc">Everything above plus lead capture improvements, automation recommendations, and optional video or photo production to give the site content that actually converts.</p>
+          </div>
+          <div class="offer-price">
+            <div class="offer-price-num">$1,500 – $2,500+</div>
+            <div class="offer-price-note">Scoped per project.</div>
+          </div>
+        </div>
+        <div class="offer-body">
+          <div class="offer-includes">
+            <h4>Everything in Website Upgrade, plus</h4>
+            <div class="offer-item">Lead capture form optimization</div>
+            <div class="offer-item">FAQ section creation</div>
+            <div class="offer-item">Automation recommendations</div>
+            <div class="offer-item">Additional service or location page</div>
+          </div>
+          <div class="offer-includes">
+            <h4>&nbsp;</h4>
+            <div class="offer-item">Video or photo shoot (priced separately)</div>
+            <div class="offer-item">Social content package option</div>
+            <div class="offer-item">6-month growth roadmap</div>
+            <div class="offer-item">Strategic review call</div>
+          </div>
+        </div>
+        <div class="offer-footer">
+          <div class="offer-turnaround">Turnaround: <strong>Scoped per project</strong></div>
+          <a href="contact.html" class="text-link">Get started →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY TEASER -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Recent Work</div>
+      <h2>All Star Lake Spa — Website Upgrade</h2>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+      <div>
+        <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:16px">The situation</div>
+        <p style="font-size:15px;color:var(--text2);line-height:1.75;margin-bottom:0">All Star Lake Spa is a well-established massage and spa in Bellevue, WA — with a strong reputation and a loyal client base. But their website had fallen behind: the homepage was cluttered, the services section was hard to navigate, the mobile experience was broken, and — most critically — injected spam content had appeared on the services page, actively harming their professional image and potentially their search rankings.</p>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:16px">What I fixed</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div class="offer-item" style="font-size:13px;color:var(--text3);display:flex;align-items:flex-start;gap:10px">Removed injected vaping/spam content from the services page</div>
+          <div class="offer-item" style="font-size:13px;color:var(--text3);display:flex;align-items:flex-start;gap:10px">Rewrote homepage headline and intro copy</div>
+          <div class="offer-item" style="font-size:13px;color:var(--text3);display:flex;align-items:flex-start;gap:10px">Restructured and simplified the services section</div>
+          <div class="offer-item" style="font-size:13px;color:var(--text3);display:flex;align-items:flex-start;gap:10px">Improved CTAs and booking flow</div>
+          <div class="offer-item" style="font-size:13px;color:var(--text3);display:flex;align-items:flex-start;gap:10px">Cleaned up navigation and removed clutter</div>
+          <div class="offer-item" style="font-size:13px;color:var(--text3);display:flex;align-items:flex-start;gap:10px">Fixed mobile layout and tap targets</div>
+          <div class="offer-item" style="font-size:13px;color:var(--text3);display:flex;align-items:flex-start;gap:10px">Visual redesign to match the quality of the actual spa</div>
+        </div>
+        <a href="case-studies.html#allstar" class="text-link" style="display:inline-block;margin-top:20px">View full case study →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">FAQ</div>
+      <h2>Common Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>Do I need a full rebuild?</span><span>+</span></div>
+        <div class="faq-a">Usually not. Most local business sites have specific problems — a weak headline, a broken form, a cluttered layout — that can be fixed without starting over. I'll tell you honestly if I think a rebuild is genuinely the better option, but in most cases it isn't.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>What platform does my site need to be on?</span><span>+</span></div>
+        <div class="faq-a">I work with WordPress, Squarespace, Wix, Webflow, and custom HTML/CSS sites. If you're not sure what your site is built on, I can figure that out during the audit.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>How do you handle payment?</span><span>+</span></div>
+        <div class="faq-a">50% upfront before work begins, 50% on delivery. I use a simple invoice — no complicated contracts for smaller projects.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>What if I already have a web person?</span><span>+</span></div>
+        <div class="faq-a">That's worth knowing upfront. If you have an active web person maintaining your site, this service may not be the right fit — I'd rather tell you that now than waste your time. If your web person built the site but doesn't actively maintain it, there's often a good opportunity to improve what's there.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>Do you offer video or photography as part of the upgrade?</span><span>+</span></div>
+        <div class="faq-a">Yes — and this is where the combination gets powerful. A website rewrite can only do so much if the photos are generic stock images. If your site needs real photography or video content to actually work, I can provide that too. It's priced separately but built into the same engagement so everything is consistent.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>How is this different from an SEO agency?</span><span>+</span></div>
+        <div class="faq-a">SEO agencies typically focus on content volume, backlinks, and keyword rankings over months. I focus on fixing what a real human visitor experiences when they land on your site — and making sure the basics of local SEO (page titles, Google Business alignment, consistent NAP data) are correct. Those fundamentals often matter more for local businesses than elaborate SEO campaigns.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <h2>Want to Know What's Holding<br>Your Website Back?</h2>
+  <p>I'll spend 20 minutes reviewing your site and send you a specific list of what I'd fix. No pitch, no obligation — just honest observations.</p>
+  <a href="contact.html" class="btn btn-primary">Request a Free Audit</a>
+</section>
+
+<div id="footer-mount"></div>
+<script src="../js/components.js"></script>
+<script>
+function toggleFaq(q){
+  const a=q.nextElementSibling;
+  const icon=q.querySelector('span:last-child');
+  const isOpen=a.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(x=>x.classList.remove('open'));
+  document.querySelectorAll('.faq-q span:last-child').forEach(x=>x.textContent='+');
+  if(!isOpen){a.classList.add('open');icon.textContent='−';}
+}
+</script>
+</body>
+</html>

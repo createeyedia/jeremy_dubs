@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Quote — Jeremy Dubs Video Production & Editing</title>
+  <meta name="description" content="Tell Jeremy about your project and get a straightforward quote for video production, remote editing, or content creation. Response within 1 business day.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div id="nav-mount"></div>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero section--darker">
+  <div class="container">
+    <div class="eyebrow">Contact</div>
+    <h1>Let's Talk About<br>Your Project</h1>
+    <p>Tell me what you're working on — even if it's just a rough idea. I'll let you know how I can help and what a realistic next step looks like.</p>
+  </div>
+</section>
+
+<!-- ── CONTACT BODY ── -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- FORM -->
+      <div class="contact-form-wrap">
+        <!-- 
+          Replace action with your preferred form backend:
+          - Formspree: action="https://formspree.io/f/YOUR_ID" method="POST"
+          - Netlify: add data-netlify="true" to <form>
+          - Web3Forms: action="https://api.web3forms.com/submit" + hidden access_key
+        -->
+        <form class="form" id="contactForm" onsubmit="handleSubmit(event)">
+
+          <div class="form-group">
+            <label class="form-label" for="name">Your Name <span style="color:#555">*</span></label>
+            <input class="form-input" type="text" id="name" name="name" placeholder="Alex Johnson" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address <span style="color:#555">*</span></label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="alex@company.com" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="company">Company or Project Name <span style="color:#444; font-weight:400; text-transform:none; letter-spacing:0; font-size:10px">(optional)</span></label>
+            <input class="form-input" type="text" id="company" name="company" placeholder="Acme Co.">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="project">What Are You Working On? <span style="color:#555">*</span></label>
+            <textarea class="form-textarea" id="project" name="project" placeholder="Tell me about your project, timeline, and any details that would help me understand what you need..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="referral">How Did You Hear About Me? <span style="color:#444; font-weight:400; text-transform:none; letter-spacing:0; font-size:10px">(optional)</span></label>
+            <input class="form-input" type="text" id="referral" name="referral" placeholder="Google, Instagram, referral...">
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="align-self:flex-start; margin-top:8px">Send Message</button>
+
+        </form>
+
+        <!-- Success state -->
+        <div id="formSuccess" style="display:none; padding:40px; background:#0f0f0f; border:1px solid rgba(255,255,255,0.07); border-radius:6px; text-align:center">
+          <div style="font-size:32px; margin-bottom:16px">✓</div>
+          <h3 style="margin-bottom:12px; font-weight:400">Message sent.</h3>
+          <p style="color:#666">Thanks for reaching out. I'll review your message and get back to you within 1 business day.</p>
+        </div>
+      </div>
+
+      <!-- INFO PANEL -->
+      <div class="contact-info">
+        <div class="contact-info-block">
+          <div class="eyebrow" style="margin-bottom:20px">Details</div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-label">Location</div>
+            <div class="contact-detail-value">Bellingham, WA</div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-label">Production Area</div>
+            <div class="contact-detail-value">Western Washington — Bellingham, Seattle, Eastside</div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-label">Remote Editing</div>
+            <div class="contact-detail-value">Available nationwide</div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-label">Response Time</div>
+            <div class="contact-detail-value">Within 1 business day</div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-label">Portfolio</div>
+            <div class="contact-detail-value">
+              <a href="https://vimeo.com/cascadecreatives" target="_blank" style="color:#666; border-bottom:1px solid #333; transition:color 0.2s">vimeo.com/cascadecreatives</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-label">Instagram</div>
+            <div class="contact-detail-value">
+              <a href="https://www.instagram.com/cascadecreatives/" target="_blank" style="color:#666; border-bottom:1px solid #333; transition:color 0.2s">@cascadecreatives</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div id="footer-mount"></div>
+<script src="../js/components.js"></script>
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  // For now shows success state — wire up to Formspree/Netlify/Web3Forms for real sends
+  document.getElementById('contactForm').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+  // Uncomment to actually submit:
+  // e.target.submit();
+}
+</script>
+</body>
+</html>

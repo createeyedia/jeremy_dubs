@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Portfolio | Jeremy Dubs — Commercial & Brand Video Production</title>
+  <meta name="description" content="Browse commercial, brand, real estate, social, and aerial video work by Jeremy Dubs — video producer and editor based in Bellingham, WA.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .vimeo-wrap{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.96);display:none;align-items:center;justify-content:center;padding:40px}
+    .vimeo-wrap.open{display:flex}
+    .vimeo-inner{position:relative;width:100%;max-width:960px;aspect-ratio:16/9}
+    .vimeo-inner iframe{width:100%;height:100%;border:none;border-radius:6px}
+    .vimeo-close{position:absolute;top:-44px;right:0;font-size:13px;color:#888;background:none;border:none;cursor:pointer;font-family:var(--font);letter-spacing:0.06em}
+    .work-page-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:0}
+    .wpt{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--bg3);cursor:pointer;transition:opacity 0.2s}
+    .wpt:hover .work-tile-overlay{opacity:0.3}
+    .wpt:hover .tile-play{opacity:1;transform:translate(-50%,-50%) scale(1)}
+    .wpt[data-hidden="true"]{display:none}
+    .tile-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(0.9);width:56px;height:56px;border:1px solid rgba(255,255,255,0.35);border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s,transform 0.3s}
+    .tile-play::after{content:'';width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:13px solid #fff;margin-left:4px}
+    .filter-bar{display:flex;gap:0;border-bottom:1px solid var(--border);margin-bottom:2px}
+    .filter-btn{font-family:var(--font);font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3);background:none;border:none;padding:14px 20px;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color 0.2s}
+    .filter-btn:hover{color:var(--text2)}
+    .filter-btn.active{color:var(--text);border-bottom-color:var(--text)}
+    /* Gradient tile colours */
+    .tc1{background:linear-gradient(135deg,#0d1f3c,#1a3a6b)}
+    .tc2{background:linear-gradient(135deg,#1a1f0d,#2d3a15)}
+    .tc3{background:linear-gradient(135deg,#2e1a0d,#4a2e18)}
+    .tc4{background:linear-gradient(135deg,#1a0d2e,#2e1850)}
+    .tc5{background:linear-gradient(135deg,#0d1a1a,#153030)}
+    .tc6{background:linear-gradient(135deg,#1f0d1a,#3a1530)}
+    @media(max-width:600px){.work-page-grid{grid-template-columns:1fr}.filter-bar{overflow-x:auto}}
+  </style>
+</head>
+<body>
+<div id="nav-mount"></div>
+
+<section class="page-hero section--darker">
+  <div class="container">
+    <div class="eyebrow">Portfolio</div>
+    <h1>Selected Work</h1>
+    <p>Video production and editing projects for businesses, brands, and property clients across Western Washington and beyond.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterWork('all',this)">All</button>
+      <button class="filter-btn" onclick="filterWork('commercial',this)">Commercial</button>
+      <button class="filter-btn" onclick="filterWork('social',this)">Social</button>
+      <button class="filter-btn" onclick="filterWork('realestate',this)">Real Estate</button>
+      <button class="filter-btn" onclick="filterWork('aerial',this)">Aerial</button>
+    </div>
+
+    <div class="work-page-grid" id="workGrid">
+
+      <!-- 1 — Cascade Pest Commercial (spans full width) -->
+      <div class="wpt" data-cat="commercial" data-vimeo="1173487171" onclick="openVideo(this)" style="grid-column:span 2;aspect-ratio:21/9">
+        <div style="position:absolute;inset:0" class="tc1"></div>
+        <div class="work-tile-overlay"></div>
+        <div class="tile-play"></div>
+        <div class="work-tile-info">
+          <div class="work-tile-cat">Commercial &amp; Brand</div>
+          <div class="work-tile-title">Cascade Pest Control — Brand Video</div>
+        </div>
+      </div>
+
+      <!-- 2 — Real Estate -->
+      <div class="wpt" data-cat="realestate" data-vimeo="835304479" onclick="openVideo(this)">
+        <div style="position:absolute;inset:0" class="tc2"></div>
+        <div class="work-tile-overlay"></div>
+        <div class="tile-play"></div>
+        <div class="work-tile-info">
+          <div class="work-tile-cat">Real Estate &amp; Property</div>
+          <div class="work-tile-title">Property Showcase</div>
+        </div>
+      </div>
+
+      <!-- 3 — Social Reel -->
+      <div class="wpt" data-cat="social" data-vimeo="1016361535" onclick="openVideo(this)">
+        <div style="position:absolute;inset:0" class="tc3"></div>
+        <div class="work-tile-overlay"></div>
+        <div class="tile-play"></div>
+        <div class="work-tile-info">
+          <div class="work-tile-cat">Social Content</div>
+          <div class="work-tile-title">Short-Form Reel</div>
+        </div>
+      </div>
+
+      <!-- 4 — Aerial/Cinematic -->
+      <div class="wpt" data-cat="aerial" data-vimeo="672552960" onclick="openVideo(this)">
+        <div style="position:absolute;inset:0" class="tc4"></div>
+        <div class="work-tile-overlay"></div>
+        <div class="tile-play"></div>
+        <div class="work-tile-info">
+          <div class="work-tile-cat">Drone &amp; Aerial</div>
+          <div class="work-tile-title">Cinematic Aerial</div>
+        </div>
+      </div>
+
+      <!-- 5 — Commercial/Campaign -->
+      <div class="wpt" data-cat="commercial" data-vimeo="851990318" onclick="openVideo(this)">
+        <div style="position:absolute;inset:0" class="tc5"></div>
+        <div class="work-tile-overlay"></div>
+        <div class="tile-play"></div>
+        <div class="work-tile-info">
+          <div class="work-tile-cat">Seasonal Campaign</div>
+          <div class="work-tile-title">Cascade Pest — Seasonal</div>
+        </div>
+      </div>
+
+      <!-- 6 — Older/Portfolio -->
+      <div class="wpt" data-cat="commercial" data-vimeo="242191914" onclick="openVideo(this)">
+        <div style="position:absolute;inset:0" class="tc6"></div>
+        <div class="work-tile-overlay"></div>
+        <div class="tile-play"></div>
+        <div class="work-tile-info">
+          <div class="work-tile-cat">Brand &amp; Cinematic</div>
+          <div class="work-tile-title">Cinematic Brand Piece</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:36px;font-size:12px;color:var(--text3);text-align:center">
+      All videos load via Vimeo — click any tile to watch. <a href="https://vimeo.com/cascadecreatives" target="_blank" rel="noopener" style="color:var(--text3);border-bottom:1px solid var(--border2)">View full channel on Vimeo →</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <h2>Want to Work Together?</h2>
+  <p>Tell me about your project and let's figure out the right approach.</p>
+  <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="vimeo-wrap" id="videoModal" onclick="closeVideoIfOutside(event)">
+  <div class="vimeo-inner">
+    <button class="vimeo-close" onclick="closeVideo()">✕ Close</button>
+    <iframe id="vimeoFrame" src="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+<div id="footer-mount"></div>
+<script src="../js/components.js"></script>
+<script>
+const grid = document.getElementById('workGrid');
+
+function filterWork(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const tiles = [...document.querySelectorAll('.wpt')];
+  tiles.forEach(t=>{
+    const show = cat==='all' || t.dataset.cat===cat;
+    t.style.display = show ? '' : 'none';
+    t.style.gridColumn = '';
+    t.style.aspectRatio = '16/9';
+  });
+  const visible = tiles.filter(t=>t.style.display!=='none');
+  if(visible[0]){
+    visible[0].style.gridColumn='span 2';
+    visible[0].style.aspectRatio='21/9';
+  }
+}
+
+function openVideo(tile){
+  const id=tile.dataset.vimeo;
+  if(!id)return;
+  document.getElementById('vimeoFrame').src=`https://player.vimeo.com/video/${id}?autoplay=1&color=ffffff`;
+  document.getElementById('videoModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeVideo(){
+  document.getElementById('videoModal').classList.remove('open');
+  document.getElementById('vimeoFrame').src='';
+  document.body.style.overflow='';
+}
+function closeVideoIfOutside(e){if(e.target===document.getElementById('videoModal'))closeVideo();}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeVideo();});
+
+// Init full-width first tile
+document.querySelector('.wpt').style.gridColumn='span 2';
+document.querySelector('.wpt').style.aspectRatio='21/9';
+</script>
+</body>
+</html>
