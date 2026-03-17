@@ -2,163 +2,370 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Production Services | Jeremy Dubs — Bellingham, WA</title>
+  <meta name="description" content="Commercial video production, remote editing, social content, real estate video, and drone coverage across Western Washington.">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16.png">
-  <link rel="apple-touch-icon" href="../img/favicon-32.png">  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Production & Editing Services | Jeremy Dubs — Bellingham, WA</title>
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jeremydubs.com/pages/services.html">
-  <meta property="og:title" content="Video Production Services | Jeremy Dubs — Bellingham, WA">
-  <meta property="og:description" content="Commercial production, remote editing, social content, real estate video, and drone work across Western Washington.">
-  <meta property="og:image" content="https://jeremydubs.com/img/og-image.svg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Video Production Services | Jeremy Dubs — Bellingham, WA">
-  <meta name="twitter:description" content="Commercial production, remote editing, social content, real estate video, and drone work across Western Washington.">
-  <meta name="twitter:image" content="https://jeremydubs.com/img/og-image.svg">
-  <meta name="description" content="Commercial video production, remote editing, social content, real estate video, and drone work. Serving Western Washington and remote clients nationwide.">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0a0a0a;
+      --bg-secondary: #111111;
+      --bg-card: #161616;
+      --bg-card-hover: #1c1c1c;
+      --border: #222222;
+      --border-light: #2a2a2a;
+      --text-primary: #f0efe9;
+      --text-secondary: #8a8a8a;
+      --text-muted: #555555;
+      --accent: #c8ff00;
+      --accent-dim: rgba(200, 255, 0, 0.08);
+      --accent-glow: rgba(200, 255, 0, 0.15);
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-body: 'DM Sans', -apple-system, sans-serif;
+      --radius: 10px;
+      --radius-lg: 16px;
+      --max-width: 1200px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--font-body); background: var(--bg-primary); color: var(--text-primary); line-height: 1.65; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 clamp(20px, 5vw, 48px); }
+
+    /* ── Reveal animation ── */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── Navbar ── */
+    .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 0; background: rgba(10,10,10,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-logo .logo-mark { display: flex; align-items: flex-end; gap: 3px; height: 24px; }
+    .nav-logo .bar { width: 5px; border-radius: 1.5px; }
+    .nav-logo .bar-1 { height: 18px; background: #fff; }
+    .nav-logo .bar-2 { height: 14px; background: #888; }
+    .nav-logo .bar-3 { height: 22px; background: #555; }
+    .nav-logo .logo-text { display: flex; flex-direction: column; line-height: 1; gap: 2px; }
+    .nav-logo .logo-name { font-size: 0.95rem; font-weight: 500; }
+    .nav-logo .logo-sub { font-size: 0.55rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); }
+    .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+    .nav-links a { font-size: 0.82rem; color: var(--text-secondary); transition: color var(--transition); }
+    .nav-links a:hover { color: var(--text-primary); }
+    .nav-cta { font-size: 0.8rem !important; color: var(--bg-primary) !important; background: var(--accent); padding: 8px 20px; border-radius: 100px; font-weight: 500; }
+
+    /* ── Hero ── */
+    .page-hero { padding: 140px 0 80px; position: relative; }
+    .page-hero::before { content: ''; position: absolute; top: -10%; right: -5%; width: 400px; height: 400px; background: radial-gradient(circle, var(--accent-glow), transparent 70%); filter: blur(100px); pointer-events: none; }
+    .page-hero .section-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); font-weight: 500; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+    .page-hero .section-label::before { content: ''; width: 24px; height: 1px; background: var(--text-muted); }
+    .page-hero h1 { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 400; line-height: 1.15; letter-spacing: -0.01em; max-width: 700px; }
+    .page-hero h1 em { font-style: italic; color: var(--accent); }
+    .page-hero p { color: var(--text-secondary); font-size: 1.05rem; max-width: 580px; margin-top: 20px; line-height: 1.7; }
+
+    /* ── Service Cards ── */
+    .services-section { padding: 0 0 100px; }
+    .services-list { display: flex; flex-direction: column; gap: 24px; }
+
+    .service-card {
+      display: grid;
+      grid-template-columns: 80px 1fr auto;
+      gap: 32px;
+      align-items: start;
+      padding: 40px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      transition: border-color var(--transition), background var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card:hover { border-color: var(--border-light); background: var(--bg-card-hover); }
+    .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); opacity: 0; transition: opacity var(--transition); }
+    .service-card:hover::before { opacity: 1; }
+
+    /* Icon column */
+    .service-icon {
+      width: 72px; height: 72px;
+      border-radius: 14px;
+      background: var(--accent-dim);
+      border: 1px solid rgba(200,255,0,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background var(--transition), border-color var(--transition);
+    }
+    .service-card:hover .service-icon { background: rgba(200,255,0,0.12); border-color: rgba(200,255,0,0.2); }
+    .service-icon svg { width: 32px; height: 32px; stroke: var(--accent); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* Content column */
+    .service-content { min-width: 0; }
+    .service-number { font-size: 0.65rem; letter-spacing: 0.1em; color: var(--accent); font-weight: 600; margin-bottom: 10px; }
+    .service-content h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; margin-bottom: 8px; }
+    .service-tagline { font-size: 0.92rem; color: var(--text-primary); font-weight: 500; margin-bottom: 14px; }
+    .service-content p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 16px; }
+    .service-best-for { margin-bottom: 20px; }
+    .service-best-for .label { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); font-weight: 600; margin-bottom: 6px; }
+    .service-best-for p { font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 0; }
+
+    /* CTA column */
+    .service-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.8rem; font-weight: 500;
+      color: var(--bg-primary); background: var(--accent);
+      padding: 10px 22px; border-radius: 100px;
+      white-space: nowrap; transition: opacity var(--transition);
+      align-self: start; margin-top: 4px;
+    }
+    .service-cta:hover { opacity: 0.85; }
+    .service-cta svg { width: 14px; height: 14px; }
+
+    /* ── Bottom CTA ── */
+    .bottom-cta { padding: 60px 0 100px; text-align: center; position: relative; }
+    .bottom-cta::before { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 400px; height: 400px; background: radial-gradient(circle, var(--accent-glow), transparent 70%); filter: blur(100px); pointer-events: none; }
+    .bottom-cta h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 400; margin-bottom: 16px; position: relative; }
+    .bottom-cta h2 em { font-style: italic; color: var(--accent); }
+    .bottom-cta p { color: var(--text-secondary); max-width: 460px; margin: 0 auto 32px; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--bg-primary); padding: 14px 32px; border-radius: 100px; font-weight: 500; font-size: 0.9rem; transition: opacity var(--transition); }
+    .btn-primary:hover { opacity: 0.88; }
+
+    /* ── Footer ── */
+    .footer { border-top: 1px solid var(--border); padding: 40px 0; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+    .footer-left { font-size: 0.82rem; color: var(--text-muted); display: flex; align-items: center; gap: 10px; }
+    .footer-links { display: flex; gap: 28px; }
+    .footer-links a { font-size: 0.82rem; color: var(--text-secondary); transition: color var(--transition); }
+    .footer-links a:hover { color: var(--accent); }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .service-card { grid-template-columns: 1fr; gap: 20px; }
+      .service-icon { width: 56px; height: 56px; border-radius: 12px; }
+      .service-icon svg { width: 26px; height: 26px; }
+      .service-cta { align-self: start; }
+    }
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .service-card { padding: 28px; }
+    }
+  </style>
 </head>
 <body>
 
-<div id="nav-mount"></div>
-
-<!-- ── PAGE HERO ── -->
-<section class="page-hero section--darker">
-  <div class="container">
-    <div class="eyebrow">Services</div>
-    <h1>Video Production &amp;<br>Editing Services</h1>
-    <p>Whether you need a production partner in the Pacific Northwest or a remote editor you can send footage to — here's exactly what I offer.</p>
-  </div>
-</section>
-
-<!-- ── SERVICES LIST ── -->
-<section class="section">
-  <div class="container">
-    <div class="services-list">
-
-      <!-- Service 1 -->
-      <div class="service-item">
-        <div class="service-item-header" onclick="toggleService(this)">
-          <span class="svc-label">01</span>
-          <span class="service-item-title">Commercial Video Production</span>
-          <span class="service-item-arrow">+</span>
-        </div>
-        <div class="service-item-body open">
-          <p><strong style="color:#f0f0f0; font-weight:500">On-location production for businesses, brands, and marketing teams in Western Washington.</strong></p>
-          <p>I handle everything from pre-production planning through the final edit. This includes concept development, location scouting, direction, camera operation, audio capture, and post-production. The result is a polished commercial or brand film that communicates your message clearly and looks professional on your website, in paid media, or anywhere you need it.</p>
-          <div class="service-best-for">
-            <div class="eyebrow">Best For</div>
-            <p>Local businesses, service companies, product brands, event coverage, and any company that needs a credible visual presence.</p>
-          </div>
-          <a href="contact.html" class="btn btn-outline mt-24" style="display:inline-flex">Request a Quote →</a>
-        </div>
-      </div>
-
-      <!-- Service 2 -->
-      <div class="service-item">
-        <div class="service-item-header" onclick="toggleService(this)">
-          <span class="svc-label">02</span>
-          <span class="service-item-title">Remote Video Editing</span>
-          <span class="service-item-arrow">+</span>
-        </div>
-        <div class="service-item-body">
-          <p><strong style="color:#f0f0f0; font-weight:500">Send me your raw footage. I'll deliver a clean, finished edit — fast.</strong></p>
-          <p>Remote editing is simple: you share your files, we agree on the look and direction, and I deliver a polished cut. I work in Premiere Pro and handle everything from talking-head interviews and branded social content to multi-cam shoots and long-form YouTube videos. No location required — I can work with clients anywhere.</p>
-          <div class="service-best-for">
-            <div class="eyebrow">Best For</div>
-            <p>Marketing teams with internal footage, agencies with overflow editing work, content creators scaling their production, and brands that shoot their own content but need a professional editor to finish it.</p>
-          </div>
-          <a href="contact.html" class="btn btn-outline mt-24" style="display:inline-flex">Request a Remote Edit Quote →</a>
-        </div>
-      </div>
-
-      <!-- Service 3 -->
-      <div class="service-item">
-        <div class="service-item-header" onclick="toggleService(this)">
-          <span class="svc-label">03</span>
-          <span class="service-item-title">Social Media Content</span>
-          <span class="service-item-arrow">+</span>
-        </div>
-        <div class="service-item-body">
-          <p><strong style="color:#f0f0f0; font-weight:500">Short-form video built for the platforms where your audience actually is.</strong></p>
-          <p>I produce and edit short-form video for Instagram Reels, TikTok, YouTube Shorts, and paid social. This includes vertical formatting, caption overlays, sound design, color grading, and platform-specific optimizations. Whether shot on-location or built from footage you provide, the output is professional social content ready to publish or run as an ad.</p>
-          <div class="service-best-for">
-            <div class="eyebrow">Best For</div>
-            <p>Brands building an organic social presence, businesses running paid video ads, and marketing teams that need a consistent stream of high-quality short-form content.</p>
-          </div>
-          <a href="contact.html" class="btn btn-outline mt-24" style="display:inline-flex">Get a Quote for Social Content →</a>
-        </div>
-      </div>
-
-      <!-- Service 4 -->
-      <div class="service-item">
-        <div class="service-item-header" onclick="toggleService(this)">
-          <span class="svc-label">04</span>
-          <span class="service-item-title">Real Estate &amp; Property Video</span>
-          <span class="service-item-arrow">+</span>
-        </div>
-        <div class="service-item-body">
-          <p><strong style="color:#f0f0f0; font-weight:500">Cinematic listing videos and property tours for agents, developers, and property managers.</strong></p>
-          <p>I shoot and edit property videos that showcase homes and commercial spaces in their best light. This includes smooth walkthrough footage, exterior establishing shots, and aerial drone coverage where appropriate. The final product is a professionally edited video formatted for MLS, social media, and direct client use.</p>
-          <div class="service-best-for">
-            <div class="eyebrow">Best For</div>
-            <p>Real estate agents, property developers, short-term rental owners, and commercial property managers in Western Washington.</p>
-          </div>
-          <a href="contact.html" class="btn btn-outline mt-24" style="display:inline-flex">Book a Property Video →</a>
-        </div>
-      </div>
-
-      <!-- Service 5 -->
-      <div class="service-item">
-        <div class="service-item-header" onclick="toggleService(this)">
-          <span class="svc-label">05</span>
-          <span class="service-item-title">Drone &amp; Cinematic B-Roll</span>
-          <span class="service-item-arrow">+</span>
-        </div>
-        <div class="service-item-body">
-          <p><strong style="color:#f0f0f0; font-weight:500">Licensed aerial footage and sweeping cinematic b-roll to elevate your next project.</strong></p>
-          <p>I'm a licensed drone operator (FAA Part 107) available for aerial coverage of properties, events, landscapes, and commercial projects across Western Washington. I also provide cinematic ground-level b-roll for brand films, commercials, and editorial content. Drone footage is delivered as raw files or fully graded, cut-ready clips.</p>
-          <div class="service-best-for">
-            <div class="eyebrow">Best For</div>
-            <p>Brands, real estate clients, production companies, and any project that needs elevated visual coverage.</p>
-          </div>
-          <a href="contact.html" class="btn btn-outline mt-24" style="display:inline-flex">Request Drone Coverage →</a>
-        </div>
-      </div>
-
+  <!-- ── Navbar ── -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-mark"><div class="bar bar-1"></div><div class="bar bar-2"></div><div class="bar bar-3"></div></div>
+        <div class="logo-text"><span class="logo-name">Jeremy Dubs</span><span class="logo-sub">Cascade Creatives</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html#services">Services</a></li>
+        <li><a href="../index.html#work">Work</a></li>
+        <li><a href="../index.html#portfolio">Video</a></li>
+        <li><a href="../index.html#why">Why Me</a></li>
+        <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+      </ul>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- ── CTA BANNER ── -->
-<section class="cta-banner">
-  <h2>Not Sure Which Service Fits?</h2>
-  <p>Tell me what you're working on and I'll recommend the right approach.</p>
-  <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-</section>
+  <!-- ── Hero ── -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-label reveal">Services</div>
+      <h1 class="reveal">Video Production &<br>Editing <em>Services</em></h1>
+      <p class="reveal">Whether you need a production partner in the Pacific Northwest or a remote editor you can send footage to — here's exactly what I offer.</p>
+    </div>
+  </section>
 
-<div id="footer-mount"></div>
+  <!-- ── Services ── -->
+  <section class="services-section">
+    <div class="container">
+      <div class="services-list">
 
-<script src="../js/components.js"></script>
-<script>
-function toggleService(header) {
-  const body = header.nextElementSibling;
-  const arrow = header.querySelector('.service-item-arrow');
-  const isOpen = body.classList.contains('open');
-  // Close all
-  document.querySelectorAll('.service-item-body').forEach(b => b.classList.remove('open'));
-  document.querySelectorAll('.service-item-arrow').forEach(a => a.textContent = '+');
-  // Open clicked if it was closed
-  if (!isOpen) {
-    body.classList.add('open');
-    arrow.textContent = '−';
-  }
-}
-// Open first service by default
-document.querySelector('.service-item-arrow').textContent = '−';
-</script>
+        <!-- 01 Commercial Video Production -->
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8"/>
+              <path d="M12 17v4"/>
+              <polygon points="10,7 10,13 15,10" fill="currentColor" stroke="none" style="fill:var(--accent);opacity:0.6"/>
+            </svg>
+          </div>
+          <div class="service-content">
+            <div class="service-number">SERVICE 01</div>
+            <h3>Commercial Video Production</h3>
+            <div class="service-tagline">On-location production for businesses, brands, and marketing teams in Western Washington.</div>
+            <p>I handle everything from pre-production planning through the final edit — concept development, location scouting, direction, camera operation, audio capture, and post-production. The result is a polished commercial or brand film that communicates your message clearly and looks professional anywhere you use it.</p>
+            <div class="service-best-for">
+              <div class="label">Best For</div>
+              <p>Local businesses, service companies, product brands, event coverage, and any company that needs a credible visual presence.</p>
+            </div>
+          </div>
+          <a href="contact.html" class="service-cta">
+            Request a Quote
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- 02 Remote Video Editing -->
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M15 3h6v6"/>
+              <path d="M9 21H3v-6"/>
+              <path d="M21 3l-7 7"/>
+              <path d="M3 21l7-7"/>
+              <rect x="7" y="7" width="10" height="10" rx="1" style="opacity:0.3" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <div class="service-content">
+            <div class="service-number">SERVICE 02</div>
+            <h3>Remote Video Editing</h3>
+            <div class="service-tagline">Send me your raw footage. I'll deliver a clean, finished edit — fast.</div>
+            <p>Remote editing is simple: you share your files, we agree on the look and direction, and I deliver a polished cut. I work in Premiere Pro and handle everything from talking-head interviews and branded social content to multi-cam shoots and long-form YouTube videos. No location required — I can work with clients anywhere.</p>
+            <div class="service-best-for">
+              <div class="label">Best For</div>
+              <p>Marketing teams with internal footage, agencies with overflow editing work, content creators scaling their production, and brands that need a professional editor to finish it.</p>
+            </div>
+          </div>
+          <a href="contact.html" class="service-cta">
+            Request a Quote
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- 03 Social Media Content -->
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="6" y="3" width="12" height="18" rx="2"/>
+              <line x1="6" y1="7" x2="18" y2="7"/>
+              <line x1="6" y1="17" x2="18" y2="17"/>
+              <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none" style="fill:var(--accent);opacity:0.6"/>
+            </svg>
+          </div>
+          <div class="service-content">
+            <div class="service-number">SERVICE 03</div>
+            <h3>Social Media Content</h3>
+            <div class="service-tagline">Short-form video built for the platforms where your audience actually is.</div>
+            <p>I produce and edit short-form video for Instagram Reels, TikTok, YouTube Shorts, and paid social — including vertical formatting, caption overlays, sound design, color grading, and platform-specific optimizations. Whether shot on-location or built from footage you provide, the output is professional social content ready to publish or run as an ad.</p>
+            <div class="service-best-for">
+              <div class="label">Best For</div>
+              <p>Brands building an organic social presence, businesses running paid video ads, and marketing teams that need consistent high-quality short-form content.</p>
+            </div>
+          </div>
+          <a href="contact.html" class="service-cta">
+            Get a Quote
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- 04 Real Estate & Property -->
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9,22 9,12 15,12 15,22"/>
+            </svg>
+          </div>
+          <div class="service-content">
+            <div class="service-number">SERVICE 04</div>
+            <h3>Real Estate & Property Video</h3>
+            <div class="service-tagline">Cinematic listing videos and property tours for agents, developers, and property managers.</div>
+            <p>I shoot and edit property videos that showcase homes and commercial spaces in their best light — smooth walkthrough footage, exterior establishing shots, and aerial drone coverage where appropriate. The final product is a professionally edited video formatted for MLS, social media, and direct client use.</p>
+            <div class="service-best-for">
+              <div class="label">Best For</div>
+              <p>Real estate agents, property developers, short-term rental owners, and commercial property managers in Western Washington.</p>
+            </div>
+          </div>
+          <a href="contact.html" class="service-cta">
+            Book a Shoot
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- 05 Drone & Cinematic B-Roll -->
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 2v4"/>
+              <path d="M12 18v4"/>
+              <path d="M4.93 4.93l2.83 2.83"/>
+              <path d="M16.24 16.24l2.83 2.83"/>
+              <path d="M2 12h4"/>
+              <path d="M18 12h4"/>
+              <path d="M4.93 19.07l2.83-2.83"/>
+              <path d="M16.24 7.76l2.83-2.83"/>
+            </svg>
+          </div>
+          <div class="service-content">
+            <div class="service-number">SERVICE 05</div>
+            <h3>Drone & Cinematic B-Roll</h3>
+            <div class="service-tagline">Licensed aerial footage and sweeping cinematic b-roll to elevate your next project.</div>
+            <p>I'm a licensed drone operator (FAA Part 107) available for aerial coverage of properties, events, landscapes, and commercial projects across Western Washington. I also provide cinematic ground-level b-roll for brand films, commercials, and editorial content. Drone footage is delivered as raw files or fully graded, cut-ready clips.</p>
+            <div class="service-best-for">
+              <div class="label">Best For</div>
+              <p>Brands, real estate clients, production companies, and any project that needs elevated visual coverage.</p>
+            </div>
+          </div>
+          <a href="contact.html" class="service-cta">
+            Request Coverage
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Bottom CTA ── -->
+  <section class="bottom-cta">
+    <div class="container">
+      <h2 class="reveal">Not Sure Which <em>Service</em> Fits?</h2>
+      <p class="reveal">Tell me what you're working on and I'll recommend the right approach.</p>
+      <a href="contact.html" class="btn-primary reveal">
+        Get in Touch
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <div style="display:flex;align-items:flex-end;gap:2.5px;height:18px;">
+            <div style="width:4px;height:14px;background:#fff;border-radius:1px;"></div>
+            <div style="width:4px;height:10px;background:#888;border-radius:1px;"></div>
+            <div style="width:4px;height:16px;background:#555;border-radius:1px;"></div>
+          </div>
+          <span>© 2026 Jeremy Dubs · Cascade Creatives · Bellingham, WA</span>
+        </div>
+        <div class="footer-links">
+          <a href="services.html">Services</a>
+          <a href="work.html">Work</a>
+          <a href="contact.html">Contact</a>
+          <a href="https://vimeo.com/cascadecreatives" target="_blank" rel="noopener">Vimeo</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
