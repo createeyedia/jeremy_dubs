@@ -1,67 +1,658 @@
-Case Study: Northwest Montessori 60th Anniversary Video
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Studies | Jeremy Dubs — Cascade Creatives</title>
+  <meta name="description" content="Detailed case studies — website upgrades, video production, and real estate media for businesses across Western Washington.">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#0a0a0a;--bg2:#111;--card:#161616;--card-h:#1c1c1c;
+      --border:#222;--border-l:#2a2a2a;
+      --t1:#f0efe9;--t2:#8a8a8a;--t3:#555;
+      --acc:#c8ff00;--acc-dim:rgba(200,255,0,0.08);--acc-glow:rgba(200,255,0,0.15);
+      --serif:'Instrument Serif',Georgia,serif;
+      --sans:'DM Sans',-apple-system,sans-serif;
+      --r:10px;--rl:16px;--mw:1200px;
+      --tr:0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+    body{font-family:var(--sans);background:var(--bg);color:var(--t1);line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    .ctr{max-width:var(--mw);margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+    .reveal.v{opacity:1;transform:translateY(0)}
+    .sl{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--t3);font-weight:500;margin-bottom:16px;display:flex;align-items:center;gap:12px}
+    .sl::before{content:'';width:24px;height:1px;background:var(--t3)}
+    .sh{font-family:var(--serif);font-weight:400;line-height:1.15;letter-spacing:-.01em}
+    .sh em{font-style:italic;color:var(--acc)}
 
-Client: Northwest Montessori School (Seattle, WA)
-Project: 60th Anniversary Fundraiser Video (Short-Form + Future Long-Form Vision)
-Role: Creative Direction, Story Development, Editing, Production Strategy
-Team: Cascade Creatives (Jeremy & Melissa)
+    /* Nav */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;background:rgba(10,10,10,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+    .nav .ctr{display:flex;justify-content:space-between;align-items:center}
+    .nl{display:flex;align-items:center;gap:10px}
+    .nl .lm{display:flex;align-items:flex-end;gap:3px;height:24px}
+    .nl .b{width:5px;border-radius:1.5px}
+    .nl .b1{height:18px;background:#fff}.nl .b2{height:14px;background:#888}.nl .b3{height:22px;background:#555}
+    .nl .lt{display:flex;flex-direction:column;line-height:1;gap:2px}
+    .nl .ln{font-size:.95rem;font-weight:500}.nl .ls{font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--t3)}
+    .nk{display:flex;gap:32px;list-style:none;align-items:center}
+    .nk a{font-size:.82rem;color:var(--t2);transition:color var(--tr)}.nk a:hover{color:var(--t1)}
+    .nc{font-size:.8rem!important;color:var(--bg)!important;background:var(--acc);padding:8px 20px;border-radius:100px;font-weight:500}
 
-⸻
+    /* Hero */
+    .hero{padding:140px 0 60px;position:relative}
+    .hero::before{content:'';position:absolute;top:-10%;right:-5%;width:500px;height:500px;background:radial-gradient(circle,var(--acc-glow),transparent 70%);filter:blur(120px);pointer-events:none}
+    .hero h1{font-size:clamp(2.2rem,5vw,3.4rem);max-width:700px;margin-bottom:16px}
+    .hero p{color:var(--t2);font-size:1.05rem;max-width:580px;line-height:1.7}
 
-Overview
+    /* Jump nav */
+    .jump-nav{padding:20px 0 60px}
+    .jump-links{display:flex;gap:12px;flex-wrap:wrap}
+    .jump-link{padding:10px 22px;border-radius:100px;border:1px solid var(--border);font-size:.82rem;color:var(--t2);transition:border-color var(--tr),color var(--tr)}
+    .jump-link:hover{border-color:var(--border-l);color:var(--t1)}
+    .jump-link .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--acc);margin-right:8px}
 
-Northwest Montessori School approached us to help create a meaningful video for their 60th anniversary fundraiser. The goal was to capture the heart of the school’s legacy—its people, philosophy, and sense of community—while also creating something concise and impactful for a live event setting.
+    /* Case study block */
+    .cs{padding:60px 0 80px;border-top:1px solid var(--border)}
+    .cs-header{margin-bottom:40px}
+    .cs-header h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:8px}
+    .cs-meta{display:flex;gap:20px;flex-wrap:wrap;margin-top:12px}
+    .cs-meta-item{font-size:.78rem;color:var(--t3);display:flex;align-items:center;gap:6px}
+    .cs-meta-item svg{width:14px;height:14px;stroke:var(--acc);fill:none;stroke-width:2}
 
-With limited time and a need to involve a wide range of voices from the school’s history, we designed a storytelling approach that balanced emotional depth with production efficiency.
+    /* Before/after slider */
+    .ba-wrap{border-radius:var(--rl);overflow:hidden;margin-bottom:40px;aspect-ratio:16/10;position:relative;background:var(--card);border:1px solid var(--border)}
+    .ba-slider{position:relative;width:100%;height:100%;cursor:col-resize;user-select:none;-webkit-user-select:none}
+    .ba-slider img{display:block;width:100%;height:100%;object-fit:cover;pointer-events:none}
+    .ba-after{position:absolute;inset:0;clip-path:inset(0 50% 0 0)}
+    .ba-after img{position:absolute;top:0;left:0;width:100%;height:100%}
+    .ba-handle{position:absolute;top:0;bottom:0;width:3px;background:var(--acc);z-index:10;left:50%;pointer-events:none}
+    .ba-handle::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:var(--acc);box-shadow:0 2px 12px rgba(0,0,0,.4)}
+    .ba-handle::after{content:'◂ ▸';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:.65rem;color:var(--bg);font-weight:700;letter-spacing:2px;z-index:1;white-space:nowrap}
+    .ba-label{position:absolute;bottom:14px;padding:5px 14px;border-radius:100px;font-size:.65rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;z-index:5;pointer-events:none}
+    .ba-label-before{left:14px;background:rgba(0,0,0,.7);color:#fff;backdrop-filter:blur(6px)}
+    .ba-label-after{right:14px;background:var(--acc);color:var(--bg)}
 
-⸻
+    /* Content grid */
+    .cs-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:40px}
+    .cs-grid h3{font-family:var(--serif);font-size:1.3rem;margin-bottom:12px}
+    .cs-grid p{font-size:.9rem;color:var(--t2);line-height:1.75;margin-bottom:16px}
+    .cs-list{list-style:none}
+    .cs-list li{font-size:.85rem;color:var(--t2);padding:6px 0;display:flex;gap:8px;line-height:1.5}
+    .cs-list li::before{content:'✓';color:var(--acc);font-weight:700;flex-shrink:0}
 
-Approach
+    /* Testimonial */
+    .testimonial{border-left:2px solid var(--acc);padding:24px 28px;background:var(--acc-dim);border-radius:0 var(--r) var(--r) 0;margin:32px 0}
+    .testimonial p{font-size:1rem;color:var(--t1);font-style:italic;line-height:1.7;margin:0}
+    .testimonial cite{display:block;font-style:normal;font-size:.82rem;color:var(--t3);margin-top:12px}
+    .testimonial-placeholder{opacity:.5;font-size:.82rem;color:var(--t3);font-style:normal}
 
-Rather than relying solely on traditional filming, we developed a hybrid production strategy:
-	•	Guided current and former students, teachers, and administrators to record personal reflections on their phones
-	•	Conducted key interviews with leadership, including the current Head of School (Elizabeth) and former director (Jan)
-	•	Incorporated archival photos and school history to visually connect past and present
-	•	Built a narrative around the theme:
-“Rooted in Legacy, Growing Our Future”
+    /* Video embed */
+    .video-embed{border-radius:var(--rl);overflow:hidden;aspect-ratio:16/9;margin-bottom:40px;background:#000;border:1px solid var(--border)}
+    .video-embed iframe{width:100%;height:100%;border:none}
 
-This approach allowed us to gather authentic, heartfelt content from across generations while staying within budget and timeline constraints.
+    /* Image grid */
+    .img-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:40px}
+    .img-grid .img-slot{aspect-ratio:16/10;border-radius:var(--r);overflow:hidden;background:var(--card);border:1px solid var(--border)}
+    .img-grid .img-slot img{width:100%;height:100%;object-fit:cover}
+    .img-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:.75rem;color:var(--t3);text-align:center;padding:12px}
 
-⸻
+    /* Results strip */
+    .results-strip{display:flex;gap:24px;flex-wrap:wrap;margin:32px 0}
+    .result-stat{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:20px 28px;flex:1;min-width:160px;text-align:center}
+    .result-stat .num{font-family:var(--serif);font-size:1.8rem;color:var(--acc);line-height:1;margin-bottom:4px}
+    .result-stat .label{font-size:.72rem;color:var(--t3);text-transform:uppercase;letter-spacing:.08em}
 
-Creative Direction
+    /* Tags */
+    .cs-tags{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+    .cs-tags span{font-size:.72rem;padding:4px 12px;border-radius:100px;background:var(--acc-dim);color:var(--acc);font-weight:500}
 
-We shaped the story around three core ideas:
-	1.	Legacy & Origin
-	•	Highlighting founder Marietta and the symbolic “Expect a Miracle” cards
-	2.	Community as Home
-	•	Emphasizing that NW Montessori is not just a school, but a place to come home to
-	3.	Future Growth
-	•	Inspiring continued involvement and support for the next generation
+    /* CTA */
+    .bcta{padding:80px 0 100px;text-align:center;position:relative}
+    .bcta::before{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,var(--acc-glow),transparent 70%);filter:blur(100px);pointer-events:none}
+    .bcta h2{font-size:clamp(1.8rem,4.5vw,2.8rem);margin-bottom:16px;position:relative}
+    .bcta p{color:var(--t2);max-width:460px;margin:0 auto 32px;font-size:1rem}
+    .btn-p{display:inline-flex;align-items:center;gap:8px;background:var(--acc);color:var(--bg);padding:14px 32px;border-radius:100px;font-weight:500;font-size:.9rem;transition:opacity var(--tr)}
+    .btn-p:hover{opacity:.88}
 
-The 90-second film was intentionally crafted as a cinematic teaser—designed to resonate emotionally during the fundraiser while opening the door for a future, more expansive story.
+    /* Footer */
+    .ft{border-top:1px solid var(--border);padding:40px 0}
+    .ft-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+    .ft-l{font-size:.82rem;color:var(--t3);display:flex;align-items:center;gap:10px}
+    .ft-r{display:flex;gap:28px}
+    .ft-r a{font-size:.82rem;color:var(--t2);transition:color var(--tr)}.ft-r a:hover{color:var(--acc)}
 
-⸻
+    @media(max-width:900px){.cs-grid{grid-template-columns:1fr}.img-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:640px){.nk{display:none}.img-grid{grid-template-columns:1fr}.results-strip{flex-direction:column}}
+  </style>
+</head>
+<body>
 
-Execution
-	•	Edited a 90-second narrative-driven video optimized for live event presentation
-	•	Selected and refined short, impactful soundbites from multiple contributors
-	•	Designed a visual style using:
-	•	Subtle photo animations (Ken Burns effect)
-	•	Clean transitions and pacing
-	•	Warm, cinematic tone
-	•	Structured the edit to build from nostalgia → community → inspiration
+  <!-- Nav -->
+  <nav class="nav"><div class="ctr">
+    <a href="../index.html" class="nl">
+      <div class="lm"><div class="b b1"></div><div class="b b2"></div><div class="b b3"></div></div>
+      <div class="lt"><span class="ln">Jeremy Dubs</span><span class="ls">Cascade Creatives</span></div>
+    </a>
+    <ul class="nk">
+      <li><a href="../index.html#services">Services</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="nc">Get a Quote</a></li>
+    </ul>
+  </div></nav>
 
-⸻
+  <!-- Hero -->
+  <section class="hero">
+    <div class="ctr">
+      <div class="sl reveal">Case Studies</div>
+      <h1 class="sh reveal">Real Projects.<br>Real <em>Results.</em></h1>
+      <p class="reveal">Detailed breakdowns of client work — what the problem was, what I did, and what changed.</p>
+    </div>
+  </section>
 
-Results
-	•	Delivered a compelling, emotionally engaging piece for the school’s 60th anniversary fundraiser
-	•	Created a scalable storytelling foundation for:
-	•	A longer-form documentary version
-	•	Ongoing monthly community spotlight videos
-	•	Strengthened connection between past and present members of the NW Montessori community
+  <!-- Jump nav -->
+  <div class="jump-nav">
+    <div class="ctr">
+      <div class="jump-links reveal">
+        <a href="#cascadepest" class="jump-link"><span class="dot"></span>Cascade Pest Control</a>
+        <a href="#allstar" class="jump-link"><span class="dot"></span>All Star Lake Spa</a>
+        <a href="#montessori" class="jump-link"><span class="dot"></span>NW Montessori School</a>
+        <a href="#marcel" class="jump-link"><span class="dot"></span>Marcel — Real Estate</a>
+      </div>
+    </div>
+  </div>
 
-⸻
+  <!-- ═══════════════════════════════════════════
+       CASE STUDY 1: CASCADE PEST CONTROL
+       ═══════════════════════════════════════════ -->
+  <section class="cs" id="cascadepest">
+    <div class="ctr">
+      <div class="cs-header reveal">
+        <div class="sl">Ongoing Video Production</div>
+        <h2 class="sh">Cascade Pest Control — <em>Western Washington</em></h2>
+        <div class="cs-meta">
+          <div class="cs-meta-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Seattle / Western WA
+          </div>
+          <div class="cs-meta-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+            Video Production
+          </div>
+          <div class="cs-meta-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Ongoing Retainer
+          </div>
+        </div>
+      </div>
 
-Key Takeaway
+      <!-- Two featured videos side by side -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px">
+        <div class="video-embed reveal" style="margin-bottom:0">
+          <iframe src="https://player.vimeo.com/video/278099968?title=0&byline=0&portrait=0" allow="fullscreen" allowfullscreen></iframe>
+        </div>
+        <div class="video-embed reveal" style="margin-bottom:0">
+          <iframe src="https://player.vimeo.com/video/1016361535?title=0&byline=0&portrait=0" allow="fullscreen" allowfullscreen></iframe>
+        </div>
+      </div>
 
-By combining thoughtful storytelling with a flexible production model, we helped Northwest Montessori tell a 60-year story in just 90 seconds—while setting the stage for deeper storytelling in the future.
+      <div class="cs-tags reveal">
+        <span>Brand Video</span>
+        <span>Social Reels</span>
+        <span>Commercials</span>
+        <span>Seasonal Campaigns</span>
+        <span>YouTube</span>
+        <span>Ongoing Retainer</span>
+      </div>
+
+      <div class="cs-grid">
+        <div class="reveal">
+          <h3>The Partnership</h3>
+          <p>Cascade Pest Control is a regional pest control company serving Seattle and Western Washington. They needed a production partner who could keep them visible and consistent across platforms throughout the year — not just a one-off video, but an ongoing content operation.</p>
+          <p>That's what this became. I produce social media reels, seasonal campaign videos, commercials, and YouTube content on a retainer basis — giving them a steady stream of professional video without the overhead of an in-house team or the inconsistency of hiring different freelancers every time.</p>
+          <p>The relationship covers everything from concept and scripting through filming, editing, and delivery — formatted for every platform they're on.</p>
+        </div>
+        <div class="reveal">
+          <h3>What I Deliver</h3>
+          <ul class="cs-list">
+            <li>Brand commercials for web and paid media</li>
+            <li>Short-form social reels for Instagram, TikTok, YouTube Shorts</li>
+            <li>Seasonal campaign videos (spring pests, summer wasps, fall rodents, etc.)</li>
+            <li>Long-form YouTube content</li>
+            <li>Multiple edits per video: horizontal, vertical, 15s/30s/60s cuts</li>
+            <li>On-location shoots across Western Washington</li>
+            <li>Ongoing content planning and production strategy</li>
+            <li>Fast turnaround to align with seasonal timing</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="results-strip reveal">
+        <div class="result-stat">
+          <div class="num">Ongoing</div>
+          <div class="label">Retainer Partnership</div>
+        </div>
+        <div class="result-stat">
+          <div class="num">Multi</div>
+          <div class="label">Platform Delivery</div>
+        </div>
+        <div class="result-stat">
+          <div class="num">Year-Round</div>
+          <div class="label">Seasonal Campaigns</div>
+        </div>
+        <!-- ═══ Add real metrics when available ═══
+        <div class="result-stat">
+          <div class="num">50+</div>
+          <div class="label">Videos Delivered</div>
+        </div>
+        ═══════════════════════════════════════════ -->
+      </div>
+
+      <!-- Image grid for stills -->
+      <div class="img-grid reveal">
+        <div class="img-slot">
+          <img src="../img/cascade-pest-case.jpg" alt="Cascade Pest Control video production" loading="lazy">
+        </div>
+        <div class="img-slot">
+          <!-- Replace: <img src="../img/cascade-pest-still-2.jpg" alt="Cascade Pest filming" loading="lazy"> -->
+          <div class="img-placeholder">On-location shoot still<br><br>Add: img/cascade-pest-still-2.jpg</div>
+        </div>
+        <div class="img-slot">
+          <div class="img-placeholder">Social reel screenshot<br><br>Add: img/cascade-pest-still-3.jpg</div>
+        </div>
+      </div>
+
+      <!-- Testimonial -->
+      <div class="testimonial reveal">
+        <!-- ═══ Replace with real quote from Cascade Pest contact ═══ -->
+        <p>"Jeremy keeps our content consistent and professional across every platform. Having one person who handles everything — from the shoot to the final edit — means we always look polished and on-brand."</p>
+        <cite>— Cascade Pest Control
+          <span class="testimonial-placeholder"><br>⚠ Replace with actual client quote and contact name</span>
+        </cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CASE STUDY 2: ALL STAR LAKE SPA
+       ═══════════════════════════════════════════ -->
+  <section class="cs" id="allstar">
+    <div class="ctr">
+      <div class="cs-header reveal">
+        <div class="sl">Website Upgrade</div>
+        <h2 class="sh">All Star Lake Spa — <em>Bellevue, WA</em></h2>
+        <div class="cs-meta">
+          <div class="cs-meta-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Bellevue, WA
+          </div>
+          <div class="cs-meta-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+            Website Upgrade
+          </div>
+          <div class="cs-meta-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            ~7 days
+          </div>
+        </div>
+      </div>
+
+      <!-- Before / After slider -->
+      <div class="ba-wrap reveal">
+        <div class="ba-slider" id="baSlider1">
+          <img src="../img/allstar-after.jpg" alt="All Star Lake Spa — redesigned" draggable="false">
+          <div class="ba-after" id="baAfter1">
+            <img src="../img/allstar-before.jpg" alt="All Star Lake Spa — old site" draggable="false">
+          </div>
+          <div class="ba-handle" id="baHandle1"></div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+        </div>
+      </div>
+
+      <div class="cs-tags reveal">
+        <span>Homepage Rewrite</span>
+        <span>Spam Removal</span>
+        <span>Services Restructure</span>
+        <span>Mobile Fix</span>
+        <span>CTAs</span>
+        <span>Visual Redesign</span>
+        <span>Local SEO</span>
+      </div>
+
+      <div class="cs-grid">
+        <div class="reveal">
+          <h3>The Situation</h3>
+          <p>All Star Massage and Spa is a well-established lakeside spa in Bellevue, WA — 18+ years in business with a loyal client base and strong reputation. But their website had fallen far behind: the homepage was cluttered with outdated content, services were hard to find, and the mobile experience was broken.</p>
+          <p>Worst of all, injected spam content had appeared on the services page — vaping and unrelated product spam that was actively harming their professional image and likely tanking their search rankings.</p>
+        </div>
+        <div class="reveal">
+          <h3>What I Did</h3>
+          <ul class="cs-list">
+            <li>Removed injected vaping/spam content from the services page</li>
+            <li>Rewrote the homepage headline and intro copy</li>
+            <li>Restructured and simplified the entire services section</li>
+            <li>Improved CTAs and the booking flow</li>
+            <li>Cleaned up navigation and removed clutter</li>
+            <li>Fixed mobile layout — tap targets, text sizing, spacing</li>
+            <li>Visual redesign to match the actual quality of the spa</li>
+            <li>Google Business alignment check</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Results — fill in real metrics when available -->
+      <div class="results-strip reveal">
+        <div class="result-stat">
+          <div class="num">100%</div>
+          <div class="label">Spam Removed</div>
+        </div>
+        <div class="result-stat">
+          <div class="num">New</div>
+          <div class="label">Homepage Copy</div>
+        </div>
+        <div class="result-stat">
+          <div class="num">Mobile</div>
+          <div class="label">Fully Responsive</div>
+        </div>
+        <!-- ═══ Add real metrics here when available ═══
+        <div class="result-stat">
+          <div class="num">+40%</div>
+          <div class="label">Booking Inquiries</div>
+        </div>
+        ═══════════════════════════════════════════════ -->
+      </div>
+
+      <!-- Testimonial -->
+      <div class="testimonial reveal">
+        <!-- ═══ Replace with real quote from Starla Schwartz ═══ -->
+        <p>"The site finally reflects the quality of what we actually offer. Patients are finding us more easily and the booking flow actually works now."</p>
+        <cite>— Starla Schwartz, Owner · All Star Massage and Spa
+          <span class="testimonial-placeholder"><br>⚠ Replace with actual client quote when available</span>
+        </cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CASE STUDY 2: NW MONTESSORI SCHOOL
+       ═══════════════════════════════════════════ -->
+  <section class="cs" id="montessori">
+    <div class="ctr">
+      <div class="cs-header reveal">
+        <div class="sl">Video Production — Anniversary Film</div>
+        <h2 class="sh">NW Montessori School — <em>60th Anniversary</em></h2>
+        <div class="cs-meta">
+          <div class="cs-meta-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Seattle, WA
+          </div>
+          <div class="cs-meta-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+            Creative Direction + Editing
+          </div>
+          <div class="cs-meta-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Ongoing Partnership
+          </div>
+        </div>
+      </div>
+
+      <!-- Video embed -->
+      <div class="video-embed reveal">
+        <iframe src="https://player.vimeo.com/video/1080296239?title=0&byline=0&portrait=0" allow="fullscreen" allowfullscreen></iframe>
+      </div>
+
+      <div class="cs-tags reveal">
+        <span>Anniversary Film</span>
+        <span>Archival Footage</span>
+        <span>Phone-Recorded Testimonials</span>
+        <span>Interviews</span>
+        <span>Fundraiser Screening</span>
+        <span>Ongoing Production</span>
+      </div>
+
+      <div class="cs-grid">
+        <div class="reveal">
+          <h3>The Project</h3>
+          <p>Northwest Montessori School came to us for their 60th anniversary fundraiser. They needed a video that captured the heart of the school's legacy — its people, philosophy, and sense of community — while being concise and impactful enough for a live event setting.</p>
+          <p>The challenge: telling a 60-year story in 90 seconds, with limited time and a need to involve voices from across the school's entire history. We designed a hybrid production approach that balanced emotional depth with practical constraints.</p>
+
+          <h3 style="margin-top:24px">The Approach</h3>
+          <p>Instead of relying solely on traditional filming, we guided current and former students, teachers, and administrators to record personal reflections on their phones. We conducted key interviews with leadership — including the Head of School, Elizabeth, and former director, Jan. Then we wove in archival photos and school history to connect past and present.</p>
+          <p>The narrative was built around a theme: <strong>"Rooted in Legacy, Growing Our Future."</strong></p>
+        </div>
+        <div class="reveal">
+          <h3>What We Delivered</h3>
+          <ul class="cs-list">
+            <li>90-second cinematic teaser optimized for live event presentation</li>
+            <li>Creative direction and story development across three arcs: legacy, community, future</li>
+            <li>Guided phone-recorded reflections from students, alumni, and staff</li>
+            <li>Key interviews with school leadership</li>
+            <li>Archival photo animation (Ken Burns) with clean transitions and warm grading</li>
+            <li>Selected and refined impactful soundbites from multiple contributors</li>
+            <li>Scalable foundation for a future long-form documentary version</li>
+            <li>Ongoing monthly community spotlight videos</li>
+          </ul>
+
+          <h3 style="margin-top:24px">Creative Direction</h3>
+          <p>We shaped the story around three ideas: the legacy of founder Marietta and the "Expect a Miracle" cards, the sense of community as home, and the inspiration for continued support. The 90-second film was designed to resonate emotionally during the fundraiser while opening the door for a deeper, more expansive story down the line.</p>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="results-strip reveal">
+        <div class="result-stat">
+          <div class="num">90s</div>
+          <div class="label">Cinematic Teaser</div>
+        </div>
+        <div class="result-stat">
+          <div class="num">60 Years</div>
+          <div class="label">Of History Captured</div>
+        </div>
+        <div class="result-stat">
+          <div class="num">Ongoing</div>
+          <div class="label">Monthly Spotlights</div>
+        </div>
+      </div>
+
+      <!-- Stills from the video -->
+      <div class="img-grid reveal">
+        <div class="img-slot">
+          <div class="img-placeholder">Still from anniversary film<br><br>Add: img/montessori-still-1.jpg</div>
+        </div>
+        <div class="img-slot">
+          <div class="img-placeholder">Archival photo / animation<br><br>Add: img/montessori-still-2.jpg</div>
+        </div>
+        <div class="img-slot">
+          <div class="img-placeholder">Interview or event still<br><br>Add: img/montessori-still-3.jpg</div>
+        </div>
+      </div>
+
+      <!-- Testimonial -->
+      <div class="testimonial reveal">
+        <!-- ═══ Replace with real quote from NW Montessori ═══ -->
+        <p>"Jeremy and Melissa understood what we were trying to capture — not just our history, but the feeling of what this school means to our community. The film brought the room to tears at the fundraiser."</p>
+        <cite>— Northwest Montessori School
+          <span class="testimonial-placeholder"><br>⚠ Replace with actual client quote and contact name</span>
+        </cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CASE STUDY 3: MARCEL — REAL ESTATE
+       ═══════════════════════════════════════════ -->
+  <section class="cs" id="marcel">
+    <div class="ctr">
+      <div class="cs-header reveal">
+        <div class="sl">Real Estate Video</div>
+        <h2 class="sh">Marcel — Real Estate <em>Video Production</em></h2>
+        <div class="cs-meta">
+          <div class="cs-meta-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Eastside / Seattle
+          </div>
+          <div class="cs-meta-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+            Real Estate Video
+          </div>
+          <div class="cs-meta-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            Drone + Walkthrough
+          </div>
+        </div>
+      </div>
+
+      <!-- Video embeds — Bellevue Towers and Medina -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px">
+        <div class="video-embed reveal" style="margin-bottom:0">
+          <iframe src="https://player.vimeo.com/video/287757023?title=0&byline=0&portrait=0" allow="fullscreen" allowfullscreen></iframe>
+        </div>
+        <div class="video-embed reveal" style="margin-bottom:0">
+          <iframe src="https://player.vimeo.com/video/851990318?title=0&byline=0&portrait=0" allow="fullscreen" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="cs-tags reveal">
+        <span>Listing Videos</span>
+        <span>Drone Aerial</span>
+        <span>Property Tours</span>
+        <span>Walkthrough</span>
+        <span>MLS Ready</span>
+        <span>Cinematic</span>
+      </div>
+
+      <div class="cs-grid">
+        <div class="reveal">
+          <h3>The Partnership</h3>
+          <!-- ═══ Update with Marcel's full name and specific details ═══ -->
+          <p>Marcel needed cinematic property videos that went beyond basic walkthrough footage — videos that made listings stand out in a competitive Eastside market and gave buyers a real sense of the space and setting before they ever set foot inside.</p>
+          <p>Working across properties in Medina, Bellevue, and the broader Eastside, each video combines smooth interior walkthroughs with aerial drone coverage and cinematic establishing shots — all edited to a professional standard ready for MLS, social media, and direct client use.</p>
+        </div>
+        <div class="reveal">
+          <h3>What I Delivered</h3>
+          <ul class="cs-list">
+            <li>Cinematic listing videos for luxury properties</li>
+            <li>FAA Part 107 licensed aerial drone coverage</li>
+            <li>Smooth interior walkthrough footage</li>
+            <li>Exterior establishing shots with cinematic grading</li>
+            <li>Multiple formats: MLS, social, full-length</li>
+            <li>Fast turnaround to meet listing timelines</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Property stills -->
+      <div class="img-grid reveal">
+        <div class="img-slot">
+          <!-- Replace: <img src="../img/marcel-property-1.jpg" alt="Property video still" loading="lazy"> -->
+          <div class="img-placeholder">Property exterior / drone<br><br>Add: img/marcel-property-1.jpg</div>
+        </div>
+        <div class="img-slot">
+          <div class="img-placeholder">Interior walkthrough still<br><br>Add: img/marcel-property-2.jpg</div>
+        </div>
+        <div class="img-slot">
+          <div class="img-placeholder">Aerial shot of property<br><br>Add: img/marcel-property-3.jpg</div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="results-strip reveal">
+        <!-- ═══ Replace with real metrics when available ═══ -->
+        <div class="result-stat">
+          <div class="num">4K</div>
+          <div class="label">Cinematic Quality</div>
+        </div>
+        <div class="result-stat">
+          <div class="num">Part 107</div>
+          <div class="label">Licensed Drone</div>
+        </div>
+        <div class="result-stat">
+          <div class="num">Fast</div>
+          <div class="label">Listing-Ready Turnaround</div>
+        </div>
+        <!-- Add when available:
+        <div class="result-stat">
+          <div class="num">Sold</div>
+          <div class="label">In X Days</div>
+        </div>
+        -->
+      </div>
+
+      <!-- Testimonial -->
+      <div class="testimonial reveal">
+        <!-- ═══ Replace with real quote from Marcel ═══ -->
+        <p>"Jeremy's listing videos consistently stand out. The aerial coverage and cinematic quality give my clients confidence and give buyers a reason to schedule a showing."</p>
+        <cite>— Marcel · Real Estate Agent
+          <span class="testimonial-placeholder"><br>⚠ Replace with actual client quote, full name, and company</span>
+        </cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="bcta">
+    <div class="ctr">
+      <h2 class="sh reveal">Ready for Results<br>Like <em>These?</em></h2>
+      <p class="reveal">Tell me about your project. I'll tell you exactly what I'd do and what it would cost.</p>
+      <a href="contact.html" class="btn-p reveal">Get in Touch <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="ft"><div class="ctr"><div class="ft-in">
+    <div class="ft-l">
+      <div style="display:flex;align-items:flex-end;gap:2.5px;height:18px"><div style="width:4px;height:14px;background:#fff;border-radius:1px"></div><div style="width:4px;height:10px;background:#888;border-radius:1px"></div><div style="width:4px;height:16px;background:#555;border-radius:1px"></div></div>
+      <span>© 2026 Jeremy Dubs · Cascade Creatives · Bellingham, WA</span>
+    </div>
+    <div class="ft-r"><a href="services.html">Services</a><a href="work.html">Work</a><a href="contact.html">Contact</a><a href="https://vimeo.com/cascadecreatives" target="_blank" rel="noopener">Vimeo</a></div>
+  </div></div></footer>
+
+  <script>
+    // Reveals
+    const o=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&(e.target.classList.add('v'),o.unobserve(e.target))})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(e=>o.observe(e));
+
+    // Before/after sliders (supports multiple)
+    document.querySelectorAll('.ba-slider').forEach(slider => {
+      const id = slider.id.replace('baSlider','');
+      const afterClip = document.getElementById('baAfter'+id);
+      const handle = document.getElementById('baHandle'+id);
+      if (!afterClip || !handle) return;
+      let dragging = false;
+
+      function setPos(x) {
+        const rect = slider.getBoundingClientRect();
+        let pct = Math.max(2, Math.min(98, ((x - rect.left) / rect.width) * 100));
+        afterClip.style.clipPath = `inset(0 ${100-pct}% 0 0)`;
+        handle.style.left = pct + '%';
+        const bl = slider.querySelector('.ba-label-before');
+        const al = slider.querySelector('.ba-label-after');
+        if (bl) bl.style.opacity = pct > 15 ? 1 : 0;
+        if (al) al.style.opacity = pct < 85 ? 1 : 0;
+      }
+
+      requestAnimationFrame(() => {
+        const rect = slider.getBoundingClientRect();
+        setPos(rect.left + rect.width * 0.5);
+      });
+
+      slider.addEventListener('mousedown', e => { dragging=true; setPos(e.clientX); });
+      slider.addEventListener('touchstart', e => { dragging=true; setPos(e.touches[0].clientX); }, {passive:true});
+      document.addEventListener('mousemove', e => { if(dragging){e.preventDefault();setPos(e.clientX);} });
+      document.addEventListener('touchmove', e => { if(dragging) setPos(e.touches[0].clientX); }, {passive:true});
+      document.addEventListener('mouseup', () => dragging=false);
+      document.addEventListener('touchend', () => dragging=false);
+    });
+  </script>
+</body>
+</html>
