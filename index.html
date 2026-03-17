@@ -986,7 +986,8 @@
   <section class="services" id="services">
     <div class="container">
       <div class="section-label reveal">What I Do</div>
-      <h2 class="section-heading reveal">Two services. One person.<br>Both focused on <em>results.</em></h2>
+      <h2 class="section-heading reveal">Two services. One trusted creative partner.<br>Both focused on <em>results.</em></h2>
+      <p class="reveal" style="color:var(--text-secondary);font-size:1.05rem;max-width:640px;line-height:1.7;margin-top:20px;">Video production, editing, and website upgrades for businesses that want sharper presentation, stronger trust, and better conversions.</p>
       <div class="services-grid stagger">
 
         <div class="service-card reveal">
@@ -1031,7 +1032,7 @@
   <section class="case-studies" id="work">
     <div class="container">
       <div class="section-label reveal">Client Work</div>
-      <h2 class="section-heading reveal">Recent <em>Results</em></h2>
+      <h2 class="section-heading reveal">Client <em>Transformations</em></h2>
 
       <div class="case-study reveal">
         <div class="case-img">
@@ -1411,13 +1412,11 @@
     // ── Auto-fetch Vimeo thumbnails ──
     // Set data-vimeo="VIDEO_ID" on each .video-tile
     // For private videos, also set data-vimeo-hash="HASH"
-    // Example: data-vimeo="1172774145" data-vimeo-hash="7709f4e592"
     (function loadVimeoThumbs() {
       document.querySelectorAll('.video-tile[data-vimeo]').forEach(async (tile) => {
         const id = tile.dataset.vimeo;
         if (!id) return;
 
-        // Build the oEmbed URL — append hash if the video is private
         const hash = tile.dataset.vimeoHash;
         const videoUrl = hash
           ? `https://vimeo.com/${id}/${hash}`
@@ -1431,24 +1430,24 @@
           const data = await res.json();
 
           if (data.thumbnail_url) {
-            // Request a larger thumbnail
             let thumbUrl = data.thumbnail_url;
+            // Request larger size
             thumbUrl = thumbUrl.replace(/_\d+x\d+/, '_960');
-            // If no size suffix was found, append one
-            if (thumbUrl === data.thumbnail_url && !thumbUrl.includes('_960')) {
-              thumbUrl = thumbUrl.replace(/\?.*$/, '') + '?mw=960';
-            }
 
             const img = document.createElement('img');
             img.src = thumbUrl;
             img.alt = data.title || '';
             img.className = 'vimeo-thumb';
-            img.loading = 'lazy';
+            // Do NOT use loading="lazy" on detached elements — it
+            // creates a deadlock where the browser won't load the
+            // image until it's in the viewport, but the image never
+            // gets added to the DOM because we'd be waiting for onload.
 
-            img.onload = () => {
-              const placeholder = tile.querySelector('.thumb-placeholder');
-              if (placeholder) placeholder.replaceWith(img);
-            };
+            // Insert directly — replace the gradient placeholder
+            const placeholder = tile.querySelector('.thumb-placeholder');
+            if (placeholder) {
+              placeholder.replaceWith(img);
+            }
           }
         } catch (err) {
           console.warn('Vimeo thumb fetch failed for', id, err);
