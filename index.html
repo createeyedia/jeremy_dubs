@@ -575,13 +575,13 @@
       pointer-events: none;
     }
     .ba-label-before {
-      right: 14px;
+      left: 14px;
       background: rgba(0,0,0,0.7);
       color: #fff;
       backdrop-filter: blur(6px);
     }
     .ba-label-after {
-      left: 14px;
+      right: 14px;
       background: var(--accent);
       color: var(--bg-primary);
     }
@@ -1036,15 +1036,15 @@
       <div class="case-study reveal">
         <div class="case-img">
           <div class="ba-slider" id="baSlider">
-            <!-- Before image (shown underneath) -->
-            <img src="img/allstar-before.jpg" alt="All Star Lake Spa — old website" draggable="false">
-            <!-- After image (clipped from left) -->
+            <!-- After image (base layer, visible on the right) -->
+            <img src="img/allstar-after.jpg" alt="All Star Lake Spa — redesigned website" draggable="false">
+            <!-- Before image (clipped overlay, visible on the left) -->
             <div class="ba-after" id="baAfter">
-              <img src="img/allstar-after.jpg" alt="All Star Lake Spa — redesigned website" draggable="false">
+              <img src="img/allstar-before.jpg" alt="All Star Lake Spa — old website" draggable="false">
             </div>
             <div class="ba-handle" id="baHandle"></div>
-            <span class="ba-label ba-label-before">Before</span>
             <span class="ba-label ba-label-after">After</span>
+            <span class="ba-label ba-label-before">Before</span>
           </div>
         </div>
         <div class="case-info">
@@ -1119,7 +1119,7 @@
            ═══════════════════════════════════════════════════════ -->
       <div class="video-grid stagger">
 
-        <div class="video-tile reveal" data-category="commercial" data-vimeo="" onclick="openVideo(this)">
+        <div class="video-tile reveal" data-category="commercial" data-vimeo="278099968" onclick="openVideo(this)">
           <div class="thumb-placeholder"></div>
           <div class="play-overlay">
             <div class="play-icon">
@@ -1128,11 +1128,11 @@
           </div>
           <div class="video-overlay">
             <div class="cat">Commercial & Brand</div>
-            <div class="title">Cascade Pest Control — Brand Video</div>
+            <div class="title">Cascade Pest Control</div>
           </div>
         </div>
 
-        <div class="video-tile reveal" data-category="realestate" data-vimeo="" onclick="openVideo(this)">
+        <div class="video-tile reveal" data-category="realestate" data-vimeo="287757023" onclick="openVideo(this)">
           <div class="thumb-placeholder"></div>
           <div class="play-overlay">
             <div class="play-icon">
@@ -1141,11 +1141,11 @@
           </div>
           <div class="video-overlay">
             <div class="cat">Real Estate & Property</div>
-            <div class="title">Property Showcase</div>
+            <div class="title">Bellevue Towers</div>
           </div>
         </div>
 
-        <div class="video-tile reveal" data-category="social" data-vimeo="" onclick="openVideo(this)">
+        <div class="video-tile reveal" data-category="social" data-vimeo="285677156" onclick="openVideo(this)">
           <div class="thumb-placeholder"></div>
           <div class="play-overlay">
             <div class="play-icon">
@@ -1154,11 +1154,11 @@
           </div>
           <div class="video-overlay">
             <div class="cat">Social Content</div>
-            <div class="title">Short-Form Reel</div>
+            <div class="title">Likewise — Social Ad</div>
           </div>
         </div>
 
-        <div class="video-tile reveal" data-category="drone" data-vimeo="" onclick="openVideo(this)">
+        <div class="video-tile reveal" data-category="drone" data-vimeo="851990318" onclick="openVideo(this)">
           <div class="thumb-placeholder"></div>
           <div class="play-overlay">
             <div class="play-icon">
@@ -1167,11 +1167,11 @@
           </div>
           <div class="video-overlay">
             <div class="cat">Drone & Aerial</div>
-            <div class="title">Cinematic Aerial</div>
+            <div class="title">Medina Real Estate Aerial</div>
           </div>
         </div>
 
-        <div class="video-tile reveal" data-category="commercial" data-vimeo="" onclick="openVideo(this)">
+        <div class="video-tile reveal" data-category="commercial" data-vimeo="1016361535" onclick="openVideo(this)">
           <div class="thumb-placeholder"></div>
           <div class="play-overlay">
             <div class="play-icon">
@@ -1180,11 +1180,11 @@
           </div>
           <div class="video-overlay">
             <div class="cat">Seasonal Campaign</div>
-            <div class="title">Cascade Pest — Seasonal</div>
+            <div class="title">Cascade Pest — Seattle</div>
           </div>
         </div>
 
-        <div class="video-tile reveal" data-category="commercial" data-vimeo="" onclick="openVideo(this)">
+        <div class="video-tile reveal" data-category="commercial" data-vimeo="371313678" onclick="openVideo(this)">
           <div class="thumb-placeholder"></div>
           <div class="play-overlay">
             <div class="play-icon">
@@ -1193,7 +1193,7 @@
           </div>
           <div class="video-overlay">
             <div class="cat">Brand & Cinematic</div>
-            <div class="title">Cinematic Brand Piece</div>
+            <div class="title">City Flowers — Holiday</div>
           </div>
         </div>
 
@@ -1329,13 +1329,15 @@
     function openVideo(tile) {
       const vimeoId = tile.dataset.vimeo;
       if (!vimeoId) {
-        // No video ID set yet — show a helpful alert
         alert('Add a Vimeo ID to this tile\'s data-vimeo attribute to enable playback.\n\nExample: data-vimeo="123456789"');
         return;
       }
+      const hash = tile.dataset.vimeoHash;
       const modal = document.getElementById('videoModal');
       const frame = document.getElementById('videoFrame');
-      frame.src = `https://player.vimeo.com/video/${vimeoId}?autoplay=1&title=0&byline=0&portrait=0`;
+      // Append hash for private videos
+      const hashParam = hash ? `&h=${hash}` : '';
+      frame.src = `https://player.vimeo.com/video/${vimeoId}?autoplay=1&title=0&byline=0&portrait=0${hashParam}`;
       modal.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
@@ -1382,8 +1384,8 @@
         // Move labels to stay visible
         const beforeLabel = slider.querySelector('.ba-label-before');
         const afterLabel = slider.querySelector('.ba-label-after');
-        if (beforeLabel) beforeLabel.style.opacity = pct < 85 ? 1 : 0;
-        if (afterLabel) afterLabel.style.opacity = pct > 15 ? 1 : 0;
+        if (beforeLabel) beforeLabel.style.opacity = pct > 15 ? 1 : 0;
+        if (afterLabel) afterLabel.style.opacity = pct < 85 ? 1 : 0;
       }
 
       // Set initial position at 50%
@@ -1412,25 +1414,35 @@
     });
 
     // ── Auto-fetch Vimeo thumbnails ──
-    // Automatically pulls HD thumbnails from Vimeo's oEmbed API
-    // Just set data-vimeo="VIDEO_ID" on each .video-tile
+    // Set data-vimeo="VIDEO_ID" on each .video-tile
+    // For private videos, also set data-vimeo-hash="HASH"
+    // Example: data-vimeo="1172774145" data-vimeo-hash="7709f4e592"
     (function loadVimeoThumbs() {
       document.querySelectorAll('.video-tile[data-vimeo]').forEach(async (tile) => {
         const id = tile.dataset.vimeo;
-        if (!id) return; // Skip tiles without an ID
+        if (!id) return;
+
+        // Build the oEmbed URL — append hash if the video is private
+        const hash = tile.dataset.vimeoHash;
+        const videoUrl = hash
+          ? `https://vimeo.com/${id}/${hash}`
+          : `https://vimeo.com/${id}`;
 
         try {
           const res = await fetch(
-            `https://vimeo.com/api/oembed.json?url=https://vimeo.com/${id}&width=960`
+            `https://vimeo.com/api/oembed.json?url=${encodeURIComponent(videoUrl)}&width=960`
           );
           if (!res.ok) throw new Error(`HTTP ${res.status}`);
           const data = await res.json();
 
           if (data.thumbnail_url) {
-            // Vimeo returns small thumbs by default — request larger
-            // Replace size suffix to get HD: _295x166 → _960
+            // Request a larger thumbnail
             let thumbUrl = data.thumbnail_url;
             thumbUrl = thumbUrl.replace(/_\d+x\d+/, '_960');
+            // If no size suffix was found, append one
+            if (thumbUrl === data.thumbnail_url && !thumbUrl.includes('_960')) {
+              thumbUrl = thumbUrl.replace(/\?.*$/, '') + '?mw=960';
+            }
 
             const img = document.createElement('img');
             img.src = thumbUrl;
@@ -1438,22 +1450,13 @@
             img.className = 'vimeo-thumb';
             img.loading = 'lazy';
 
-            // When image loads, swap it in
             img.onload = () => {
               const placeholder = tile.querySelector('.thumb-placeholder');
-              if (placeholder) {
-                placeholder.replaceWith(img);
-              }
+              if (placeholder) placeholder.replaceWith(img);
             };
-
-            // Also update the overlay title if Vimeo provides one
-            // (uncomment if you want Vimeo titles to override your custom titles)
-            // const titleEl = tile.querySelector('.video-overlay .title');
-            // if (titleEl && data.title) titleEl.textContent = data.title;
           }
         } catch (err) {
-          // Silently keep the gradient placeholder if fetch fails
-          console.warn('Vimeo thumb fetch failed for ID:', id, err);
+          console.warn('Vimeo thumb fetch failed for', id, err);
         }
       });
     })();
