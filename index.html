@@ -238,6 +238,34 @@
       padding: 120px 0 80px;
       overflow: hidden;
     }
+    /* Background image — auto-set by JS from Vimeo thumbnail */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-bg img,
+    .hero-bg video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      animation: heroZoom 25s ease-in-out infinite alternate;
+    }
+    @keyframes heroZoom {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.08); }
+    }
+    /* Dark gradient overlay so text stays readable */
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to right, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.7) 50%, rgba(10,10,10,0.4) 100%),
+        linear-gradient(to top, rgba(10,10,10,0.95) 0%, transparent 40%);
+      z-index: 1;
+    }
     .hero::before {
       content: '';
       position: absolute;
@@ -246,10 +274,11 @@
       background: radial-gradient(circle, var(--accent-glow), transparent 70%);
       filter: blur(120px);
       pointer-events: none;
+      z-index: 2;
     }
     .hero-content {
       position: relative;
-      z-index: 2;
+      z-index: 3;
       max-width: 820px;
     }
     .hero-location {
@@ -945,7 +974,7 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#portfolio">Video</a></li>
-        <li><a href="#why">Why Me</a></li>
+        <li><a href="pages/about.html">About</a></li>
         <li><a href="pages/contact.html" class="nav-cta">Get a Quote</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -956,6 +985,10 @@
 
   <!-- ═══════════════ HERO ═══════════════ -->
   <section class="hero">
+    <!-- Background: auto-loads from Vimeo thumbnail.
+         To upgrade to video later, replace the <img> with:
+         <video src="video/hero-reel.mp4" autoplay muted loop playsinline></video> -->
+    <div class="hero-bg" id="heroBg"></div>
     <div class="container">
       <div class="hero-content">
         <div class="hero-location">
@@ -1408,6 +1441,34 @@
         }
       });
     });
+
+    // ── Hero background image from Vimeo ──
+    // Uses the Roche Harbor aerial (275434535) as the hero bg.
+    // Change the ID below to use a different video's thumbnail.
+    // To upgrade to a video reel later, just add a <video> tag
+    // inside #heroBg and remove this script block.
+    (async function loadHeroBg() {
+      const heroId = '275434535'; // Riviera Rendezvous — Roche Harbor
+      const heroBg = document.getElementById('heroBg');
+      if (!heroBg) return;
+      try {
+        const res = await fetch(
+          `https://vimeo.com/api/oembed.json?url=https://vimeo.com/${heroId}&width=1920`
+        );
+        if (!res.ok) return;
+        const data = await res.json();
+        if (data.thumbnail_url) {
+          let url = data.thumbnail_url.replace(/_\d+x\d+/, '_1920');
+          const img = document.createElement('img');
+          img.src = url;
+          img.alt = '';
+          img.fetchPriority = 'high';
+          heroBg.prepend(img);
+        }
+      } catch (e) {
+        console.warn('Hero bg load failed:', e);
+      }
+    })();
 
     // ── Auto-fetch Vimeo thumbnails ──
     // Set data-vimeo="VIDEO_ID" on each .video-tile
