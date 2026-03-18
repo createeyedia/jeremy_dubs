@@ -573,6 +573,7 @@
       cursor: col-resize;
       user-select: none;
       -webkit-user-select: none;
+      touch-action: none;
     }
     .ba-slider img {
       display: block;
@@ -1428,9 +1429,9 @@
       });
 
       slider.addEventListener('mousedown', (e) => { isDragging = true; setPosition(e.clientX); });
-      slider.addEventListener('touchstart', (e) => { isDragging = true; setPosition(e.touches[0].clientX); }, { passive: true });
+      slider.addEventListener('touchstart', (e) => { isDragging = true; e.preventDefault(); setPosition(e.touches[0].clientX); }, { passive: false });
       document.addEventListener('mousemove', (e) => { if (isDragging) { e.preventDefault(); setPosition(e.clientX); } });
-      document.addEventListener('touchmove', (e) => { if (isDragging) setPosition(e.touches[0].clientX); }, { passive: true });
+      document.addEventListener('touchmove', (e) => { if (isDragging) { e.preventDefault(); setPosition(e.touches[0].clientX); } }, { passive: false });
       document.addEventListener('mouseup', () => isDragging = false);
       document.addEventListener('touchend', () => isDragging = false);
     })();
