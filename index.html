@@ -532,18 +532,6 @@
       background: var(--bg-card);
     }
 
-    /* ════════════════════════════════════════════════════════════
-       IMAGE PLACEHOLDERS
-       ────────────────────────────────────────────────────────────
-       Replace the <div class="img-placeholder"> blocks below with
-       real <img> tags pointing to your actual screenshots/photos.
-
-       Example:
-         BEFORE:  <div class="img-placeholder">All Star Lake Spa</div>
-         AFTER:   <img src="/images/allstar-case-study.jpg"
-                       alt="All Star Lake Spa website redesign"
-                       loading="lazy">
-       ════════════════════════════════════════════════════════════ */
     .img-placeholder {
       width: 100%;
       height: 100%;
@@ -713,26 +701,6 @@
       border-color: var(--border-light);
       transform: translateY(-3px);
     }
-
-    /* ════════════════════════════════════════════════════════════
-       VIDEO THUMBNAILS
-       ────────────────────────────────────────────────────────────
-       Replace .video-tile backgrounds with real thumbnail images.
-
-       Option A: Background image on the tile
-         .video-tile[data-project="cascade"] {
-           background: url('/images/thumbs/cascade-thumb.jpg') center/cover;
-         }
-
-       Option B: Add an <img> tag inside the .video-tile div
-         <img src="/images/thumbs/cascade-thumb.jpg"
-              alt="Cascade Pest Control commercial"
-              style="width:100%;height:100%;object-fit:cover;">
-
-       Option C: Use Vimeo thumbnail API
-         https://vimeo.com/api/oembed.json?url=https://vimeo.com/VIDEO_ID
-         → response.thumbnail_url
-       ════════════════════════════════════════════════════════════ */
 
     .video-tile .thumb-placeholder {
       width: 100%; height: 100%;
@@ -1013,8 +981,7 @@
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#services">Services</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#portfolio">Video</a></li>
+        <li><a href="pages/work.html">Work</a></li>
         <li><a href="pages/about.html">About</a></li>
         <li><a href="pages/contact.html" class="nav-cta">Get a Quote</a></li>
       </ul>
@@ -1026,9 +993,6 @@
 
   <!-- ═══════════════ HERO ═══════════════ -->
   <section class="hero">
-    <!-- Background: auto-loads from Vimeo thumbnail.
-         To upgrade to video later, replace the <img> with:
-         <video src="video/hero-reel.mp4" autoplay muted loop playsinline></video> -->
     <div class="hero-bg" id="heroBg"></div>
     <div class="container">
       <div class="hero-content">
@@ -1180,19 +1144,6 @@
       <div class="section-label reveal">Video Portfolio</div>
       <h2 class="section-heading reveal">Selected Production <em>Work</em></h2>
 
-      <!-- ═══════════════════════════════════════════════════════
-           VIDEO TILES — How to use:
-
-           1. Set data-vimeo="YOUR_VIDEO_ID" on each .video-tile
-              Example: data-vimeo="123456789"
-           2. Thumbnails auto-fetch from Vimeo's oEmbed API
-           3. Click opens the video in a lightbox modal
-           4. Tiles without a Vimeo ID show a gradient placeholder
-
-           To find your Vimeo ID: open the video on vimeo.com
-           and copy the number from the URL, e.g.
-           https://vimeo.com/123456789 → data-vimeo="123456789"
-           ═══════════════════════════════════════════════════════ -->
       <div class="video-grid stagger">
 
         <div class="video-tile reveal" data-category="commercial" data-vimeo="278099968" onclick="openVideo(this)">
@@ -1327,6 +1278,16 @@
     </div>
   </section>
 
+  <!-- ═══════════════ TESTIMONIAL ═══════════════ -->
+  <section style="padding:40px 0 0;">
+    <div class="container" style="max-width:720px;">
+      <div class="reveal" style="border-left:2px solid var(--accent);padding:28px 32px;background:rgba(200,255,0,0.05);border-radius:0 10px 10px 0;text-align:left;">
+        <p style="font-size:1.1rem;color:var(--text-primary);font-style:italic;line-height:1.7;margin:0 0 12px;">"Jeremy keeps our content consistent and professional across every platform. Having one person who handles everything — from the shoot to the final edit — means we always look polished and on-brand."</p>
+        <cite style="font-style:normal;font-size:.82rem;color:var(--text-muted);">— Kevin Peterson, Operations Manager · Cascade Pest Control</cite>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══════════════ CTA ═══════════════ -->
   <section class="cta-section">
     <div class="container">
@@ -1354,6 +1315,8 @@
         <div class="footer-links">
           <a href="pages/services.html">Services</a>
           <a href="pages/work.html">Work</a>
+          <a href="pages/case-studies.html">Case Studies</a>
+          <a href="pages/about.html">About</a>
           <a href="pages/contact.html">Contact</a>
           <a href="https://vimeo.com/cascadecreatives" target="_blank" rel="noopener">Vimeo</a>
         </div>
