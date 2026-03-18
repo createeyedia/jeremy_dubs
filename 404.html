@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | Jeremy Dubs — Cascade Creatives</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#0a0a0a;--card:#161616;--border:#222;
+      --t1:#f0efe9;--t2:#8a8a8a;--t3:#555;
+      --acc:#c8ff00;--acc-glow:rgba(200,255,0,0.15);
+      --serif:'Instrument Serif',Georgia,serif;
+      --sans:'DM Sans',-apple-system,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{-webkit-font-smoothing:antialiased}
+    body{font-family:var(--sans);background:var(--bg);color:var(--t1);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 24px;position:relative;overflow:hidden}
+    body::before{content:'';position:absolute;top:30%;left:50%;transform:translateX(-50%);width:500px;height:500px;background:radial-gradient(circle,var(--acc-glow),transparent 70%);filter:blur(120px);pointer-events:none}
+    .code{font-family:var(--serif);font-size:clamp(6rem,15vw,10rem);font-weight:400;line-height:1;color:var(--acc);opacity:0.15;position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);pointer-events:none;user-select:none}
+    .content{position:relative;z-index:1;max-width:480px}
+    .logo{display:flex;align-items:center;gap:10px;justify-content:center;margin-bottom:48px}
+    .logo .lm{display:flex;align-items:flex-end;gap:3px;height:24px}
+    .logo .b{width:5px;border-radius:1.5px}
+    .logo .b1{height:18px;background:#fff}
+    .logo .b2{height:14px;background:#888}
+    .logo .b3{height:22px;background:#555}
+    .logo .lt{display:flex;flex-direction:column;line-height:1;gap:2px;text-align:left}
+    .logo .ln{font-size:.95rem;font-weight:500}
+    .logo .ls{font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--t3)}
+    h1{font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:400;margin-bottom:16px;line-height:1.2}
+    h1 em{font-style:italic;color:var(--acc)}
+    p{color:var(--t2);font-size:1rem;line-height:1.7;margin-bottom:32px}
+    .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-p{display:inline-flex;align-items:center;gap:8px;background:var(--acc);color:var(--bg);padding:12px 28px;border-radius:100px;font-weight:500;font-size:.88rem;text-decoration:none;transition:opacity .3s}
+    .btn-p:hover{opacity:.88}
+    .btn-s{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--t1);padding:12px 28px;border-radius:100px;font-size:.88rem;border:1px solid var(--border);text-decoration:none;transition:border-color .3s}
+    .btn-s:hover{border-color:var(--t3)}
+    .footer{position:absolute;bottom:24px;font-size:.75rem;color:var(--t3)}
+  </style>
+</head>
+<body>
+  <div class="code">404</div>
+  <div class="content">
+    <a href="/" class="logo">
+      <div class="lm"><div class="b b1"></div><div class="b b2"></div><div class="b b3"></div></div>
+      <div class="lt"><span class="ln">Jeremy Dubs</span><span class="ls">Cascade Creatives</span></div>
+    </a>
+    <h1>This page doesn't <em>exist.</em></h1>
+    <p>The page you're looking for may have moved or never existed in the first place. Let's get you somewhere useful.</p>
+    <div class="actions">
+      <a href="/" class="btn-p">
+        Back to Home
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/pages/contact.html" class="btn-s">Get in Touch</a>
+    </div>
+  </div>
+  <div class="footer">© 2026 Jeremy Dubs · Cascade Creatives · Bellingham, WA</div>
+</body>
+</html>
