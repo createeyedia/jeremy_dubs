@@ -98,6 +98,7 @@
     .tile[data-cat="drone"] .thumb-ph{background:linear-gradient(160deg,#0d1a2e,#1a2e3e,#0d1a2e)}
     .tile[data-cat="event"] .thumb-ph{background:linear-gradient(160deg,#1a1a1a,#2e1a1a,#1a1a1a)}
     .tile[data-cat="brand"] .thumb-ph{background:linear-gradient(160deg,#1a1a2e,#16213e,#0f3460)}
+    .tile[data-cat="website"] .thumb-ph{background:linear-gradient(160deg,#1a1a0e,#2e2a1a,#1a1a0e)}
     .tile .thumb-ph::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.04),transparent);animation:shimmer 2s infinite}
     @keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
     .vimeo-thumb{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1)}
@@ -202,6 +203,7 @@
         <button class="filter-btn" data-filter="drone" onclick="filterTiles('drone',this)">Drone & Aerial</button>
         <button class="filter-btn" data-filter="social" onclick="filterTiles('social',this)">Social</button>
         <button class="filter-btn" data-filter="event" onclick="filterTiles('event',this)">Event</button>
+        <button class="filter-btn" data-filter="website" onclick="filterTiles('website',this)">Website</button>
         <span class="filter-count" id="filterCount">18 projects</span>
       </div>
     </div>
@@ -324,6 +326,19 @@
           <div class="thumb-ph"></div>
           <div class="play-ov"><div class="play-ic"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
           <div class="info-ov"><div class="cat">Commercial</div><div class="ttl">Karate West — Demo Team</div></div>
+        </div>
+
+        <!-- Website builds -->
+        <div class="tile" data-cat="website" data-thumb="../img/paradise-finance-thumb.jpg" onclick="window.open('https://paradisefinance.com','_blank')">
+          <div class="thumb-ph"></div>
+          <div class="play-ov"><div class="play-ic"><svg viewBox="0 0 24 24" style="fill:none;stroke:#fff;stroke-width:2;margin:0"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><circle cx="7" cy="6" r="0.5" fill="#fff"/><circle cx="10" cy="6" r="0.5" fill="#fff"/></svg></div></div>
+          <div class="info-ov"><div class="cat">Website Build</div><div class="ttl">Paradise Finance — Cairns, AU</div></div>
+        </div>
+
+        <div class="tile" data-cat="website" data-thumb="../img/allstar-after.jpg" onclick="window.open('https://allstarlakespa.com','_blank')">
+          <div class="thumb-ph"></div>
+          <div class="play-ov"><div class="play-ic"><svg viewBox="0 0 24 24" style="fill:none;stroke:#fff;stroke-width:2;margin:0"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><circle cx="7" cy="6" r="0.5" fill="#fff"/><circle cx="10" cy="6" r="0.5" fill="#fff"/></svg></div></div>
+          <div class="info-ov"><div class="cat">Website Upgrade</div><div class="ttl">All Star Lake Spa — Bellevue, WA</div></div>
         </div>
 
       </div>
@@ -454,6 +469,18 @@
     // Init count
     document.getElementById('filterCount').textContent =
       document.querySelectorAll('.tile').length + ' projects';
+
+    // ── Load static thumbnails for website tiles ──
+    document.querySelectorAll('.tile[data-thumb]').forEach(tile => {
+      const src = tile.dataset.thumb;
+      if (!src) return;
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = tile.querySelector('.ttl')?.textContent || '';
+      img.className = 'vimeo-thumb';
+      const ph = tile.querySelector('.thumb-ph');
+      if (ph) ph.replaceWith(img);
+    });
   </script>
 </body>
 </html>
