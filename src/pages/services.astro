@@ -1,0 +1,92 @@
+---
+import Base from '../layouts/Base.astro';
+
+const services = [
+  {
+    num: '01',
+    id: 'commercial',
+    title: 'Commercial Video Production',
+    desc: "On-location production for businesses, brands, and marketing teams in Western Washington.",
+    body: "I handle everything from pre-production planning through the final edit — concept development, location scouting, direction, camera operation, audio capture, and post-production. The result is a polished commercial or brand film that communicates your message clearly and looks professional anywhere you use it.",
+    bestFor: "Local businesses, service companies, product brands, event coverage, and any company that needs a credible visual presence.",
+    cta: 'Request a Quote',
+  },
+  {
+    num: '02',
+    id: 'editing',
+    title: 'Remote Video Editing',
+    desc: "Send me your raw footage. I'll deliver a clean, finished edit — fast.",
+    body: "Remote editing is simple: you share your files, we agree on the look and direction, and I deliver a polished cut. I work in Premiere Pro and handle everything from talking-head interviews and branded social content to multi-cam shoots and long-form YouTube videos. No location required — I can work with clients anywhere.",
+    bestFor: "Marketing teams with internal footage, agencies with overflow editing work, content creators scaling their production, and brands that need a professional editor to finish it.",
+    cta: 'Request a Quote',
+  },
+  {
+    num: '03',
+    id: 'social',
+    title: 'Social Media Content',
+    desc: "Short-form video built for the platforms where your audience actually is.",
+    body: "I produce and edit short-form video for Instagram Reels, TikTok, YouTube Shorts, and paid social — including vertical formatting, caption overlays, sound design, color grading, and platform-specific optimizations. Whether shot on-location or built from footage you provide, the output is professional social content ready to publish or run as an ad.",
+    bestFor: "Brands building an organic social presence, businesses running paid video ads, and marketing teams that need consistent high-quality short-form content.",
+    cta: 'Get a Quote',
+  },
+  {
+    num: '04',
+    id: 'realestate',
+    title: 'Real Estate & Property Video',
+    desc: "Cinematic listing videos and property tours for agents, developers, and property managers.",
+    body: "I shoot and edit property videos that showcase homes and commercial spaces in their best light — smooth walkthrough footage, exterior establishing shots, and aerial drone coverage where appropriate. The final product is a professionally edited video formatted for MLS, social media, and direct client use.",
+    bestFor: "Real estate agents, property developers, short-term rental owners, and commercial property managers in Western Washington.",
+    cta: 'Book a Shoot',
+  },
+  {
+    num: '05',
+    id: 'drone',
+    title: 'Drone & Cinematic B-Roll',
+    desc: "Licensed aerial footage and sweeping cinematic b-roll to elevate your next project.",
+    body: "I'm a licensed drone operator (FAA Part 107) available for aerial coverage of properties, events, landscapes, and commercial projects across Western Washington. I also provide cinematic ground-level b-roll for brand films, commercials, and editorial content. Drone footage is delivered as raw files or fully graded, cut-ready clips.",
+    bestFor: "Brands, real estate clients, production companies, and any project that needs elevated visual coverage.",
+    cta: 'Request Coverage',
+  },
+];
+---
+
+<Base
+  title="Video Production & Editing Services | Jeremy Dubs — Bellingham, WA"
+  description="Commercial video production, remote editing, social content, real estate video, and drone services for businesses across Western Washington and nationwide."
+>
+  <section class="page-hero">
+    <div class="container">
+      <span class="label">Services</span>
+      <h1>Video Production & Editing <em>Services</em></h1>
+      <p>Whether you need a production partner in the Pacific Northwest or a remote editor you can send footage to — here's exactly what I offer.</p>
+    </div>
+  </section>
+
+  {services.map((svc) => (
+    <section id={svc.id} style={services.indexOf(svc) % 2 === 1 ? 'background: var(--bg-elevated);' : ''}>
+      <div class="container container--narrow">
+        <div class="reveal">
+          <span class="label">Service {svc.num}</span>
+          <h2 style="margin: 0.5rem 0 1rem;">{svc.title}</h2>
+          <p style="font-size: 1.1rem; color: var(--text); margin-bottom: 1.5rem;">{svc.desc}</p>
+          <p style="color: var(--text-muted);">{svc.body}</p>
+          <div style="margin-top: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm);">
+            <strong style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent);">Best For</strong>
+            <p style="color: var(--text-muted); margin: 0.5rem 0 0; font-size: 0.95rem;">{svc.bestFor}</p>
+          </div>
+          <div style="margin-top: 1.5rem;">
+            <a href="/contact" class="btn btn--primary">{svc.cta}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="cta-block" style="background: var(--bg-elevated);">
+    <div class="container">
+      <h2 class="reveal">Not Sure Which <em>Service</em> Fits?</h2>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;" class="reveal">Tell me what you're working on and I'll recommend the right approach.</p>
+      <a href="/contact" class="btn btn--primary reveal">Get in Touch</a>
+    </div>
+  </section>
+</Base>

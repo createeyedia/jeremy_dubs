@@ -1,0 +1,145 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Get a Quote | Jeremy Dubs — Video & Website Upgrades"
+  description="Tell me what you're working on — video, website, or both. I'll let you know how I can help and what a realistic next step looks like."
+>
+  <section class="page-hero">
+    <div class="container">
+      <span class="label">Contact</span>
+      <h1>Let's Talk About Your <em>Project</em></h1>
+      <p>Tell me what you're working on — even if it's just a rough idea. I'll let you know how I can help and what a realistic next step looks like.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container" style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 3rem; align-items: start;">
+
+      <!-- Form -->
+      <div>
+        <form id="contact-form" action="https://formspree.io/f/xzdjkjrd" method="POST">
+
+          <!-- Service Type -->
+          <div class="form-group full" style="margin-bottom: 1.5rem;">
+            <label>What do you need?<span style="color: var(--accent);">*</span></label>
+            <div class="service-selector">
+              <label>
+                <input type="radio" name="service" value="Video Production" required />
+                🎬 Video Production
+              </label>
+              <label>
+                <input type="radio" name="service" value="Website Upgrade" />
+                🌐 Website Upgrade
+              </label>
+              <label>
+                <input type="radio" name="service" value="Both" />
+                ⚡ Both
+              </label>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Your Name<span style="color: var(--accent);">*</span></label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address<span style="color: var(--accent);">*</span></label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="company">Company or Project Name (optional)</label>
+              <input type="text" id="company" name="company" />
+            </div>
+            <div class="form-group">
+              <label for="budget">Budget Range (optional)</label>
+              <select id="budget" name="budget">
+                <option value="">Select a range...</option>
+                <option value="Under $1,000">Under $1,000</option>
+                <option value="$1,000 – $3,000">$1,000 – $3,000</option>
+                <option value="$3,000 – $5,000">$3,000 – $5,000</option>
+                <option value="$5,000 – $10,000">$5,000 – $10,000</option>
+                <option value="$10,000+">$10,000+</option>
+                <option value="Not sure yet">Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label for="message">Tell me about your project<span style="color: var(--accent);">*</span></label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="form-group full">
+              <label for="referral">How did you hear about me? (optional)</label>
+              <input type="text" id="referral" name="referral" />
+            </div>
+            <div class="form-group full">
+              <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">Send Message</button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Success Message -->
+        <div class="form-success" id="form-success">
+          <h3>Message Sent</h3>
+          <p style="color: var(--text-muted);">Thanks for reaching out. I'll review your project and get back to you within 1 business day.</p>
+        </div>
+      </div>
+
+      <!-- Details Sidebar -->
+      <div>
+        <h3 style="margin-bottom: 1.5rem;">Details</h3>
+        <dl class="contact-details">
+          <dt>Location</dt>
+          <dd>Bellingham, WA</dd>
+          <dt>Production Area</dt>
+          <dd>Western Washington — Bellingham, Seattle, Eastside</dd>
+          <dt>Remote Editing</dt>
+          <dd>Available nationwide</dd>
+          <dt>Response Time</dt>
+          <dd>Within 1 business day</dd>
+          <dt>Portfolio</dt>
+          <dd><a href="https://vimeo.com/cascadecreatives" target="_blank" rel="noopener">vimeo.com/cascadecreatives</a></dd>
+          <dt>Instagram</dt>
+          <dd><a href="https://www.instagram.com/cascadecreatives/" target="_blank" rel="noopener">@cascadecreatives</a></dd>
+        </dl>
+        <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 0.75rem;">
+          <a href="/services" class="btn btn--ghost">View production services</a>
+          <a href="/website-upgrades" class="btn btn--ghost">See website upgrade packages</a>
+          <a href="/work" class="btn btn--ghost">Browse the full portfolio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const success = document.getElementById('form-success');
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { Accept: 'application/json' },
+        });
+        if (res.ok) {
+          form.style.display = 'none';
+          if (success) success.classList.add('show');
+        }
+      } catch (err) {
+        // fallback: submit normally
+        form.submit();
+      }
+    });
+  </script>
+</Base>
+
+<style>
+  @media (max-width: 768px) {
+    .container[style*="grid-template-columns: 1.5fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>

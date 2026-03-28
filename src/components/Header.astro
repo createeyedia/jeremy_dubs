@@ -1,0 +1,143 @@
+---
+const currentPath = Astro.url.pathname;
+const isHome = currentPath === '/';
+---
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo">
+      <span class="logo-name">Jeremy Dubs</span>
+      <span class="logo-sub">Cascade Creatives</span>
+    </a>
+    <nav class="nav-desktop" aria-label="Main navigation">
+      <a href="/services" class:list={[{ active: currentPath.startsWith('/services') }]}>Services</a>
+      <a href="/work" class:list={[{ active: currentPath.startsWith('/work') }]}>Work</a>
+      <a href="/about" class:list={[{ active: currentPath.startsWith('/about') }]}>About</a>
+      <a href="/contact" class="btn btn--primary btn--sm">Get a Quote</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
+    <a href="/services">Services</a>
+    <a href="/work">Work</a>
+    <a href="/about">About</a>
+    <a href="/contact">Get a Quote</a>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    transition: background var(--transition);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+  }
+
+  .logo-name {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    color: var(--white);
+  }
+
+  .logo-sub {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+  }
+
+  .nav-desktop {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-desktop a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: color var(--transition);
+  }
+
+  .nav-desktop a:hover,
+  .nav-desktop a.active {
+    color: var(--white);
+  }
+
+  .nav-desktop .btn--sm {
+    padding: 0.55rem 1.2rem;
+    font-size: 0.8rem;
+    color: var(--bg) !important;
+  }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 4px;
+  }
+
+  .nav-toggle span {
+    width: 22px;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: all var(--transition);
+  }
+
+  .nav-mobile {
+    display: none;
+    flex-direction: column;
+    padding: 1rem 1.5rem 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .nav-mobile a {
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+    transition: color var(--transition);
+  }
+
+  .nav-mobile a:last-child {
+    border-bottom: none;
+    color: var(--accent);
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .nav-desktop { display: none; }
+    .nav-toggle { display: flex; }
+    .nav-mobile.open { display: flex; }
+  }
+</style>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const mobile = document.getElementById('nav-mobile');
+  toggle?.addEventListener('click', () => {
+    const open = mobile?.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+</script>

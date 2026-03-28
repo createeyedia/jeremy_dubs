@@ -1,0 +1,59 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; {year} Jeremy Dubs &middot; Cascade Creatives &middot; Bellingham, WA</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/services">Services</a>
+        <a href="/work">Work</a>
+        <a href="/case-studies">Case Studies</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="https://vimeo.com/cascadecreatives" target="_blank" rel="noopener">Vimeo</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 0;
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-copy {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .footer-links a {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    transition: color var(--transition);
+  }
+
+  .footer-links a:hover { color: var(--accent); }
+
+  @media (max-width: 768px) {
+    .footer-inner { flex-direction: column; text-align: center; }
+    .footer-links { justify-content: center; }
+  }
+</style>

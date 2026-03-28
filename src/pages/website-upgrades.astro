@@ -1,0 +1,219 @@
+---
+import Base from '../layouts/Base.astro';
+
+const auditItems = [
+  'Weak or missing homepage headline — visitors can\'t tell what you do in 5 seconds',
+  'No clear call to action above the fold — people don\'t know what to do next',
+  'Phone number buried or missing — especially damaging on mobile',
+  'Cluttered navigation — too many options, no clear priority',
+  'Weak or absent trust signals — no reviews, credentials, or real photos',
+  'Generic stock photos — makes the site feel impersonal and untrustworthy',
+  'Services poorly described — no explanation of who they\'re for or how to get started',
+  'Broken or confusing contact forms — the single biggest lead-loss point',
+  'Poor mobile experience — layout breaks, text too small, buttons too small to tap',
+  'Outdated content — old promotions, wrong hours, stale blog posts',
+  'Weak local SEO basics — wrong page title, no location in meta',
+  'Inconsistent contact info — doesn\'t match Google Business listing',
+];
+
+const faqs = [
+  { q: 'Do I need a full rebuild?', a: "Usually not. Most local business sites have specific problems — a weak headline, a broken form, a cluttered layout — that can be fixed without starting over. I'll tell you honestly if I think a rebuild is genuinely the better option, but in most cases it isn't." },
+  { q: 'What platform does my site need to be on?', a: "I work with WordPress, Squarespace, Wix, Webflow, and custom HTML/CSS sites. If you're not sure what your site is built on, I can figure that out during the audit." },
+  { q: 'How do you handle payment?', a: '50% upfront before work begins, 50% on delivery. I use a simple invoice — no complicated contracts for smaller projects.' },
+  { q: 'What if I already have a web person?', a: "If you have an active web person maintaining your site, this service may not be the right fit — I'd rather tell you that now than waste your time. If your web person built the site but doesn't actively maintain it, there's often a good opportunity to improve what's there." },
+  { q: 'Do you offer video or photography as part of the upgrade?', a: "Yes — and this is where the combination gets powerful. A website rewrite can only do so much if the photos are generic stock images. If your site needs real photography or video content, I can provide that too. It's priced separately but built into the same engagement so everything is consistent." },
+  { q: 'How is this different from an SEO agency?', a: "SEO agencies typically focus on content volume, backlinks, and keyword rankings over months. I focus on fixing what a real human visitor experiences when they land on your site — and making sure the basics of local SEO are correct. Those fundamentals often matter more for local businesses than elaborate SEO campaigns." },
+];
+
+const tier1Items = ['Homepage headline & subheadline rewrite','CTA button placement and wording','Contact info and form audit','Trust signal improvements','Stale content removal','Mobile layout review','Basic local SEO: title, meta description','Google Business alignment check','Navigation clarity improvements'];
+const tier2Items = ['Everything in Site Cleanup','Service section restructure & rewrite','Project / gallery presentation improvement','Local SEO across all pages','Content cleanup and rewrite where needed','Stronger conversion flow throughout','Consistency audit across all pages','About page rewrite','Footer and contact page polish'];
+const tier3Items = ['Everything in Website Upgrade','Lead capture form optimization','FAQ section creation','Automation recommendations','Additional service or location page','Video or photo shoot (priced separately)','Social content package option','6-month growth roadmap','Strategic review call'];
+---
+
+<Base
+  title="Website Upgrades for Local Businesses | Cascade Creatives"
+  description="I help local businesses fix the specific parts of their website that are losing leads — without a full rebuild. Free audit, fast turnaround, flat-rate pricing."
+>
+  <section class="page-hero">
+    <div class="container">
+      <span class="label">Website Upgrades</span>
+      <h1>Your Website Is Quietly Costing You <em>Customers</em></h1>
+      <p>I help local businesses fix the specific parts of their website that are losing leads — without a full rebuild. I look at your site the way a new customer would, identify what's broken or weak, and fix those things fast.</p>
+      <div style="margin-top: 2rem;">
+        <a href="/contact" class="btn btn--primary">Request a Free Audit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section>
+    <div class="container container--narrow">
+      <div class="section-header reveal">
+        <span class="label">The Problem</span>
+        <h2>Most local business websites were built years ago and haven't been <em>touched since.</em></h2>
+      </div>
+      <p style="color: var(--text-muted); text-align: center; max-width: 650px; margin: 0 auto;" class="reveal">They load slowly, look outdated on mobile, bury the phone number, have weak calls to action, and don't give first-time visitors a reason to trust the business.</p>
+      <p style="color: var(--text-muted); text-align: center; max-width: 650px; margin: 1rem auto 0;" class="reveal">The fix is usually not a full rebuild — it's targeted improvements to the parts that matter most. I specialize in finding those specific problems and fixing them — fast, clearly scoped, and at a price that makes sense for a local business.</p>
+    </div>
+  </section>
+
+  <!-- Audit -->
+  <section style="background: var(--bg-elevated);">
+    <div class="container container--narrow">
+      <div class="section-header reveal">
+        <span class="label">The Audit</span>
+        <h2>What I <em>Look For</em></h2>
+        <p>I review only what's publicly visible — no access to your backend required.</p>
+      </div>
+      <ul class="checklist reveal">
+        {auditItems.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section>
+    <div class="container container--narrow">
+      <div class="section-header reveal">
+        <span class="label">The Process</span>
+        <h2>Simple. Fast. No <em>Surprises.</em></h2>
+      </div>
+      <div class="process-step reveal">
+        <span class="process-step__number">01</span>
+        <div>
+          <h3>Free Audit</h3>
+          <p style="color: var(--text-muted);">I spend 20–30 minutes reviewing your site and put together a short list of specific observations — what's weak, what's costing you leads, and what I'd fix. Free, no obligation.</p>
+        </div>
+      </div>
+      <div class="process-step reveal">
+        <span class="process-step__number">02</span>
+        <div>
+          <h3>Quick Call</h3>
+          <p style="color: var(--text-muted);">We spend 20 minutes on the phone walking through what I found. I explain what each issue means for your business and which ones would have the biggest impact to fix first.</p>
+        </div>
+      </div>
+      <div class="process-step reveal">
+        <span class="process-step__number">03</span>
+        <div>
+          <h3>Scoped Proposal</h3>
+          <p style="color: var(--text-muted);">I send you a clear proposal with exactly what's included, what it costs, and how long it takes. No surprises, no scope creep. You approve it, we start.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section style="background: var(--bg-elevated);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">Packages</span>
+        <h2>Three Ways to <em>Work Together</em></h2>
+        <p>Every project starts with a free audit so I know exactly what your site needs before I propose anything.</p>
+      </div>
+      <div class="grid-3 reveal">
+        <div class="pricing-card">
+          <span class="label">Tier 01</span>
+          <h3>Site Cleanup</h3>
+          <div class="price">$500 – $800</div>
+          <div class="price-note">Flat rate · 50% upfront</div>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">A focused cleanup of your homepage and key pages. Fix the first impression — the things a new visitor sees and judges in the first 10 seconds.</p>
+          <ul>
+            {tier1Items.map((item) => <li>{item}</li>)}
+          </ul>
+          <div class="turnaround">Turnaround: 3–5 business days</div>
+          <div style="margin-top: 1.25rem;"><a href="/contact" class="btn btn--outline" style="width:100%; justify-content:center;">Get started</a></div>
+        </div>
+        <div class="pricing-card featured">
+          <span class="label">Tier 02</span>
+          <h3>Website Upgrade</h3>
+          <div class="price">$900 – $1,500</div>
+          <div class="price-note">Flat rate · 50% upfront</div>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">A comprehensive improvement to your site's structure, content, and conversion flow. Goes beyond the homepage to make the whole site work better.</p>
+          <ul>
+            {tier2Items.map((item) => <li>{item}</li>)}
+          </ul>
+          <div class="turnaround">Turnaround: 7–10 business days</div>
+          <div style="margin-top: 1.25rem;"><a href="/contact" class="btn btn--primary" style="width:100%; justify-content:center;">Get started</a></div>
+        </div>
+        <div class="pricing-card">
+          <span class="label">Tier 03</span>
+          <h3>Growth Upgrade</h3>
+          <div class="price">$1,500 – $2,500+</div>
+          <div class="price-note">Scoped per project</div>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Everything above plus lead capture improvements, automation recommendations, and optional video or photo production to give the site content that actually converts.</p>
+          <ul>
+            {tier3Items.map((item) => <li>{item}</li>)}
+          </ul>
+          <div class="turnaround">Turnaround: Scoped per project</div>
+          <div style="margin-top: 1.25rem;"><a href="/contact" class="btn btn--outline" style="width:100%; justify-content:center;">Get started</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Star Case Study Preview -->
+  <section>
+    <div class="container container--narrow">
+      <div class="section-header reveal">
+        <span class="label">Recent Work</span>
+        <h2>All Star Lake Spa — Website <em>Upgrade</em></h2>
+      </div>
+      <div class="reveal">
+        <img src="/img/allstar-after.jpg" alt="All Star Lake Spa redesigned website" style="border-radius: var(--radius); margin-bottom: 1.5rem;" />
+        <h3>The Situation</h3>
+        <p style="color: var(--text-muted);">A well-established massage and spa in Bellevue, WA with a strong reputation — but a website that had fallen behind. Cluttered homepage, broken mobile experience, and injected spam content actively harming their image.</p>
+        <h3 style="margin-top: 1.5rem;">What I Fixed</h3>
+        <ul class="checklist" style="margin-top: 0.75rem;">
+          <li>Removed injected spam content from services page</li>
+          <li>Rewrote homepage headline and intro copy</li>
+          <li>Restructured and simplified services section</li>
+          <li>Improved CTAs and booking flow</li>
+          <li>Fixed mobile layout and tap targets</li>
+          <li>Visual redesign to match spa quality</li>
+        </ul>
+        <a href="/case-studies#allstar" class="btn btn--ghost" style="margin-top: 1rem;">View full case study</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background: var(--bg-elevated);">
+    <div class="container container--narrow">
+      <div class="section-header reveal">
+        <span class="label">FAQ</span>
+        <h2>Common <em>Questions</em></h2>
+      </div>
+      <div class="reveal">
+        {faqs.map((faq) => (
+          <div class="faq-item">
+            <button class="faq-question">{faq.q}</button>
+            <div class="faq-answer"><p>{faq.a}</p></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block">
+    <div class="container">
+      <h2 class="reveal">Want to Know What's Holding Your Website <em>Back?</em></h2>
+      <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;" class="reveal">I'll spend 20 minutes reviewing your site and send you a specific list of what I'd fix. No pitch, no obligation — just honest observations.</p>
+      <a href="/contact" class="btn btn--primary reveal">Request a Free Audit</a>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        if (!item) return;
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach((el) => el.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
+  </script>
+</Base>
