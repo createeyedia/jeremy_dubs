@@ -1,29 +1,32 @@
 ---
 import Base from '../layouts/Base.astro';
 
+
 const projects = [
   { title: 'Cascade Pest Control', category: 'Commercial', img: '/img/cascade-pest-case.jpg' },
-  { title: 'Silver Cloud Hotels', category: 'Commercial', img: '/img/silver-cloud.jpg' },
+  { title: 'Silver Cloud Hotels', category: 'Commercial', img: 'https://vumbnail.com/316959450.jpg' },
   { title: 'NW Montessori — Anniversary', category: 'Brand & Cinematic', img: '/img/montessori-still-1.jpg' },
-  { title: 'Bellevue Towers', category: 'Real Estate', img: '/img/bellevue-towers.jpg' },
-  { title: 'SAMM Apartments — Sammamish', category: 'Real Estate', img: '/img/samm-apts.jpg' },
-  { title: 'Medina Real Estate Aerial', category: 'Drone & Aerial', img: '/img/medina-aerial.jpg' },
-  { title: 'Likewise — Social Ad', category: 'Social', img: '/img/likewise-social.jpg' },
-  { title: 'Riviera Rendezvous — Roche Harbor', category: 'Event', img: '/img/riviera.jpg' },
-  { title: 'Brewe Layman Law', category: 'Commercial', img: '/img/brewe-layman.jpg' },
-  { title: 'Kind Snacks — Capitol Hill Block Party', category: 'Event', img: '/img/kind-snacks.jpg' },
+  { title: 'Bellevue Towers', category: 'Real Estate', img: 'https://vumbnail.com/287757023.jpg' },
+  { title: 'SAMM Apartments — Sammamish', category: 'Real Estate', img: 'https://vumbnail.com/242191741.jpg' },
+  { title: 'Medina Real Estate Aerial', category: 'Drone & Aerial', img: 'https://vumbnail.com/851990318.jpg' },
+  { title: 'Likewise — Social Ad', category: 'Social', img: 'https://vumbnail.com/285677156.jpg' },
+  { title: 'Riviera Rendezvous — Roche Harbor', category: 'Event', img: 'https://vumbnail.com/275434535.jpg' },
+  { title: 'Brewe Layman Law', category: 'Commercial', img: 'https://vumbnail.com/95992532.jpg' },
+  { title: 'Kind Snacks — Capitol Hill Block Party', category: 'Event', img: 'https://vumbnail.com/104476318.jpg' },
   { title: 'Cascade Pest — Seattle', category: 'Commercial', img: '/img/cascade-pest-still-2.jpg' },
-  { title: '686 — Lights Out', category: 'Brand & Cinematic', img: '/img/686-lights-out.jpg' },
-  { title: 'Likewise — Animated Explainer', category: 'Brand & Cinematic', img: '/img/likewise-explainer.jpg' },
-  { title: 'Snowboard — 10 Barrel Brewing', category: 'Brand & Cinematic', img: '/img/10-barrel.jpg' },
-  { title: 'City Flowers — Holiday', category: 'Event', img: '/img/city-flowers.jpg' },
-  { title: 'Kuna ID — Property', category: 'Real Estate', img: '/img/kuna-property.jpg' },
-  { title: 'Silver Cloud — Social', category: 'Social', img: '/img/silver-cloud-social.jpg' },
-  { title: 'Karate West — Demo Team', category: 'Commercial', img: '/img/karate-west.jpg' },
+  { title: '686 — Lights Out', category: 'Brand & Cinematic', img: 'https://vumbnail.com/75112064.jpg' },
+  { title: 'Likewise — Animated Explainer', category: 'Brand & Cinematic', img: 'https://vumbnail.com/289601123.jpg' },
+  { title: 'Snowboard — 10 Barrel Brewing', category: 'Brand & Cinematic', img: 'https://vumbnail.com/835304479.jpg' },
+  { title: 'City Flowers — Holiday', category: 'Event', img: 'https://vumbnail.com/371313678.jpg' },
+  { title: 'Kuna ID — Property', category: 'Real Estate', img: 'https://vumbnail.com/1173487171.jpg' },
+  { title: 'Silver Cloud — Social', category: 'Social', img: 'https://vumbnail.com/293664485.jpg' },
+  { title: 'Karate West — Demo Team', category: 'Commercial', img: 'https://vumbnail.com/242675538.jpg' },
 ];
+
 
 const categories = ['All', ...new Set(projects.map((p) => p.category))];
 ---
+
 
 <Base
   title="Video Portfolio | Jeremy Dubs — Commercial & Brand Video Production"
@@ -37,6 +40,7 @@ const categories = ['All', ...new Set(projects.map((p) => p.category))];
     </div>
   </section>
 
+
   <section>
     <div class="container">
       <!-- Filter Tabs -->
@@ -46,6 +50,7 @@ const categories = ['All', ...new Set(projects.map((p) => p.category))];
         ))}
         <span style="font-size: 0.8rem; color: var(--text-dim); align-self: center; margin-left: 0.5rem;" id="project-count">{projects.length} projects</span>
       </div>
+
 
       <!-- Grid -->
       <div class="portfolio-grid" id="portfolio-grid">
@@ -60,11 +65,13 @@ const categories = ['All', ...new Set(projects.map((p) => p.category))];
         ))}
       </div>
 
+
       <div style="text-align: center; margin-top: 2.5rem;">
         <a href="https://vimeo.com/cascadecreatives" target="_blank" rel="noopener" class="btn btn--outline">View full channel on Vimeo</a>
       </div>
     </div>
   </section>
+
 
   <!-- CTA -->
   <section class="cta-block" style="background: var(--bg-elevated);">
@@ -73,30 +80,3 @@ const categories = ['All', ...new Set(projects.map((p) => p.category))];
       <p style="color: var(--text-muted); margin-bottom: 2rem;" class="reveal">Tell me about your project and let's figure out the right approach.</p>
       <a href="/contact" class="btn btn--primary reveal">Request a Quote</a>
     </div>
-  </section>
-
-  <script>
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const items = document.querySelectorAll('.portfolio-item');
-    const countEl = document.getElementById('project-count');
-
-    filterBtns.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach((b) => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.getAttribute('data-filter');
-        let visible = 0;
-        items.forEach((item) => {
-          const el = item as HTMLElement;
-          if (filter === 'All' || item.getAttribute('data-category') === filter) {
-            el.style.display = '';
-            visible++;
-          } else {
-            el.style.display = 'none';
-          }
-        });
-        if (countEl) countEl.textContent = `${visible} project${visible !== 1 ? 's' : ''}`;
-      });
-    });
-  </script>
-</Base>
