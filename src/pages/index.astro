@@ -1,9 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 
-
 const portfolioItems = [
-  { title: 'Cascade Pest Control', category: 'Commercial & Brand', img: '/mg/cascade-pest-case.jpg' },
+  { title: 'Cascade Pest Control', category: 'Commercial & Brand', img: '/img/cascade-pest-case.jpg' },
   { title: 'Silver Cloud Hotels', category: 'Commercial & Brand', img: 'https://vumbnail.com/316959450.jpg' },
   { title: 'Bellevue Towers', category: 'Real Estate & Property', img: 'https://vumbnail.com/287757023.jpg' },
   { title: 'SAMM Apartments — Sammamish', category: 'Real Estate & Property', img: 'https://vumbnail.com/242191741.jpg' },
@@ -17,7 +16,6 @@ const portfolioItems = [
   { title: '686 — Lights Out', category: 'Brand & Cinematic', img: 'https://vumbnail.com/75112064.jpg' },
 ];
 
-
 const expectations = [
   { num: '01', title: 'You Work Directly With Me', desc: 'No project managers or account reps. You talk to the person doing the work, start to finish.' },
   { num: '02', title: 'Specific, Not Vague', desc: "I tell you exactly what's wrong and exactly what I'd fix — no fluff, no selling you things you don't need." },
@@ -28,9 +26,7 @@ const expectations = [
 ];
 ---
 
-
 <Base title="Jeremy Dubs — Video Production & Website Upgrades | Bellingham, WA">
-
 
   <!-- Hero -->
   <section class="hero">
@@ -48,7 +44,6 @@ const expectations = [
       </div>
     </div>
   </section>
-
 
   <!-- Services -->
   <section id="services">
@@ -78,4 +73,146 @@ const expectations = [
           <p style="color:var(--text-muted);">I find exactly what's holding your website back and fix those specific things — without a full rebuild. Most local business sites need targeted improvements, not a $5,000 do-over.</p>
           <div class="tags" style="margin: 1rem 0;">
             <span class="tag">Homepage rewrite</span>
+            <span class="tag">CTA improvements</span>
+            <span class="tag">Navigation fixes</span>
+            <span class="tag">Trust signals</span>
+            <span class="tag">Local SEO</span>
+          </div>
+          <a href="/website-upgrades" class="btn btn--ghost">See website packages</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Client Work -->
+  <section id="work" style="background: var(--bg-elevated);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">Client Work</span>
+        <h2>Client <em>Transformations</em></h2>
+      </div>
+
+      <!-- Before/After Slider — All Star -->
+      <div class="reveal" style="max-width: 800px; margin: 0 auto 3rem;">
+        <div class="ba-slider" id="ba-slider">
+          <img src="/img/allstar-before.jpg" alt="All Star Lake Spa — old website" class="ba-before" />
+          <img src="/img/allstar-after.jpg" alt="All Star Lake Spa — redesigned website" class="ba-after" />
+          <div class="ba-handle" id="ba-handle"></div>
+        </div>
+        <div style="margin-top: 1.5rem;">
+          <span class="label">Website Upgrade — Bellevue, WA</span>
+          <h3 style="margin: 0.5rem 0;">All Star Lake Spa</h3>
+          <p style="color:var(--text-muted); font-size: 0.95rem;">Full website overhaul for a lakeside massage and spa. Removed injected spam content, rewrote homepage copy, restructured services, improved CTAs, cleaned navigation, and updated mobile layout.</p>
+          <div class="tags" style="margin: 1rem 0;">
+            <span class="tag tag--accent">Homepage Rewrite</span>
+            <span class="tag tag--accent">Spam Removal</span>
+            <span class="tag tag--accent">Services Restructure</span>
+            <span class="tag tag--accent">Mobile</span>
+            <span class="tag tag--accent">CTAs</span>
+          </div>
+          <a href="/case-studies#allstar" class="btn btn--ghost">View case study</a>
+        </div>
+      </div>
+
+      <!-- Cascade Pest -->
+      <div class="reveal" style="max-width: 800px; margin: 0 auto;">
+        <img src="/img/cascade-pest-case.jpg" alt="Cascade Pest Control video production" style="border-radius: var(--radius); margin-bottom: 1.5rem;" />
+        <span class="label">Ongoing Video Production — Western WA</span>
+        <h3 style="margin: 0.5rem 0;">Cascade Pest Control</h3>
+        <p style="color:var(--text-muted); font-size: 0.95rem;">Ongoing video content partnership producing social media reels, seasonal campaign videos, commercials, and YouTube content — keeping a regional pest control brand visible and consistent across platforms.</p>
+        <div class="tags" style="margin: 1rem 0;">
+          <span class="tag tag--accent">Social Reels</span>
+          <span class="tag tag--accent">Commercials</span>
+          <span class="tag tag--accent">Seasonal Campaigns</span>
+          <span class="tag tag--accent">YouTube</span>
+        </div>
+        <a href="/case-studies#cascadepest" class="btn btn--ghost">View case study</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">Video Portfolio</span>
+        <h2>Selected Production <em>Work</em></h2>
+      </div>
+      <div class="portfolio-grid">
+        {portfolioItems.map((item) => (
+          <div class="portfolio-item reveal">
+            <img src={item.img} alt={item.title} loading="lazy" />
+            <div class="portfolio-item__overlay">
+              <span class="portfolio-item__category">{item.category}</span>
+              <span class="portfolio-item__title">{item.title}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="/work" class="btn btn--outline">Full Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Expect -->
+  <section style="background: var(--bg-elevated);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">Why Work With Me</span>
+        <h2>What You Can <em>Expect</em></h2>
+      </div>
+      <div class="expect-grid">
+        {expectations.map((item) => (
+          <div class="expect-card reveal">
+            <span class="number">{item.num}</span>
+            <h3>{item.title}</h3>
+            <p>{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section>
+    <div class="container container--narrow">
+      <div class="testimonial reveal">
+        <blockquote>"Cascade Pest Control has partnered with Cascade Creatives on numerous video projects over the past few years. Jeremy always seeks to understand our vision to provide us with the best possible product."</blockquote>
+        <cite>— Kevin Peterson, Operations Manager · Cascade Pest Control</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block" style="background: var(--bg-elevated);">
+    <div class="container">
+      <h2 class="reveal">Ready to Look More Professional and Generate More <em>Leads?</em></h2>
+      <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;" class="reveal">Tell me what you're working on — video, website, or both. I'll tell you exactly what I'd do and what it would cost.</p>
+      <a href="/contact" class="btn btn--primary reveal">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Before/After slider script -->
+  <script>
+    const slider = document.getElementById('ba-slider');
+    const handle = document.getElementById('ba-handle');
+    if (slider && handle) {
+      let dragging = false;
+      const move = (x: number) => {
+        const rect = slider.getBoundingClientRect();
+        let pct = ((x - rect.left) / rect.width) * 100;
+        pct = Math.max(5, Math.min(95, pct));
+        handle.style.left = pct + '%';
+        const after = slider.querySelector('.ba-after') as HTMLElement;
+        if (after) after.style.clipPath = `inset(0 0 0 ${pct}%)`;
+      };
+      slider.addEventListener('mousedown', (e) => { dragging = true; move(e.clientX); });
+      window.addEventListener('mousemove', (e) => { if (dragging) move(e.clientX); });
+      window.addEventListener('mouseup', () => { dragging = false; });
+      slider.addEventListener('touchstart', (e) => { dragging = true; move(e.touches[0].clientX); }, { passive: false });
+      slider.addEventListener('touchmove', (e) => { if (dragging) { e.preventDefault(); move(e.touches[0].clientX); } }, { passive: false });
+      slider.addEventListener('touchend', () => { dragging = false; });
+    }
+  </script>
+</Base>
