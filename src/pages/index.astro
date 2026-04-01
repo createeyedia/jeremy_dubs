@@ -2,18 +2,18 @@
 import Base from '../layouts/Base.astro';
 
 const portfolioItems = [
-  { title: 'Cascade Pest Control', category: 'Commercial & Brand', img: '/img/cascade-pest-case.jpg' },
-  { title: 'Silver Cloud Hotels', category: 'Commercial & Brand', img: 'https://vumbnail.com/316959450.jpg' },
-  { title: 'Bellevue Towers', category: 'Real Estate & Property', img: 'https://vumbnail.com/287757023.jpg' },
-  { title: 'SAMM Apartments — Sammamish', category: 'Real Estate & Property', img: 'https://vumbnail.com/242191741.jpg' },
-  { title: 'Medina Real Estate Aerial', category: 'Drone & Aerial', img: 'https://vumbnail.com/851990318.jpg' },
-  { title: 'Brewe Layman Law', category: 'Commercial & Brand', img: 'https://vumbnail.com/95992532.jpg' },
-  { title: 'Likewise — Social Ad', category: 'Social Content', img: 'https://vumbnail.com/285677156.jpg' },
-  { title: 'Riviera Rendezvous — Roche Harbor', category: 'Event & Brand', img: 'https://vumbnail.com/275434535.jpg' },
-  { title: 'NW Montessori — Anniversary', category: 'Brand & Cinematic', img: '/img/montessori-still-1.jpg' },
-  { title: 'Kind Snacks — Capitol Hill Block Party', category: 'Event & Brand', img: 'https://vumbnail.com/104476318.jpg' },
-  { title: 'Cascade Pest — Seattle', category: 'Seasonal Campaign', img: '/img/cascade-pest-still-2.jpg' },
-  { title: '686 — Lights Out', category: 'Brand & Cinematic', img: 'https://vumbnail.com/75112064.jpg' },
+  { title: 'Cascade Pest Control', category: 'Commercial & Brand', img: '/img/cascade-pest-case.jpg', vimeo: '278099968' },
+  { title: 'Silver Cloud Hotels', category: 'Commercial & Brand', img: 'https://vumbnail.com/316959450.jpg', vimeo: '316959450' },
+  { title: 'Bellevue Towers', category: 'Real Estate & Property', img: 'https://vumbnail.com/287757023.jpg', vimeo: '287757023' },
+  { title: 'SAMM Apartments — Sammamish', category: 'Real Estate & Property', img: 'https://vumbnail.com/242191741.jpg', vimeo: '242191741' },
+  { title: 'Medina Real Estate Aerial', category: 'Drone & Aerial', img: 'https://vumbnail.com/851990318.jpg', vimeo: '851990318' },
+  { title: 'Brewe Layman Law', category: 'Commercial & Brand', img: 'https://vumbnail.com/95992532.jpg', vimeo: '95992532' },
+  { title: 'Likewise — Social Ad', category: 'Social Content', img: 'https://vumbnail.com/285677156.jpg', vimeo: '285677156' },
+  { title: 'Riviera Rendezvous — Roche Harbor', category: 'Event & Brand', img: 'https://vumbnail.com/275434535.jpg', vimeo: '275434535' },
+  { title: 'NW Montessori — Anniversary', category: 'Brand & Cinematic', img: '/img/montessori-still-1.jpg', vimeo: '1080296239' },
+  { title: 'Kind Snacks — Capitol Hill Block Party', category: 'Event & Brand', img: 'https://vumbnail.com/104476318.jpg', vimeo: '104476318' },
+  { title: 'Cascade Pest — Seattle', category: 'Seasonal Campaign', img: '/img/cascade-pest-still-2.jpg', vimeo: '1016361535' },
+  { title: '686 — Lights Out', category: 'Brand & Cinematic', img: 'https://vumbnail.com/75112064.jpg', vimeo: '75112064' },
 ];
 
 const expectations = [
@@ -24,28 +24,88 @@ const expectations = [
   { num: '05', title: 'Local + Remote', desc: 'On-location across Western Washington. Website and editing work for clients anywhere in the country.' },
   { num: '06', title: 'FAA Part 107 Licensed', desc: 'Licensed drone operator for aerial coverage of properties, events, and commercial shoots across the Pacific Northwest.' },
 ];
+
+const tickerItems = ['Commercial Video', 'Brand Films', 'Social Reels', 'Website Upgrades', 'Drone Coverage', 'Real Estate Tours', 'Remote Editing', 'Event Coverage', 'Local SEO', 'Content Strategy'];
 ---
 
 <Base title="Jeremy Dubs — Video Production & Website Upgrades | Bellingham, WA">
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <span class="label">Bellingham, WA — Available locally & remotely</span>
-      <h1>Video Production & Website Upgrades for <em>Local Businesses</em></h1>
-      <p class="subtitle">I help businesses look more professional, generate more leads, and show up better online — through polished video content and targeted website improvements.</p>
-      <div class="hero-actions">
-        <a href="/contact" class="btn btn--primary">Request a Quote</a>
-        <a href="/work" class="btn btn--outline">View Work</a>
+  <!-- ===================== EPIC HERO ===================== -->
+  <section class="hero-epic" id="hero">
+    <div class="hero-grain"></div>
+    <div class="hero-glow" id="heroGlow"></div>
+    <div class="hero-line hero-line--1"></div>
+    <div class="hero-line hero-line--2"></div>
+    <div class="hero-dot hero-dot--1"></div>
+    <div class="hero-dot hero-dot--2"></div>
+    <div class="hero-dot hero-dot--3"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge anim-up" style="--delay: 0s;">
+          <span class="hero-badge__dot"></span>
+          Bellingham, WA — Available locally & remotely
+        </div>
+
+        <h1 class="hero-title">
+          <span class="hero-title__line anim-up" style="--delay: 0.1s;">Video Production &</span>
+          <span class="hero-title__line anim-up" style="--delay: 0.2s;">Website Upgrades</span>
+          <span class="hero-title__line hero-title__line--accent anim-up" style="--delay: 0.3s;">for <em>Local Businesses</em></span>
+        </h1>
+
+        <p class="hero-sub anim-up" style="--delay: 0.45s;">I help businesses look more professional, generate more leads, and show up better online — through polished video content and targeted website improvements.</p>
+
+        <div class="hero-actions anim-up" style="--delay: 0.55s;">
+          <a href="/contact" class="btn btn--primary btn--lg">
+            Request a Quote
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="/work" class="btn btn--outline btn--lg">View Work</a>
+        </div>
+
+        <div class="hero-proof anim-up" style="--delay: 0.65s;">
+          <div class="hero-proof__logos">
+            <span>All Star Lake Spa</span>
+            <span class="hero-proof__sep">·</span>
+            <span>Cascade Pest Control</span>
+            <span class="hero-proof__sep">·</span>
+            <span>Engel & Völkers</span>
+          </div>
+        </div>
       </div>
-      <div class="hero-clients">
-        <span class="label">Working with</span><br />
-        <span>All Star Lake Spa · Cascade Pest Control · Businesses across Western Washington</span>
+
+      <div class="hero-showcase anim-up" style="--delay: 0.3s;">
+        <div class="hero-card hero-card--1">
+          <img src="https://vumbnail.com/316959450.jpg" alt="Silver Cloud Hotels" loading="eager" />
+          <div class="hero-card__label">Silver Cloud Hotels</div>
+        </div>
+        <div class="hero-card hero-card--2">
+          <img src="/img/cascade-pest-case.jpg" alt="Cascade Pest Control" loading="eager" />
+          <div class="hero-card__label">Cascade Pest Control</div>
+        </div>
+        <div class="hero-card hero-card--3">
+          <img src="https://vumbnail.com/287757023.jpg" alt="Bellevue Towers" loading="eager" />
+          <div class="hero-card__label">Bellevue Towers</div>
+        </div>
       </div>
+    </div>
+
+    <div class="hero-scroll anim-up" style="--delay: 0.8s;">
+      <div class="hero-scroll__line"></div>
+      <span>Scroll</span>
     </div>
   </section>
 
-  <!-- Services -->
+  <!-- ===================== TICKER ===================== -->
+  <div class="ticker">
+    <div class="ticker__track">
+      {[...tickerItems, ...tickerItems].map((item) => (
+        <span class="ticker__item">{item}<span class="ticker__dot">&#10022;</span></span>
+      ))}
+    </div>
+  </div>
+
+  <!-- ===================== SERVICES ===================== -->
   <section id="services">
     <div class="container">
       <div class="section-header reveal">
@@ -84,7 +144,7 @@ const expectations = [
     </div>
   </section>
 
-  <!-- Client Work -->
+  <!-- ===================== CLIENT WORK ===================== -->
   <section id="work" style="background: var(--bg-elevated);">
     <div class="container">
       <div class="section-header reveal">
@@ -92,7 +152,6 @@ const expectations = [
         <h2>Client <em>Transformations</em></h2>
       </div>
 
-      <!-- Before/After Slider — All Star -->
       <div class="reveal" style="max-width: 800px; margin: 0 auto 3rem;">
         <div class="ba-slider" id="ba-slider">
           <img src="/img/allstar-before.jpg" alt="All Star Lake Spa — old website" class="ba-before" />
@@ -114,7 +173,6 @@ const expectations = [
         </div>
       </div>
 
-      <!-- Cascade Pest -->
       <div class="reveal" style="max-width: 800px; margin: 0 auto;">
         <img src="/img/cascade-pest-case.jpg" alt="Cascade Pest Control video production" style="border-radius: var(--radius); margin-bottom: 1.5rem;" />
         <span class="label">Ongoing Video Production — Western WA</span>
@@ -131,7 +189,7 @@ const expectations = [
     </div>
   </section>
 
-  <!-- Portfolio -->
+  <!-- ===================== PORTFOLIO ===================== -->
   <section id="portfolio">
     <div class="container">
       <div class="section-header reveal">
@@ -155,7 +213,7 @@ const expectations = [
     </div>
   </section>
 
-  <!-- What to Expect -->
+  <!-- ===================== WHAT TO EXPECT ===================== -->
   <section style="background: var(--bg-elevated);">
     <div class="container">
       <div class="section-header reveal">
@@ -174,7 +232,7 @@ const expectations = [
     </div>
   </section>
 
-  <!-- Testimonial -->
+  <!-- ===================== TESTIMONIAL ===================== -->
   <section>
     <div class="container container--narrow">
       <div class="testimonial reveal">
@@ -184,7 +242,7 @@ const expectations = [
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- ===================== CTA ===================== -->
   <section class="cta-block" style="background: var(--bg-elevated);">
     <div class="container">
       <h2 class="reveal">Ready to Look More Professional and Generate More <em>Leads?</em></h2>
@@ -193,8 +251,132 @@ const expectations = [
     </div>
   </section>
 
-  <!-- Before/After slider script -->
+  <!-- ===================== HERO STYLES ===================== -->
+  <style>
+    .hero-epic {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 7rem 0 3rem;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 40%, rgba(200, 255, 0, 0.04) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 20% 80%, rgba(200, 255, 0, 0.03) 0%, transparent 50%),
+        linear-gradient(160deg, #0a0a0a 0%, #0d0d0d 40%, #080808 100%);
+    }
+    .hero-grain {
+      position: absolute; inset: 0; opacity: 0.35; pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E");
+      background-size: 200px;
+    }
+    .hero-glow {
+      position: absolute; width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(200, 255, 0, 0.06) 0%, transparent 70%);
+      pointer-events: none; transform: translate(-50%, -50%);
+      transition: left 0.3s ease, top 0.3s ease; left: 50%; top: 50%; z-index: 0;
+    }
+    .hero-line { position: absolute; background: var(--accent); opacity: 0.08; z-index: 0; }
+    .hero-line--1 { width: 1px; height: 40vh; top: 10%; left: 8%; animation: lineGrow 1.5s ease 0.5s both; }
+    .hero-line--2 { width: 20vw; height: 1px; bottom: 18%; right: 5%; animation: lineGrow 1.5s ease 0.7s both; }
+    @keyframes lineGrow { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 0.08; } }
+    .hero-dot { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); opacity: 0.15; }
+    .hero-dot--1 { top: 20%; right: 15%; animation: dotPulse 3s ease infinite; }
+    .hero-dot--2 { top: 65%; left: 5%; animation: dotPulse 3s ease 1s infinite; }
+    .hero-dot--3 { bottom: 25%; right: 35%; animation: dotPulse 3s ease 2s infinite; }
+    @keyframes dotPulse { 0%, 100% { opacity: 0.15; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.8); } }
+
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.4rem 1rem 0.4rem 0.6rem;
+      background: rgba(200, 255, 0, 0.06); border: 1px solid rgba(200, 255, 0, 0.12);
+      border-radius: 100px; font-size: 0.75rem; font-weight: 500;
+      color: var(--accent); letter-spacing: 0.04em; text-transform: uppercase;
+      margin-bottom: 1.5rem; backdrop-filter: blur(4px);
+    }
+    .hero-badge__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: dotPulse 2s ease infinite; }
+
+    .hero-title { font-size: clamp(2.8rem, 5.5vw, 4.5rem); line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+    .hero-title__line { display: block; }
+    .hero-title__line--accent {
+      background: linear-gradient(135deg, var(--accent) 0%, #e0ff60 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .hero-title__line--accent em { -webkit-text-fill-color: transparent; }
+
+    .hero-sub { font-size: 1.1rem; color: var(--text-muted); max-width: 500px; margin-bottom: 2rem; line-height: 1.7; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .btn--lg { padding: 1rem 2rem; font-size: 0.95rem; }
+    .btn--primary svg { transition: transform var(--transition); }
+    .btn--primary:hover svg { transform: translateX(3px); }
+
+    .hero-proof { padding-top: 1.5rem; border-top: 1px solid var(--border); }
+    .hero-proof__logos { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; font-size: 0.85rem; color: var(--text-dim); }
+    .hero-proof__sep { opacity: 0.3; }
+
+    .hero-showcase { position: relative; height: 480px; perspective: 1000px; }
+    .hero-card {
+      position: absolute; border-radius: var(--radius); overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s ease; cursor: pointer;
+    }
+    .hero-card:hover { z-index: 10; box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(200, 255, 0, 0.15); }
+    .hero-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-card__label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 2rem 1rem 0.75rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+      font-size: 0.8rem; font-weight: 500; color: var(--white);
+    }
+    .hero-card--1 { width: 300px; height: 200px; top: 0; right: 0; transform: rotate(3deg) translateZ(20px); animation: cf1 6s ease-in-out infinite; }
+    .hero-card--1:hover { transform: rotate(0deg) translateZ(40px) scale(1.05); }
+    .hero-card--2 { width: 280px; height: 190px; top: 160px; right: 180px; transform: rotate(-2deg) translateZ(10px); animation: cf2 7s ease-in-out 0.5s infinite; z-index: 2; }
+    .hero-card--2:hover { transform: rotate(0deg) translateZ(40px) scale(1.05); }
+    .hero-card--3 { width: 260px; height: 170px; top: 300px; right: 40px; transform: rotate(1.5deg) translateZ(5px); animation: cf3 8s ease-in-out 1s infinite; }
+    .hero-card--3:hover { transform: rotate(0deg) translateZ(40px) scale(1.05); }
+    @keyframes cf1 { 0%, 100% { transform: rotate(3deg) translateY(0) translateZ(20px); } 50% { transform: rotate(3deg) translateY(-12px) translateZ(20px); } }
+    @keyframes cf2 { 0%, 100% { transform: rotate(-2deg) translateY(0) translateZ(10px); } 50% { transform: rotate(-2deg) translateY(-8px) translateZ(10px); } }
+    @keyframes cf3 { 0%, 100% { transform: rotate(1.5deg) translateY(0) translateZ(5px); } 50% { transform: rotate(1.5deg) translateY(-10px) translateZ(5px); } }
+
+    .hero-scroll { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; z-index: 1; }
+    .hero-scroll__line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--accent), transparent); animation: scrollPulse 2s ease infinite; }
+    .hero-scroll span { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-dim); }
+    @keyframes scrollPulse { 0%, 100% { opacity: 0.3; transform: scaleY(1); } 50% { opacity: 0.8; transform: scaleY(1.2); } }
+
+    .anim-up { opacity: 0; transform: translateY(30px); animation: animUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: var(--delay, 0s); }
+    @keyframes animUp { to { opacity: 1; transform: translateY(0); } }
+
+    .ticker { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 0.9rem 0; overflow: hidden; background: var(--bg); }
+    .ticker__track { display: flex; gap: 2rem; white-space: nowrap; animation: tickerScroll 30s linear infinite; width: max-content; }
+    .ticker__item { font-family: var(--font-display); font-size: 1rem; color: var(--text-muted); display: flex; align-items: center; gap: 2rem; }
+    .ticker__dot { color: var(--accent); font-size: 0.6rem; opacity: 0.5; }
+    @keyframes tickerScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-showcase { display: none; }
+      .hero-title { font-size: clamp(2.2rem, 7vw, 3.5rem); }
+    }
+    @media (max-width: 768px) {
+      .hero-epic { min-height: auto; padding: 6rem 0 4rem; }
+      .hero-line, .hero-dot { display: none; }
+    }
+  </style>
+
   <script>
+    const glow = document.getElementById('heroGlow');
+    const hero = document.querySelector('.hero-epic');
+    if (glow && hero) {
+      hero.addEventListener('mousemove', (e) => {
+        const rect = hero.getBoundingClientRect();
+        glow.style.left = (e.clientX - rect.left) + 'px';
+        glow.style.top = (e.clientY - rect.top) + 'px';
+      });
+    }
+
     const slider = document.getElementById('ba-slider');
     const handle = document.getElementById('ba-handle');
     if (slider && handle) {
