@@ -1,36 +1,42 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const portfolioItems = [
-  { title: 'Cascade Pest Control', category: 'Commercial & Brand', img: '/img/cascade-pest-case.jpg', vimeo: '278099968' },
-  { title: 'Silver Cloud Hotels', category: 'Commercial & Brand', img: 'https://vumbnail.com/316959450.jpg', vimeo: '316959450' },
-  { title: 'Bellevue Towers', category: 'Real Estate & Property', img: 'https://vumbnail.com/287757023.jpg', vimeo: '287757023' },
-  { title: 'SAMM Apartments — Sammamish', category: 'Real Estate & Property', img: 'https://vumbnail.com/242191741.jpg', vimeo: '242191741' },
-  { title: 'Medina Real Estate Aerial', category: 'Drone & Aerial', img: 'https://vumbnail.com/851990318.jpg', vimeo: '851990318' },
-  { title: 'Brewe Layman Law', category: 'Commercial & Brand', img: 'https://vumbnail.com/95992532.jpg', vimeo: '95992532' },
-  { title: 'Likewise — Social Ad', category: 'Social Content', img: 'https://vumbnail.com/285677156.jpg', vimeo: '285677156' },
-  { title: 'Riviera Rendezvous — Roche Harbor', category: 'Event & Brand', img: 'https://vumbnail.com/275434535.jpg', vimeo: '275434535' },
-  { title: 'NW Montessori — Anniversary', category: 'Brand & Cinematic', img: '/img/montessori-still-1.jpg', vimeo: '1080296239' },
-  { title: 'Kind Snacks — Capitol Hill Block Party', category: 'Event & Brand', img: 'https://vumbnail.com/104476318.jpg', vimeo: '104476318' },
-  { title: 'Cascade Pest — Seattle', category: 'Seasonal Campaign', img: '/img/cascade-pest-still-2.jpg', vimeo: '1016361535' },
-  { title: '686 — Lights Out', category: 'Brand & Cinematic', img: 'https://vumbnail.com/75112064.jpg', vimeo: '75112064' },
+const showcaseItems = [
+  { title: 'Paradise Finance', cat: 'Website Design', img: '/img/paradise-finance-thumb.jpg' },
+  { title: 'All Star Lake Spa', cat: 'Website Redesign', img: '/img/allstar-after.jpg' },
+  { title: 'Cascade Pest Control', cat: 'Video + Content', img: '/img/cascade-pest-case.jpg' },
+  { title: 'Medina Real Estate', cat: 'Drone & Aerial', img: 'https://vumbnail.com/851990318.jpg' },
+  { title: 'Silver Cloud Hotels', cat: 'Commercial', img: 'https://vumbnail.com/316959450.jpg' },
 ];
 
-const expectations = [
-  { num: '01', title: 'You Work Directly With Me', desc: 'No project managers or account reps. You talk to the person doing the work, start to finish.' },
-  { num: '02', title: 'Specific, Not Vague', desc: "I tell you exactly what's wrong and exactly what I'd fix — no fluff, no selling you things you don't need." },
-  { num: '03', title: 'Video + Web Under One Roof', desc: "Most web people can't shoot. Most videographers can't improve a website. I do both — so your content and your site actually work together." },
-  { num: '04', title: 'Fast Turnaround', desc: "Website cleanups in 3–5 days. Edits returned quickly. Your business doesn't stop while we work." },
-  { num: '05', title: 'Local + Remote', desc: 'On-location across Western Washington. Website and editing work for clients anywhere in the country.' },
-  { num: '06', title: 'FAA Part 107 Licensed', desc: 'Licensed drone operator for aerial coverage of properties, events, and commercial shoots across the Pacific Northwest.' },
+const capabilities = [
+  'Web Design', 'AI-Powered Development', 'Brand Strategy', 'Content Production', 'Social Ads',
+  'SEO & Performance', 'Video Production', 'Drone Coverage', 'UI/UX', 'Digital Strategy',
 ];
 
-const tickerItems = ['Commercial Video', 'Brand Films', 'Social Reels', 'Website Upgrades', 'Drone Coverage', 'Real Estate Tours', 'Remote Editing', 'Event Coverage', 'Local SEO', 'Content Strategy'];
+const workItems = [
+  { title: 'Paradise Finance', category: 'Website Design', img: '/img/paradise-finance-thumb.jpg', type: 'web' },
+  { title: 'All Star Lake Spa', category: 'Website Redesign', img: '/img/allstar-after.jpg', type: 'web' },
+  { title: 'Cascade Pest Control', category: 'Video Production', img: '/img/cascade-pest-case.jpg', type: 'video' },
+  { title: 'Silver Cloud Hotels', category: 'Commercial', img: 'https://vumbnail.com/316959450.jpg', type: 'video' },
+  { title: 'Bellevue Towers', category: 'Real Estate', img: 'https://vumbnail.com/287757023.jpg', type: 'video' },
+  { title: 'NW Montessori', category: 'Brand Film', img: '/img/montessori-still-1.jpg', type: 'video' },
+  { title: 'Medina Real Estate', category: 'Drone & Aerial', img: 'https://vumbnail.com/851990318.jpg', type: 'video' },
+  { title: 'Likewise', category: 'Social Ad', img: 'https://vumbnail.com/285677156.jpg', type: 'video' },
+  { title: '686 — Lights Out', category: 'Brand & Cinematic', img: 'https://vumbnail.com/75112064.jpg', type: 'video' },
+];
+
+const reasons = [
+  { num: '01', title: 'AI-Accelerated, Not AI-Generated', desc: 'I use AI tools to move faster — not to replace creative thinking. You get the speed of modern tooling with the taste of someone who\'s been doing this for a decade.' },
+  { num: '02', title: 'Design + Content Under One Roof', desc: 'Most designers can\'t shoot. Most videographers can\'t design. I do both — so your site launches with real content, not placeholders.' },
+  { num: '03', title: 'You Work With Me Directly', desc: 'No account managers. No project handoffs. You talk to the person doing the work — which means faster decisions and better outcomes.' },
+  { num: '04', title: 'Fast, Focused Delivery', desc: 'Most sites launch in 2–3 weeks. Redesigns and audits in days. I scope tight and deliver on time — your business doesn\'t stop while we work.' },
+];
 ---
 
-<Base title="Jeremy Dubs — Video Production & Website Upgrades | Bellingham, WA">
+<Base title="Jeremy Dubs — Web Design, Content Production & Digital Strategy | Cascade Creatives">
 
-  <!-- ===================== EPIC HERO ===================== -->
+  <!-- ===================== HERO ===================== -->
   <section class="hero-epic" id="hero">
     <div class="hero-grain"></div>
     <div class="hero-glow" id="heroGlow"></div>
@@ -44,27 +50,29 @@ const tickerItems = ['Commercial Video', 'Brand Films', 'Social Reels', 'Website
       <div class="hero-content">
         <div class="hero-badge anim-up" style="--delay: 0s;">
           <span class="hero-badge__dot"></span>
-          Bellingham, WA — Available locally & remotely
+          AI-Native Creative Studio
         </div>
 
         <h1 class="hero-title">
-          <span class="hero-title__line anim-up" style="--delay: 0.1s;">Video Production &</span>
-          <span class="hero-title__line anim-up" style="--delay: 0.2s;">Website Upgrades</span>
-          <span class="hero-title__line hero-title__line--accent anim-up" style="--delay: 0.3s;">for <em>Local Businesses</em></span>
+          <span class="hero-title__line anim-up" style="--delay: 0.1s;">I design websites,</span>
+          <span class="hero-title__line anim-up" style="--delay: 0.2s;">produce content, and</span>
+          <span class="hero-title__line hero-title__line--accent anim-up" style="--delay: 0.3s;">build <em>digital presence</em></span>
         </h1>
 
-        <p class="hero-sub anim-up" style="--delay: 0.45s;">I help businesses look more professional, generate more leads, and show up better online — through polished video content and targeted website improvements.</p>
+        <p class="hero-sub anim-up" style="--delay: 0.45s;">Modern web design and original content — built with AI tools and a decade of creative production experience. One person, no overhead, better results.</p>
 
         <div class="hero-actions anim-up" style="--delay: 0.55s;">
           <a href="/contact" class="btn btn--primary btn--lg">
-            Request a Quote
+            Start a Project
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href="/work" class="btn btn--outline btn--lg">View Work</a>
+          <a href="/work" class="btn btn--outline btn--lg">See the Work</a>
         </div>
 
         <div class="hero-proof anim-up" style="--delay: 0.65s;">
           <div class="hero-proof__logos">
+            <span>Paradise Finance</span>
+            <span class="hero-proof__sep">·</span>
             <span>All Star Lake Spa</span>
             <span class="hero-proof__sep">·</span>
             <span>Cascade Pest Control</span>
@@ -74,19 +82,35 @@ const tickerItems = ['Commercial Video', 'Brand Films', 'Social Reels', 'Website
         </div>
       </div>
 
+      <!-- Desktop showcase -->
       <div class="hero-showcase anim-up" style="--delay: 0.3s;">
         <div class="hero-card hero-card--1">
-          <img src="https://vumbnail.com/851990318.jpg" alt="Medina Real Estate Aerial" loading="eager" />
-          <div class="hero-card__label"><span style="color:var(--accent);font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;display:block;margin-bottom:2px;">Drone &amp; Aerial</span>Medina Real Estate</div>
+          <img src="/img/paradise-finance-thumb.jpg" alt="Paradise Finance — Website Design" loading="eager" />
+          <div class="hero-card__label"><span style="color:var(--accent);font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;display:block;margin-bottom:2px;">Website Design</span>Paradise Finance</div>
         </div>
         <div class="hero-card hero-card--2">
-          <img src="/img/paradise-finance-thumb.jpg" alt="Paradise Finance — Website Build" loading="eager" />
-          <div class="hero-card__label"><span style="color:var(--accent);font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;display:block;margin-bottom:2px;">Website Build</span>Paradise Finance</div>
+          <img src="/img/allstar-after.jpg" alt="All Star Lake Spa — Redesign" loading="eager" />
+          <div class="hero-card__label"><span style="color:var(--accent);font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;display:block;margin-bottom:2px;">Website Redesign</span>All Star Lake Spa</div>
         </div>
         <div class="hero-card hero-card--3">
-          <img src="/img/cascade-pest-case.jpg" alt="Cascade Pest Control" loading="eager" />
-          <div class="hero-card__label">Cascade Pest Control</div>
+          <img src="/img/cascade-pest-case.jpg" alt="Cascade Pest Control — Content" loading="eager" />
+          <div class="hero-card__label"><span style="color:var(--accent);font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;display:block;margin-bottom:2px;">Video + Content</span>Cascade Pest Control</div>
         </div>
+      </div>
+    </div>
+
+    <!-- Mobile showcase -->
+    <div class="hero-mobile-showcase anim-up" style="--delay: 0.5s;">
+      <div class="hero-mobile-track">
+        {showcaseItems.map((item) => (
+          <div class="hero-mobile-card">
+            <img src={item.img} alt={item.title} loading="eager" />
+            <div class="hero-mobile-card__info">
+              <span class="hero-mobile-card__cat">{item.cat}</span>
+              <span class="hero-mobile-card__title">{item.title}</span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
 
@@ -99,105 +123,102 @@ const tickerItems = ['Commercial Video', 'Brand Films', 'Social Reels', 'Website
   <!-- ===================== TICKER ===================== -->
   <div class="ticker">
     <div class="ticker__track">
-      {[...tickerItems, ...tickerItems].map((item) => (
+      {[...capabilities, ...capabilities].map((item) => (
         <span class="ticker__item">{item}<span class="ticker__dot">&#10022;</span></span>
       ))}
     </div>
   </div>
 
-  <!-- ===================== SERVICES ===================== -->
+  <!-- ===================== WHAT I BUILD ===================== -->
   <section id="services">
     <div class="container">
       <div class="section-header reveal">
-        <span class="label">What I Do</span>
-        <h2>Two services. One trusted creative partner. Both focused on <em>results.</em></h2>
-        <p>Video production, editing, and website upgrades for businesses that want sharper presentation, stronger trust, and better conversions.</p>
+        <span class="label">What I Build</span>
+        <h2>Your website, your content, your <em>digital presence.</em> All of it.</h2>
+        <p>I don't just design websites — I build the entire digital foundation. The site, the content on it, the strategy behind it. One engagement, one creative partner.</p>
       </div>
-      <div class="grid-2">
+      <div class="grid-3" style="gap: 1.25rem;">
         <div class="card reveal">
-          <span class="label">Service 01</span>
-          <h3>Video Production & Editing</h3>
-          <p style="color:var(--text-muted);">Cinematic commercials, social content, branded videos, real estate tours, and remote editing for businesses and marketing teams across the Pacific Northwest.</p>
+          <span class="label">Primary</span>
+          <h3>Web Design & Development</h3>
+          <p style="color:var(--text-muted);">Custom websites built on modern frameworks — fast, responsive, and optimized. New builds, complete redesigns, and strategic overhauls for businesses ready to look the part.</p>
           <div class="tags" style="margin: 1rem 0;">
-            <span class="tag">Commercial video</span>
-            <span class="tag">Remote editing</span>
-            <span class="tag">Social reels</span>
-            <span class="tag">Real estate</span>
-            <span class="tag">Drone (FAA Part 107)</span>
+            <span class="tag">Custom design</span>
+            <span class="tag">Astro / Static</span>
+            <span class="tag">Webflow</span>
+            <span class="tag">SEO</span>
+            <span class="tag">Performance</span>
           </div>
-          <a href="/services" class="btn btn--ghost">See production services</a>
+          <a href="/services" class="btn btn--ghost">Learn more</a>
         </div>
         <div class="card reveal">
-          <span class="label">Service 02</span>
-          <h3>Website Upgrades for Local Businesses</h3>
-          <p style="color:var(--text-muted);">I find exactly what's holding your website back and fix those specific things — without a full rebuild. Most local business sites need targeted improvements, not a $5,000 do-over.</p>
+          <span class="label">Integrated</span>
+          <h3>Content Production</h3>
+          <p style="color:var(--text-muted);">Original photo, video, and drone content — produced specifically for your site and marketing. No stock photos. No placeholders. Real content that builds trust.</p>
           <div class="tags" style="margin: 1rem 0;">
-            <span class="tag">Homepage rewrite</span>
-            <span class="tag">CTA improvements</span>
-            <span class="tag">Navigation fixes</span>
-            <span class="tag">Trust signals</span>
-            <span class="tag">Local SEO</span>
+            <span class="tag">Video</span>
+            <span class="tag">Photography</span>
+            <span class="tag">Drone (FAA 107)</span>
+            <span class="tag">Social ads</span>
+            <span class="tag">Reels</span>
           </div>
-          <a href="/website-upgrades" class="btn btn--ghost">See website packages</a>
+          <a href="/services#content" class="btn btn--ghost">Learn more</a>
+        </div>
+        <div class="card reveal">
+          <span class="label">Strategic</span>
+          <h3>AI & Digital Strategy</h3>
+          <p style="color:var(--text-muted);">I help businesses modernize how they work — using AI tools to accelerate development, improve content workflows, and build smarter digital systems.</p>
+          <div class="tags" style="margin: 1rem 0;">
+            <span class="tag">AI integration</span>
+            <span class="tag">Workflow automation</span>
+            <span class="tag">Content strategy</span>
+            <span class="tag">Digital audit</span>
+          </div>
+          <a href="/services#strategy" class="btn btn--ghost">Learn more</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== CLIENT WORK ===================== -->
-  <section id="work" style="background: var(--bg-elevated);">
+  <!-- ===================== BEFORE/AFTER ===================== -->
+  <section id="transformations" style="background: var(--bg-elevated);">
     <div class="container">
       <div class="section-header reveal">
-        <span class="label">Client Work</span>
-        <h2>Client <em>Transformations</em></h2>
+        <span class="label">Results</span>
+        <h2>Real projects. Measurable <em>transformations.</em></h2>
       </div>
 
       <div class="reveal" style="max-width: 800px; margin: 0 auto 3rem;">
         <div class="ba-slider" id="ba-slider">
-          <img src="/img/allstar-before.jpg" alt="All Star Lake Spa — old website" class="ba-before" />
-          <img src="/img/allstar-after.jpg" alt="All Star Lake Spa — redesigned website" class="ba-after" />
+          <img src="/img/allstar-before.jpg" alt="All Star Lake Spa — before" class="ba-before" />
+          <img src="/img/allstar-after.jpg" alt="All Star Lake Spa — after" class="ba-after" />
           <div class="ba-handle" id="ba-handle"></div>
         </div>
         <div style="margin-top: 1.5rem;">
-          <span class="label">Website Upgrade — Bellevue, WA</span>
+          <span class="label">Website Redesign</span>
           <h3 style="margin: 0.5rem 0;">All Star Lake Spa</h3>
-          <p style="color:var(--text-muted); font-size: 0.95rem;">Full website overhaul for a lakeside massage and spa. Removed injected spam content, rewrote homepage copy, restructured services, improved CTAs, cleaned navigation, and updated mobile layout.</p>
+          <p style="color:var(--text-muted); font-size: 0.95rem;">Complete website overhaul — removed spam content, rewrote copy, restructured services, fixed mobile experience, and redesigned to match the actual quality of the business.</p>
           <div class="tags" style="margin: 1rem 0;">
-            <span class="tag tag--accent">Homepage Rewrite</span>
-            <span class="tag tag--accent">Spam Removal</span>
-            <span class="tag tag--accent">Services Restructure</span>
+            <span class="tag tag--accent">Redesign</span>
+            <span class="tag tag--accent">Copy</span>
             <span class="tag tag--accent">Mobile</span>
-            <span class="tag tag--accent">CTAs</span>
+            <span class="tag tag--accent">SEO</span>
           </div>
           <a href="/case-studies#allstar" class="btn btn--ghost">View case study</a>
         </div>
       </div>
-
-      <div class="reveal" style="max-width: 800px; margin: 0 auto;">
-        <img src="/img/cascade-pest-case.jpg" alt="Cascade Pest Control video production" style="border-radius: var(--radius); margin-bottom: 1.5rem;" />
-        <span class="label">Ongoing Video Production — Western WA</span>
-        <h3 style="margin: 0.5rem 0;">Cascade Pest Control</h3>
-        <p style="color:var(--text-muted); font-size: 0.95rem;">Ongoing video content partnership producing social media reels, seasonal campaign videos, commercials, and YouTube content — keeping a regional pest control brand visible and consistent across platforms.</p>
-        <div class="tags" style="margin: 1rem 0;">
-          <span class="tag tag--accent">Social Reels</span>
-          <span class="tag tag--accent">Commercials</span>
-          <span class="tag tag--accent">Seasonal Campaigns</span>
-          <span class="tag tag--accent">YouTube</span>
-        </div>
-        <a href="/case-studies#cascadepest" class="btn btn--ghost">View case study</a>
-      </div>
     </div>
   </section>
 
-  <!-- ===================== PORTFOLIO ===================== -->
-  <section id="portfolio">
+  <!-- ===================== WORK GRID ===================== -->
+  <section id="work">
     <div class="container">
       <div class="section-header reveal">
-        <span class="label">Video Portfolio</span>
-        <h2>Selected Production <em>Work</em></h2>
+        <span class="label">Selected Work</span>
+        <h2>Websites, content, and <em>creative production.</em></h2>
       </div>
       <div class="portfolio-grid">
-        {portfolioItems.map((item) => (
+        {workItems.map((item) => (
           <div class="portfolio-item reveal">
             <img src={item.img} alt={item.title} loading="lazy" />
             <div class="portfolio-item__overlay">
@@ -213,15 +234,15 @@ const tickerItems = ['Commercial Video', 'Brand Films', 'Social Reels', 'Website
     </div>
   </section>
 
-  <!-- ===================== WHAT TO EXPECT ===================== -->
+  <!-- ===================== WHY ME ===================== -->
   <section style="background: var(--bg-elevated);">
     <div class="container">
       <div class="section-header reveal">
         <span class="label">Why Work With Me</span>
-        <h2>What You Can <em>Expect</em></h2>
+        <h2>Modern tools. Real craft. <em>No bloat.</em></h2>
       </div>
-      <div class="expect-grid">
-        {expectations.map((item) => (
+      <div class="grid-2">
+        {reasons.map((item) => (
           <div class="expect-card reveal">
             <span class="number">{item.num}</span>
             <h3>{item.title}</h3>
@@ -245,38 +266,19 @@ const tickerItems = ['Commercial Video', 'Brand Films', 'Social Reels', 'Website
   <!-- ===================== CTA ===================== -->
   <section class="cta-block" style="background: var(--bg-elevated);">
     <div class="container">
-      <h2 class="reveal">Ready to Look More Professional and Generate More <em>Leads?</em></h2>
-      <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;" class="reveal">Tell me what you're working on — video, website, or both. I'll tell you exactly what I'd do and what it would cost.</p>
-      <a href="/contact" class="btn btn--primary reveal">Get in Touch</a>
+      <h2 class="reveal">Ready to build something <em>better?</em></h2>
+      <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;" class="reveal">Tell me what you're working on. I'll tell you exactly what I'd do, how long it takes, and what it costs.</p>
+      <a href="/contact" class="btn btn--primary reveal">Start a Project</a>
     </div>
   </section>
 
-  <!-- ===================== HERO STYLES ===================== -->
+  <!-- ===================== STYLES ===================== -->
   <style>
-    .hero-epic {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 7rem 0 3rem;
-      overflow: hidden;
-      background:
-        radial-gradient(ellipse 80% 60% at 70% 40%, rgba(200, 255, 0, 0.04) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 50% at 20% 80%, rgba(200, 255, 0, 0.03) 0%, transparent 50%),
-        linear-gradient(160deg, #0a0a0a 0%, #0d0d0d 40%, #080808 100%);
-    }
-    .hero-grain {
-      position: absolute; inset: 0; opacity: 0.35; pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E");
-      background-size: 200px;
-    }
-    .hero-glow {
-      position: absolute; width: 600px; height: 600px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(200, 255, 0, 0.06) 0%, transparent 70%);
-      pointer-events: none; transform: translate(-50%, -50%);
-      transition: left 0.3s ease, top 0.3s ease; left: 50%; top: 50%; z-index: 0;
-    }
+    .hero-epic { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 7rem 0 3rem; overflow: hidden;
+      background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(200,255,0,0.04) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 20% 80%, rgba(200,255,0,0.03) 0%, transparent 50%), linear-gradient(160deg, #0a0a0a 0%, #0d0d0d 40%, #080808 100%); }
+    .hero-grain { position: absolute; inset: 0; opacity: 0.35; pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E"); background-size: 200px; }
+    .hero-glow { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(200,255,0,0.06) 0%, transparent 70%); pointer-events: none; transform: translate(-50%,-50%); transition: left 0.3s ease, top 0.3s ease; left: 50%; top: 50%; z-index: 0; }
     .hero-line { position: absolute; background: var(--accent); opacity: 0.08; z-index: 0; }
     .hero-line--1 { width: 1px; height: 40vh; top: 10%; left: 8%; animation: lineGrow 1.5s ease 0.5s both; }
     .hero-line--2 { width: 20vw; height: 1px; bottom: 18%; right: 5%; animation: lineGrow 1.5s ease 0.7s both; }
@@ -285,116 +287,74 @@ const tickerItems = ['Commercial Video', 'Brand Films', 'Social Reels', 'Website
     .hero-dot--1 { top: 20%; right: 15%; animation: dotPulse 3s ease infinite; }
     .hero-dot--2 { top: 65%; left: 5%; animation: dotPulse 3s ease 1s infinite; }
     .hero-dot--3 { bottom: 25%; right: 35%; animation: dotPulse 3s ease 2s infinite; }
-    @keyframes dotPulse { 0%, 100% { opacity: 0.15; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.8); } }
-
+    @keyframes dotPulse { 0%,100% { opacity: 0.15; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.8); } }
     .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
-
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      padding: 0.4rem 1rem 0.4rem 0.6rem;
-      background: rgba(200, 255, 0, 0.06); border: 1px solid rgba(200, 255, 0, 0.12);
-      border-radius: 100px; font-size: 0.75rem; font-weight: 500;
-      color: var(--accent); letter-spacing: 0.04em; text-transform: uppercase;
-      margin-bottom: 1.5rem; backdrop-filter: blur(4px);
-    }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 1rem 0.4rem 0.6rem; background: rgba(200,255,0,0.06); border: 1px solid rgba(200,255,0,0.12); border-radius: 100px; font-size: 0.75rem; font-weight: 500; color: var(--accent); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 1.5rem; backdrop-filter: blur(4px); }
     .hero-badge__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: dotPulse 2s ease infinite; }
-
     .hero-title { font-size: clamp(2.8rem, 5.5vw, 4.5rem); line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
     .hero-title__line { display: block; }
-    .hero-title__line--accent {
-      background: linear-gradient(135deg, var(--accent) 0%, #e0ff60 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
+    .hero-title__line--accent { background: linear-gradient(135deg, var(--accent) 0%, #e0ff60 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .hero-title__line--accent em { -webkit-text-fill-color: transparent; }
-
     .hero-sub { font-size: 1.1rem; color: var(--text-muted); max-width: 500px; margin-bottom: 2rem; line-height: 1.7; }
     .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
     .btn--lg { padding: 1rem 2rem; font-size: 0.95rem; }
     .btn--primary svg { transition: transform var(--transition); }
     .btn--primary:hover svg { transform: translateX(3px); }
-
     .hero-proof { padding-top: 1.5rem; border-top: 1px solid var(--border); }
     .hero-proof__logos { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; font-size: 0.85rem; color: var(--text-dim); }
     .hero-proof__sep { opacity: 0.3; }
-
     .hero-showcase { position: relative; height: 480px; perspective: 1000px; }
-    .hero-card {
-      position: absolute; border-radius: var(--radius); overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
-      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s ease; cursor: pointer;
-    }
-    .hero-card:hover { z-index: 10; box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(200, 255, 0, 0.15); }
+    .hero-card { position: absolute; border-radius: var(--radius); overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05); transition: transform 0.5s cubic-bezier(0.4,0,0.2,1), box-shadow 0.5s ease; cursor: pointer; }
+    .hero-card:hover { z-index: 10; box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(200,255,0,0.15); }
     .hero-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .hero-card__label {
-      position: absolute; bottom: 0; left: 0; right: 0;
-      padding: 2rem 1rem 0.75rem;
-      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
-      font-size: 0.8rem; font-weight: 500; color: var(--white);
-    }
+    .hero-card__label { position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem 1rem 0.75rem; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%); font-size: 0.8rem; font-weight: 500; color: var(--white); }
     .hero-card--1 { width: 300px; height: 200px; top: 0; right: 0; transform: rotate(3deg) translateZ(20px); animation: cf1 6s ease-in-out infinite; }
     .hero-card--1:hover { transform: rotate(0deg) translateZ(40px) scale(1.05); }
     .hero-card--2 { width: 280px; height: 190px; top: 160px; right: 180px; transform: rotate(-2deg) translateZ(10px); animation: cf2 7s ease-in-out 0.5s infinite; z-index: 2; }
     .hero-card--2:hover { transform: rotate(0deg) translateZ(40px) scale(1.05); }
     .hero-card--3 { width: 260px; height: 170px; top: 300px; right: 40px; transform: rotate(1.5deg) translateZ(5px); animation: cf3 8s ease-in-out 1s infinite; }
     .hero-card--3:hover { transform: rotate(0deg) translateZ(40px) scale(1.05); }
-    @keyframes cf1 { 0%, 100% { transform: rotate(3deg) translateY(0) translateZ(20px); } 50% { transform: rotate(3deg) translateY(-12px) translateZ(20px); } }
-    @keyframes cf2 { 0%, 100% { transform: rotate(-2deg) translateY(0) translateZ(10px); } 50% { transform: rotate(-2deg) translateY(-8px) translateZ(10px); } }
-    @keyframes cf3 { 0%, 100% { transform: rotate(1.5deg) translateY(0) translateZ(5px); } 50% { transform: rotate(1.5deg) translateY(-10px) translateZ(5px); } }
-
+    @keyframes cf1 { 0%,100% { transform: rotate(3deg) translateY(0) translateZ(20px); } 50% { transform: rotate(3deg) translateY(-12px) translateZ(20px); } }
+    @keyframes cf2 { 0%,100% { transform: rotate(-2deg) translateY(0) translateZ(10px); } 50% { transform: rotate(-2deg) translateY(-8px) translateZ(10px); } }
+    @keyframes cf3 { 0%,100% { transform: rotate(1.5deg) translateY(0) translateZ(5px); } 50% { transform: rotate(1.5deg) translateY(-10px) translateZ(5px); } }
     .hero-scroll { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; z-index: 1; }
     .hero-scroll__line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--accent), transparent); animation: scrollPulse 2s ease infinite; }
     .hero-scroll span { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-dim); }
-    @keyframes scrollPulse { 0%, 100% { opacity: 0.3; transform: scaleY(1); } 50% { opacity: 0.8; transform: scaleY(1.2); } }
-
-    .anim-up { opacity: 0; transform: translateY(30px); animation: animUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: var(--delay, 0s); }
+    @keyframes scrollPulse { 0%,100% { opacity: 0.3; transform: scaleY(1); } 50% { opacity: 0.8; transform: scaleY(1.2); } }
+    .anim-up { opacity: 0; transform: translateY(30px); animation: animUp 0.8s cubic-bezier(0.16,1,0.3,1) forwards; animation-delay: var(--delay, 0s); }
     @keyframes animUp { to { opacity: 1; transform: translateY(0); } }
-
     .ticker { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 0.9rem 0; overflow: hidden; background: var(--bg); }
     .ticker__track { display: flex; gap: 2rem; white-space: nowrap; animation: tickerScroll 30s linear infinite; width: max-content; }
     .ticker__item { font-family: var(--font-display); font-size: 1rem; color: var(--text-muted); display: flex; align-items: center; gap: 2rem; }
     .ticker__dot { color: var(--accent); font-size: 0.6rem; opacity: 0.5; }
     @keyframes tickerScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-    @media (max-width: 1024px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-showcase { display: none; }
-      .hero-title { font-size: clamp(2.2rem, 7vw, 3.5rem); }
-    }
-    @media (max-width: 768px) {
-      .hero-epic { min-height: auto; padding: 6rem 0 4rem; }
-      .hero-line, .hero-dot { display: none; }
-    }
+    .hero-mobile-showcase { display: none; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 0 1.5rem; margin: 0 -1.5rem; }
+    .hero-mobile-showcase::-webkit-scrollbar { display: none; }
+    .hero-mobile-track { display: flex; gap: 0.75rem; padding: 0 1.5rem; width: max-content; }
+    .hero-mobile-card { flex-shrink: 0; width: 200px; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); background: var(--bg-card); }
+    .hero-mobile-card img { width: 100%; height: 120px; object-fit: cover; display: block; }
+    .hero-mobile-card__info { padding: 0.6rem 0.75rem; }
+    .hero-mobile-card__cat { display: block; font-size: 0.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.15rem; }
+    .hero-mobile-card__title { display: block; font-family: var(--font-display); font-size: 0.85rem; color: var(--white); }
+    @media (max-width: 1024px) { .hero-grid { grid-template-columns: 1fr; } .hero-showcase { display: none; } .hero-mobile-showcase { display: block; margin-top: 1.5rem; } .hero-title { font-size: clamp(2.2rem, 7vw, 3.5rem); } }
+    @media (max-width: 768px) { .hero-epic { min-height: auto; padding: 5.5rem 0 2rem; } .hero-line, .hero-dot { display: none; } .hero-scroll { display: none; } .hero-proof { margin-top: 0.5rem; } .hero-badge { font-size: 0.65rem; } .hero-sub { font-size: 0.95rem; margin-bottom: 1.5rem; } .btn--lg { padding: 0.85rem 1.5rem; font-size: 0.85rem; } }
   </style>
 
   <script>
     const glow = document.getElementById('heroGlow');
     const hero = document.querySelector('.hero-epic');
-    if (glow && hero) {
-      hero.addEventListener('mousemove', (e) => {
-        const rect = hero.getBoundingClientRect();
-        glow.style.left = (e.clientX - rect.left) + 'px';
-        glow.style.top = (e.clientY - rect.top) + 'px';
-      });
-    }
-
+    if (glow && hero) { hero.addEventListener('mousemove', (e) => { const r = hero.getBoundingClientRect(); glow.style.left = (e.clientX - r.left) + 'px'; glow.style.top = (e.clientY - r.top) + 'px'; }); }
     const slider = document.getElementById('ba-slider');
     const handle = document.getElementById('ba-handle');
     if (slider && handle) {
-      let dragging = false;
-      const move = (x: number) => {
-        const rect = slider.getBoundingClientRect();
-        let pct = ((x - rect.left) / rect.width) * 100;
-        pct = Math.max(5, Math.min(95, pct));
-        handle.style.left = pct + '%';
-        const after = slider.querySelector('.ba-after') as HTMLElement;
-        if (after) after.style.clipPath = `inset(0 0 0 ${pct}%)`;
-      };
-      slider.addEventListener('mousedown', (e) => { dragging = true; move(e.clientX); });
-      window.addEventListener('mousemove', (e) => { if (dragging) move(e.clientX); });
-      window.addEventListener('mouseup', () => { dragging = false; });
-      slider.addEventListener('touchstart', (e) => { dragging = true; move(e.touches[0].clientX); }, { passive: false });
-      slider.addEventListener('touchmove', (e) => { if (dragging) { e.preventDefault(); move(e.touches[0].clientX); } }, { passive: false });
-      slider.addEventListener('touchend', () => { dragging = false; });
+      let d = false;
+      const m = (x: number) => { const r = slider.getBoundingClientRect(); let p = ((x - r.left) / r.width) * 100; p = Math.max(5, Math.min(95, p)); handle.style.left = p + '%'; const a = slider.querySelector('.ba-after') as HTMLElement; if (a) a.style.clipPath = `inset(0 0 0 ${p}%)`; };
+      slider.addEventListener('mousedown', (e) => { d = true; m(e.clientX); });
+      window.addEventListener('mousemove', (e) => { if (d) m(e.clientX); });
+      window.addEventListener('mouseup', () => { d = false; });
+      slider.addEventListener('touchstart', (e) => { d = true; m(e.touches[0].clientX); }, { passive: false });
+      slider.addEventListener('touchmove', (e) => { if (d) { e.preventDefault(); m(e.touches[0].clientX); } }, { passive: false });
+      slider.addEventListener('touchend', () => { d = false; });
     }
   </script>
 </Base>

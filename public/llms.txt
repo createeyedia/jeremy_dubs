@@ -1,19 +1,17 @@
 # Jeremy Dubs — Cascade Creatives
 
 ## About
-Jeremy Dubs operates Cascade Creatives, a video production and website upgrade business based in Bellingham, WA. He works directly with local businesses and regional brands — no agency overhead.
+Jeremy Dubs operates Cascade Creatives — an AI-native creative studio specializing in web design, content production, and digital strategy. Based in Bellingham, WA, working with clients everywhere.
 
 ## Services
-- **Video Production & Editing**: Commercial video, social content, real estate tours, brand films, drone (FAA Part 107 licensed), and remote post-production.
-- **Website Upgrades**: Homepage rewrites, CTA improvements, navigation fixes, trust signals, local SEO, and spam cleanup — without full rebuilds.
-
-## Service Area
-- On-location: Western Washington (Whatcom, Skagit, King County, Eastside)
-- Remote editing & website work: Nationwide
+- **Web Design & Development**: Custom websites on Astro, static HTML, and Webflow. New builds, redesigns, and performance optimization.
+- **Content Production**: Video, photography, drone (FAA Part 107). Produced for websites, social media, and paid ads.
+- **AI & Digital Strategy**: AI workflow integration, content automation, digital presence consulting.
 
 ## Key Clients
+- Paradise Finance (website design)
+- All Star Lake Spa (website redesign)
 - Cascade Pest Control (ongoing video production)
-- All Star Lake Spa (website upgrade)
 - NW Montessori School (anniversary film)
 - Marcel Dolak, Engel & Völkers (luxury real estate video)
 

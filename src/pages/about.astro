@@ -2,57 +2,46 @@
 import Base from '../layouts/Base.astro';
 
 const facts = [
-  { title: 'Bellingham, WA', desc: 'Based in Bellingham — available for on-location production across all of Western Washington.' },
-  { title: 'FAA Part 107 Licensed', desc: 'Licensed drone operator for aerial coverage of properties, events, and commercial shoots.' },
-  { title: 'Remote Nationwide', desc: 'Available for remote editing and post-production support for clients anywhere in the country.' },
-  { title: 'Premiere Pro & DaVinci', desc: 'Editing in Premiere Pro and DaVinci Resolve — industry-standard tools for professional post-production.' },
-  { title: 'Website Upgrades', desc: "I also fix the specific things holding local business websites back — homepage rewrites, CTAs, mobile layout, local SEO." },
-  { title: 'Cascade Creatives', desc: 'Operating as Cascade Creatives — serving businesses across the Pacific Northwest since 2013.' },
-];
-
-const serviceLinks = [
-  { num: '01', title: 'Video Production & Editing', desc: 'Commercials, social content, real estate tours, brand films, event coverage, drone, and remote post-production.', href: '/services' },
-  { num: '02', title: 'Website Upgrades for Local Businesses', desc: 'Homepage rewrites, CTA improvements, navigation fixes, trust signals, and local SEO — without a full rebuild.', href: '/website-upgrades' },
-  { num: '03', title: 'Social Media Content', desc: 'Short-form video for Instagram Reels, TikTok, YouTube Shorts — shot on-location or edited from your footage.', href: '/services#social' },
-  { num: '04', title: 'Drone & Cinematic B-Roll', desc: 'FAA Part 107 licensed aerial coverage for properties, events, landscapes, and commercial projects.', href: '/services#drone' },
+  { title: 'AI-Accelerated', desc: 'I use AI tools across every phase — research, design, development, content — to move faster without sacrificing quality.' },
+  { title: '10+ Years in Production', desc: 'A decade of commercial video, brand films, and visual storytelling — now applied to web design and digital presence.' },
+  { title: 'FAA Part 107 Licensed', desc: 'Licensed drone operator for aerial content — real estate, events, commercial projects.' },
+  { title: 'Modern Stack', desc: 'Building on Astro, static HTML, and Webflow — fast, lightweight, and future-proof.' },
+  { title: 'Design + Content', desc: 'I produce original photo and video content as part of the design process — not as an afterthought.' },
+  { title: 'Cascade Creatives', desc: 'Operating as Cascade Creatives since 2013. Based in Bellingham, WA — working with clients everywhere.' },
 ];
 ---
 
-<Base
-  title="About Cascade Creatives — Jeremy Dubs | Video Production & Website Upgrades"
-  description="Cascade Creatives helps businesses look more professional, communicate more clearly, and show up better online. Based in Bellingham, WA."
->
+<Base title="About — Jeremy Dubs | Cascade Creatives" description="I've spent a decade in visual storytelling and production. Now I combine that with modern web development and AI tools to build better digital presence — faster.">
+
   <section class="page-hero">
     <div class="container">
-      <span class="label">About Cascade Creatives</span>
-      <h1>Sharper visuals. Stronger websites. <em>One creative partner.</em></h1>
-      <p><strong>Cascade Creatives</strong> helps businesses look more professional, communicate more clearly, and show up better online. I'm <strong>Jeremy Dubs</strong> — the filmmaker and creative partner behind it all. Based in Bellingham, WA, working with businesses that take how they show up seriously.</p>
+      <span class="label">About</span>
+      <h1>Creative craft meets <em>modern tools.</em></h1>
+      <p>I'm Jeremy Dubs — the designer, developer, and creative producer behind Cascade Creatives. I build websites, produce content, and help businesses show up better online.</p>
     </div>
   </section>
 
-  <!-- Photo + Bio -->
   <section>
     <div class="container" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; align-items: start;">
       <div class="reveal">
-        <img src="/img/jeremy-headshot.jpg" alt="Jeremy Dubs — Cascade Creatives" style="border-radius: var(--radius); width: 100%;" />
+        <img src="/img/jeremy-headshot.jpg" alt="Jeremy Dubs" style="border-radius: var(--radius); width: 100%;" />
       </div>
       <div class="reveal">
-        <span class="label">Why Cascade Creatives Exists</span>
-        <h2 style="margin: 0.5rem 0 1.5rem;">Most businesses don't need more fluff — they need to <em>look the part.</em></h2>
-        <p style="color: var(--text-muted);">I built Cascade Creatives around a simple idea: a lot of businesses have something genuinely good — but the way they present themselves online doesn't reflect that. The video looks like it was shot on a phone. The website was built four years ago and never touched. The first impression doesn't match the actual quality of the business.</p>
-        <p style="color: var(--text-muted);">That's where I come in. I work with local businesses and regional brands to improve how they show up — through <strong>polished video content, stronger website presentation, and practical creative work</strong> that actually moves the needle.</p>
-        <p style="color: var(--text-muted);">My background is in filming, editing, and storytelling. Over time, that grew into helping businesses with more than just video. Clients often didn't just need a better video — they needed <strong>better messaging, cleaner presentation, stronger calls to action</strong>, or a website that finally matched the quality of their actual business.</p>
-        <p style="color: var(--text-muted);">I don't run a bloated agency. When you work with Cascade Creatives, you work directly with me — which means clearer communication, faster decisions, and a more focused process from start to finish.</p>
+        <span class="label">The Short Version</span>
+        <h2 style="margin: 0.5rem 0 1.5rem;">A decade of creative production, <em>now supercharged.</em></h2>
+        <p style="color: var(--text-muted);">I started in video production — shooting commercials, brand films, real estate tours, and event coverage across the Pacific Northwest. Over time, clients needed more than just video. They needed better websites, stronger messaging, and a digital presence that matched the quality of their actual business.</p>
+        <p style="color: var(--text-muted);">So I evolved. I taught myself modern web development, got deep into AI tools, and built a practice that combines <strong>design, content production, and strategic thinking</strong> into one offering. The result: I can design your site, produce the content for it, and deploy the whole thing — faster than a traditional agency, with more creative depth than a freelance developer.</p>
+        <p style="color: var(--text-muted);">I don't run a bloated agency. When you work with me, you work <strong>directly with me</strong> — which means clearer communication, faster decisions, and work that actually reflects your vision.</p>
+        <p style="color: var(--text-muted);">AI is a core part of how I work. I use it to accelerate research, development, content creation, and strategy — not to replace creative judgment, but to remove friction from the process. The output is better work, delivered faster.</p>
       </div>
     </div>
   </section>
 
-  <!-- Quick Facts -->
   <section style="background: var(--bg-elevated);">
     <div class="container">
       <div class="section-header reveal">
-        <span class="label">Quick Facts</span>
-        <h2>What I <em>Bring</em></h2>
+        <span class="label">What I Bring</span>
+        <h2>Tools, experience, and <em>perspective.</em></h2>
       </div>
       <div class="facts-grid">
         {facts.map((f) => (
@@ -65,40 +54,17 @@ const serviceLinks = [
     </div>
   </section>
 
-  <!-- Services -->
-  <section>
+  <section class="cta-block">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="label">What I Work On</span>
-        <h2>Two services, one <em>partner.</em></h2>
-        <p>Most web people can't shoot. Most videographers can't improve a website. I do both — so your content and your site actually work together.</p>
-      </div>
-      <div class="service-links reveal">
-        {serviceLinks.map((s) => (
-          <a href={s.href} class="service-link">
-            <span class="number">{s.num}</span>
-            <h3>{s.title}</h3>
-            <p>{s.desc}</p>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-block" style="background: var(--bg-elevated);">
-    <div class="container">
-      <h2 class="reveal">Let's Work <em>Together</em></h2>
+      <h2 class="reveal">Let's build something <em>together.</em></h2>
       <p style="color: var(--text-muted); margin-bottom: 2rem;" class="reveal">Tell me what you're working on and I'll help you figure out the best next step.</p>
-      <a href="/contact" class="btn btn--primary reveal">Get in Touch</a>
+      <a href="/contact" class="btn btn--primary reveal">Start a Project</a>
     </div>
   </section>
 </Base>
 
 <style>
   @media (max-width: 768px) {
-    .container[style*="grid-template-columns: 1fr 1.5fr"] {
-      grid-template-columns: 1fr !important;
-    }
+    .container[style*="grid-template-columns: 1fr 1.5fr"] { grid-template-columns: 1fr !important; }
   }
 </style>

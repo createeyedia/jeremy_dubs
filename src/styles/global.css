@@ -478,6 +478,26 @@ section {
   height: 100%;
   object-fit: cover;
   transition: transform var(--transition-slow), opacity var(--transition);
+  background: var(--bg-card);
+}
+
+.portfolio-item img[src=""],
+.portfolio-item img:not([src]) {
+  visibility: hidden;
+}
+
+.portfolio-item--placeholder {
+  display: flex;
+  align-items: flex-end;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, var(--bg-card) 0%, #1a1a1a 100%);
+}
+
+.portfolio-item--placeholder .portfolio-item__overlay {
+  opacity: 1;
+  position: relative;
+  background: none;
+  padding: 0;
 }
 
 .portfolio-item:hover img {
