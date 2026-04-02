@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://jeremydubs.com/sitemap-index.xml
+Sitemap: https://cascadecreatives.com/sitemap-index.xml
