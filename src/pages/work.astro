@@ -1,12 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
-
 const projects = [
   { title: 'Paradise Finance', category: 'Web Design', img: '/img/paradise-finance-thumb.jpg' },
   { title: 'All Star Lake Spa', category: 'Web Design', img: '/img/allstar-after.jpg' },
   { title: 'Cascade Pest Control', category: 'Video', img: '/img/cascade-pest-case.jpg' },
   { title: 'Silver Cloud Hotels', category: 'Video', img: 'https://vumbnail.com/316959450.jpg' },
-  { title: 'NW Montessori — Anniversary', category: 'Brand Film', img: '/img/montessori-still-1.jpg' },
+  { title: 'NW Montessori', category: 'Brand Film', img: '/img/montessori-still-1.jpg' },
   { title: 'Bellevue Towers', category: 'Real Estate', img: 'https://vumbnail.com/287757023.jpg' },
   { title: 'SAMM Apartments', category: 'Real Estate', img: 'https://vumbnail.com/242191741.jpg' },
   { title: 'Medina Real Estate', category: 'Drone', img: 'https://vumbnail.com/851990318.jpg' },
@@ -21,69 +20,17 @@ const projects = [
   { title: 'Silver Cloud — Social', category: 'Social', img: 'https://vumbnail.com/293664485.jpg' },
   { title: 'Karate West', category: 'Video', img: 'https://vumbnail.com/242675538.jpg' },
 ];
-
 const categories = ['All', ...new Set(projects.map((p) => p.category))];
 ---
-
-<Base title="Work | Jeremy Dubs — Web Design & Creative Production" description="Web design, video production, and creative content for businesses, brands, and creators.">
-
-  <section class="page-hero">
-    <div class="container">
-      <span class="label">Portfolio</span>
-      <h1>Selected <em>Work</em></h1>
-      <p>Web design, video production, and content projects for businesses and brands.</p>
-    </div>
-  </section>
-
+<Base title="Work | Cascade Creatives — Web Design & Creative Production" description="Web design, video production, and creative content for businesses and brands.">
+  <section class="page-hero"><div class="container"><span class="label">Portfolio</span><h1>Selected <em>Work</em></h1><p>Web design, video production, and content projects for businesses and brands.</p></div></section>
   <section>
     <div class="container">
-      <div class="filters" id="filters">
-        {categories.map((cat) => (
-          <button class:list={['filter-btn', { active: cat === 'All' }]} data-filter={cat}>{cat}</button>
-        ))}
-        <span style="font-size: 0.8rem; color: var(--text-dim); align-self: center; margin-left: 0.5rem;" id="project-count">{projects.length} projects</span>
-      </div>
-      <div class="portfolio-grid" id="portfolio-grid">
-        {projects.map((p) => (
-          <div class="portfolio-item" data-category={p.category}>
-            <img src={p.img} alt={p.title} loading="lazy" />
-            <div class="portfolio-item__overlay">
-              <span class="portfolio-item__category">{p.category}</span>
-              <span class="portfolio-item__title">{p.title}</span>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div style="text-align: center; margin-top: 2.5rem;">
-        <a href="https://vimeo.com/cascadecreatives" target="_blank" rel="noopener" class="btn btn--outline">View video reel on Vimeo</a>
-      </div>
+      <div class="filters" id="filters">{categories.map((cat) => (<button class:list={['filter-btn', { active: cat === 'All' }]} data-filter={cat}>{cat}</button>))}<span style="font-size: 0.8rem; color: var(--text-dim); align-self: center; margin-left: 0.5rem;" id="project-count">{projects.length} projects</span></div>
+      <div class="portfolio-grid" id="portfolio-grid">{projects.map((p) => (<div class="portfolio-item" data-category={p.category}><img src={p.img} alt={p.title} loading="lazy" /><div class="portfolio-item__overlay"><span class="portfolio-item__category">{p.category}</span><span class="portfolio-item__title">{p.title}</span></div></div>))}</div>
+      <div style="text-align: center; margin-top: 2.5rem;"><a href="https://vimeo.com/cascadecreatives" target="_blank" rel="noopener" class="btn btn--outline">View video reel on Vimeo</a></div>
     </div>
   </section>
-
-  <section class="cta-block" style="background: var(--bg-elevated);">
-    <div class="container">
-      <h2 class="reveal">Want to work <em>together?</em></h2>
-      <p style="color: var(--text-muted); margin-bottom: 2rem;" class="reveal">Tell me about your project and let's figure out the right approach.</p>
-      <a href="/contact" class="btn btn--primary reveal">Start a Project</a>
-    </div>
-  </section>
-
-  <script>
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const items = document.querySelectorAll('.portfolio-item');
-    const countEl = document.getElementById('project-count');
-    filterBtns.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach((b) => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.getAttribute('data-filter');
-        let visible = 0;
-        items.forEach((item) => {
-          const el = item as HTMLElement;
-          if (filter === 'All' || item.getAttribute('data-category') === filter) { el.style.display = ''; visible++; } else { el.style.display = 'none'; }
-        });
-        if (countEl) countEl.textContent = `${visible} project${visible !== 1 ? 's' : ''}`;
-      });
-    });
-  </script>
+  <section class="cta-block" style="background: var(--bg-elevated);"><div class="container"><h2 class="reveal">Want to work <em>together?</em></h2><p style="color: var(--text-muted); margin-bottom: 2rem;" class="reveal">Tell us about your project and let's figure out the right approach.</p><a href="/contact" class="btn btn--primary reveal">Start a Project</a></div></section>
+  <script>const filterBtns = document.querySelectorAll('.filter-btn'); const items = document.querySelectorAll('.portfolio-item'); const countEl = document.getElementById('project-count'); filterBtns.forEach((btn) => { btn.addEventListener('click', () => { filterBtns.forEach((b) => b.classList.remove('active')); btn.classList.add('active'); const filter = btn.getAttribute('data-filter'); let visible = 0; items.forEach((item) => { const el = item as HTMLElement; if (filter === 'All' || item.getAttribute('data-category') === filter) { el.style.display = ''; visible++; } else { el.style.display = 'none'; } }); if (countEl) countEl.textContent = `${visible} project${visible !== 1 ? 's' : ''}`; }); });</script>
 </Base>

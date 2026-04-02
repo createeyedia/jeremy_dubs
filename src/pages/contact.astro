@@ -1,17 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-
-<Base title="Start a Project | Jeremy Dubs — Cascade Creatives" description="Tell me what you're working on. I'll tell you exactly what I'd do, how long it takes, and what it costs.">
-
-  <section class="page-hero">
-    <div class="container">
-      <span class="label">Contact</span>
-      <h1>Let's talk about your <em>project.</em></h1>
-      <p>Tell me what you're working on — even if it's just a rough idea. I'll let you know how I can help and what a realistic next step looks like.</p>
-    </div>
-  </section>
-
+<Base title="Start a Project | Cascade Creatives" description="Tell us what you're working on. We'll tell you exactly what we'd do, how long it takes, and what it costs.">
+  <section class="page-hero"><div class="container"><span class="label">Contact</span><h1>Let's talk about your <em>project.</em></h1><p>Tell us what you're working on — even if it's just a rough idea. We'll let you know how we can help and what a realistic next step looks like.</p></div></section>
   <section>
     <div class="container" style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 3rem; align-items: start;">
       <div>
@@ -26,58 +17,25 @@ import Base from '../layouts/Base.astro';
             </div>
           </div>
           <div class="form-grid">
-            <div class="form-group">
-              <label for="name">Your Name<span style="color: var(--accent);">*</span></label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address<span style="color: var(--accent);">*</span></label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="company">Company or Project Name (optional)</label>
-              <input type="text" id="company" name="company" />
-            </div>
-            <div class="form-group">
-              <label for="budget">Budget Range (optional)</label>
-              <select id="budget" name="budget">
-                <option value="">Select a range...</option>
-                <option value="Under $1,000">Under $1,000</option>
-                <option value="$1,000 – $3,000">$1,000 – $3,000</option>
-                <option value="$3,000 – $5,000">$3,000 – $5,000</option>
-                <option value="$5,000 – $10,000">$5,000 – $10,000</option>
-                <option value="$10,000+">$10,000+</option>
-                <option value="Not sure yet">Not sure yet</option>
-              </select>
-            </div>
-            <div class="form-group full">
-              <label for="message">Tell me about your project<span style="color: var(--accent);">*</span></label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <div class="form-group full">
-              <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">Send Message</button>
-            </div>
+            <div class="form-group"><label for="name">Your Name<span style="color: var(--accent);">*</span></label><input type="text" id="name" name="name" required /></div>
+            <div class="form-group"><label for="email">Email Address<span style="color: var(--accent);">*</span></label><input type="email" id="email" name="email" required /></div>
+            <div class="form-group"><label for="company">Company or Project Name (optional)</label><input type="text" id="company" name="company" /></div>
+            <div class="form-group"><label for="budget">Budget Range (optional)</label><select id="budget" name="budget"><option value="">Select a range...</option><option value="Under $1,000">Under $1,000</option><option value="$1,000 – $3,000">$1,000 – $3,000</option><option value="$3,000 – $5,000">$3,000 – $5,000</option><option value="$5,000 – $10,000">$5,000 – $10,000</option><option value="$10,000+">$10,000+</option><option value="Not sure yet">Not sure yet</option></select></div>
+            <div class="form-group full"><label for="message">Tell us about your project<span style="color: var(--accent);">*</span></label><textarea id="message" name="message" rows="5" required></textarea></div>
+            <div class="form-group full"><button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">Send Message</button></div>
           </div>
         </form>
-        <div class="form-success" id="form-success">
-          <h3>Message Sent</h3>
-          <p style="color: var(--text-muted);">Thanks for reaching out. I'll review your project and get back to you within 1 business day.</p>
-        </div>
+        <div class="form-success" id="form-success"><h3>Message Sent</h3><p style="color: var(--text-muted);">Thanks for reaching out. We'll review your project and get back to you within 1 business day.</p></div>
       </div>
-
       <div>
         <h3 style="margin-bottom: 1.5rem;">Details</h3>
         <dl class="contact-details">
-          <dt>Based in</dt>
-          <dd>Bellingham, WA</dd>
-          <dt>Working with</dt>
-          <dd>Clients everywhere — remote-first</dd>
-          <dt>Response Time</dt>
-          <dd>Within 1 business day</dd>
-          <dt>Portfolio</dt>
-          <dd><a href="https://vimeo.com/cascadecreatives" target="_blank" rel="noopener">vimeo.com/cascadecreatives</a></dd>
-          <dt>Instagram</dt>
-          <dd><a href="https://www.instagram.com/cascadecreatives/" target="_blank" rel="noopener">@cascadecreatives</a></dd>
+          <dt>Studio</dt><dd>Cascade Creatives</dd>
+          <dt>Based in</dt><dd>Bellingham, WA</dd>
+          <dt>Working with</dt><dd>Clients everywhere — remote-first</dd>
+          <dt>Response Time</dt><dd>Within 1 business day</dd>
+          <dt>Portfolio</dt><dd><a href="https://vimeo.com/cascadecreatives" target="_blank" rel="noopener">vimeo.com/cascadecreatives</a></dd>
+          <dt>Instagram</dt><dd><a href="https://www.instagram.com/cascadecreatives/" target="_blank" rel="noopener">@cascadecreatives</a></dd>
         </dl>
         <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 0.75rem;">
           <a href="/services" class="btn btn--ghost">View services</a>
@@ -86,22 +44,6 @@ import Base from '../layouts/Base.astro';
       </div>
     </div>
   </section>
-
-  <script>
-    const form = document.getElementById('contact-form') as HTMLFormElement;
-    const success = document.getElementById('form-success');
-    form?.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      try {
-        const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
-        if (res.ok) { form.style.display = 'none'; if (success) success.classList.add('show'); }
-      } catch { form.submit(); }
-    });
-  </script>
+  <script>const form = document.getElementById('contact-form') as HTMLFormElement; const success = document.getElementById('form-success'); form?.addEventListener('submit', async (e) => { e.preventDefault(); try { const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } }); if (res.ok) { form.style.display = 'none'; if (success) success.classList.add('show'); } } catch { form.submit(); } });</script>
 </Base>
-
-<style>
-  @media (max-width: 768px) {
-    .container[style*="grid-template-columns: 1.5fr 1fr"] { grid-template-columns: 1fr !important; }
-  }
-</style>
+<style>@media (max-width: 768px) { .container[style*="grid-template-columns: 1.5fr 1fr"] { grid-template-columns: 1fr !important; } }</style>

@@ -1,132 +1,20 @@
 ---
 import Base from '../layouts/Base.astro';
-
-const auditItems = [
-  'Weak or missing headline — visitors can\'t tell what you do in 5 seconds',
-  'No clear call to action above the fold',
-  'Poor mobile experience — broken layouts, unreadable text, tiny tap targets',
-  'Outdated design that doesn\'t reflect the quality of the business',
-  'Generic stock photos instead of real content',
-  'Slow load times and poor performance',
-  'Weak or absent trust signals — no reviews, credentials, or real photos',
-  'Services poorly described or hard to find',
-  'Broken or confusing contact flow',
-  'Missing SEO fundamentals — wrong titles, no meta descriptions',
-];
-
+const auditItems = ['Weak or missing headline — visitors can\'t tell what you do in 5 seconds','No clear call to action above the fold','Poor mobile experience — broken layouts, unreadable text, tiny tap targets','Outdated design that doesn\'t reflect the quality of the business','Generic stock photos instead of real content','Slow load times and poor performance','Weak or absent trust signals — no reviews, credentials, or real photos','Services poorly described or hard to find','Broken or confusing contact flow','Missing SEO fundamentals — wrong titles, no meta descriptions'];
 const faqs = [
-  { q: 'Do I need a full rebuild?', a: "Usually not. Most sites have specific problems — a weak headline, broken mobile layout, poor conversion flow — that can be fixed without starting over. I'll tell you honestly if a rebuild makes more sense." },
-  { q: 'What platforms do you work with?', a: "I build on Astro, static HTML, and Webflow. I can also work with existing WordPress, Squarespace, and Wix sites for audits and targeted improvements." },
-  { q: 'How fast can you turn this around?', a: "Audits take 1–2 days. Targeted fixes in 3–5 days. Full redesigns in 2–3 weeks. I scope tight and deliver on time." },
-  { q: 'Can you also produce content for the site?', a: "Yes — photo, video, and drone content, produced specifically for your site and marketing. This is where the combination gets powerful. A redesign can only do so much with stock photos." },
-  { q: 'How is this different from an SEO agency?', a: "SEO agencies focus on rankings over months. I focus on what a real person experiences when they land on your site — and making sure the fundamentals are correct. That often matters more than elaborate campaigns." },
+  { q: 'Do we need a full rebuild?', a: "Usually not. Most sites have specific problems that can be fixed without starting over. We'll tell you honestly if a rebuild makes more sense." },
+  { q: 'What platforms do you work with?', a: "We build on Astro, static HTML, and Webflow. We can also work with existing WordPress, Squarespace, and Wix sites for audits and targeted improvements." },
+  { q: 'How fast can you turn this around?', a: "Audits take 1–2 days. Targeted fixes in 3–5 days. Full redesigns in 2–3 weeks. We scope tight and deliver on time." },
+  { q: 'Can you also produce content for the site?', a: "Yes — photo, video, and drone content, produced specifically for your site and marketing. This is where the combination gets powerful." },
+  { q: 'How is this different from an SEO agency?', a: "SEO agencies focus on rankings over months. We focus on what a real person experiences when they land on your site — and making sure the fundamentals are correct." },
 ];
 ---
-
-<Base title="Website Audit & Redesign | Jeremy Dubs — Cascade Creatives" description="I find what's broken on your website and fix it — or rebuild it entirely. Fast, clearly scoped, and built to convert.">
-
-  <section class="page-hero">
-    <div class="container">
-      <span class="label">Website Audit & Redesign</span>
-      <h1>Your website should be your best <em>salesperson.</em></h1>
-      <p>I audit what's not working, fix what matters most, and rebuild what needs it — fast, clearly scoped, and designed to convert.</p>
-      <div style="margin-top: 2rem;">
-        <a href="/contact" class="btn btn--primary">Request a Free Audit</a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container container--narrow">
-      <div class="section-header reveal">
-        <span class="label">The Audit</span>
-        <h2>What I <em>look for</em></h2>
-        <p>I review your site the way a new customer would — no backend access needed.</p>
-      </div>
-      <ul class="checklist reveal">
-        {auditItems.map((item) => <li>{item}</li>)}
-      </ul>
-    </div>
-  </section>
-
-  <section style="background: var(--bg-elevated);">
-    <div class="container container--narrow">
-      <div class="section-header reveal">
-        <span class="label">The Process</span>
-        <h2>Simple. Fast. No <em>surprises.</em></h2>
-      </div>
-      <div class="process-step reveal">
-        <span class="process-step__number">01</span>
-        <div>
-          <h3>Free Audit</h3>
-          <p style="color: var(--text-muted);">I spend 20–30 minutes reviewing your site and send you a specific list of what I'd fix — what's weak, what's costing you leads, and what has the biggest impact.</p>
-        </div>
-      </div>
-      <div class="process-step reveal">
-        <span class="process-step__number">02</span>
-        <div>
-          <h3>Scoped Proposal</h3>
-          <p style="color: var(--text-muted);">I send a clear proposal — exactly what's included, what it costs, and how long it takes. No scope creep.</p>
-        </div>
-      </div>
-      <div class="process-step reveal">
-        <span class="process-step__number">03</span>
-        <div>
-          <h3>Build & Deliver</h3>
-          <p style="color: var(--text-muted);">I do the work and deliver on time. Most targeted fixes ship in 3–5 days. Full redesigns in 2–3 weeks.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container container--narrow">
-      <div class="section-header reveal">
-        <span class="label">Recent Work</span>
-        <h2>All Star Lake Spa — Website <em>Redesign</em></h2>
-      </div>
-      <div class="reveal">
-        <img src="/img/allstar-after.jpg" alt="All Star Lake Spa redesigned" style="border-radius: var(--radius); margin-bottom: 1.5rem;" />
-        <p style="color: var(--text-muted);">Complete website overhaul for an established spa in Bellevue, WA. Removed injected spam, rewrote copy, restructured services, fixed mobile experience, and redesigned the entire site to match the quality of the business.</p>
-        <a href="/case-studies#allstar" class="btn btn--ghost" style="margin-top: 1rem;">View case study</a>
-      </div>
-    </div>
-  </section>
-
-  <section style="background: var(--bg-elevated);">
-    <div class="container container--narrow">
-      <div class="section-header reveal">
-        <span class="label">FAQ</span>
-        <h2>Common <em>Questions</em></h2>
-      </div>
-      <div class="reveal">
-        {faqs.map((faq) => (
-          <div class="faq-item">
-            <button class="faq-question">{faq.q}</button>
-            <div class="faq-answer"><p>{faq.a}</p></div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-block">
-    <div class="container">
-      <h2 class="reveal">Want to know what's holding your website <em>back?</em></h2>
-      <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;" class="reveal">I'll review your site and send you a specific list of what I'd fix. No pitch — just honest observations.</p>
-      <a href="/contact" class="btn btn--primary reveal">Request a Free Audit</a>
-    </div>
-  </section>
-
-  <script>
-    document.querySelectorAll('.faq-question').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const item = btn.parentElement;
-        if (!item) return;
-        const wasOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item.open').forEach((el) => el.classList.remove('open'));
-        if (!wasOpen) item.classList.add('open');
-      });
-    });
-  </script>
+<Base title="Website Audit & Redesign | Cascade Creatives" description="We find what's broken on your website and fix it — or rebuild it entirely. Fast, clearly scoped, and built to convert.">
+  <section class="page-hero"><div class="container"><span class="label">Website Audit & Redesign</span><h1>Your website should be your best <em>salesperson.</em></h1><p>We audit what's not working, fix what matters most, and rebuild what needs it — fast, clearly scoped, and designed to convert.</p><div style="margin-top: 2rem;"><a href="/contact" class="btn btn--primary">Request a Free Audit</a></div></div></section>
+  <section><div class="container container--narrow"><div class="section-header reveal"><span class="label">The Audit</span><h2>What we <em>look for</em></h2><p>We review your site the way a new customer would — no backend access needed.</p></div><ul class="checklist reveal">{auditItems.map((item) => <li>{item}</li>)}</ul></div></section>
+  <section style="background: var(--bg-elevated);"><div class="container container--narrow"><div class="section-header reveal"><span class="label">The Process</span><h2>Simple. Fast. No <em>surprises.</em></h2></div><div class="process-step reveal"><span class="process-step__number">01</span><div><h3>Free Audit</h3><p style="color: var(--text-muted);">We spend 20–30 minutes reviewing your site and send you a specific list of what we'd fix — what's weak, what's costing you leads, and what has the biggest impact.</p></div></div><div class="process-step reveal"><span class="process-step__number">02</span><div><h3>Scoped Proposal</h3><p style="color: var(--text-muted);">We send a clear proposal — exactly what's included, what it costs, and how long it takes. No scope creep.</p></div></div><div class="process-step reveal"><span class="process-step__number">03</span><div><h3>Build & Deliver</h3><p style="color: var(--text-muted);">We do the work and deliver on time. Most targeted fixes ship in 3–5 days. Full redesigns in 2–3 weeks.</p></div></div></div></section>
+  <section><div class="container container--narrow"><div class="section-header reveal"><span class="label">Recent Work</span><h2>All Star Lake Spa — Website <em>Redesign</em></h2></div><div class="reveal"><img src="/img/allstar-after.jpg" alt="All Star Lake Spa redesigned" style="border-radius: var(--radius); margin-bottom: 1.5rem;" /><p style="color: var(--text-muted);">Complete website overhaul — removed injected spam, rewrote copy, restructured services, fixed mobile experience, and redesigned the entire site to match the quality of the business.</p><a href="/case-studies#allstar" class="btn btn--ghost" style="margin-top: 1rem;">View case study</a></div></div></section>
+  <section style="background: var(--bg-elevated);"><div class="container container--narrow"><div class="section-header reveal"><span class="label">FAQ</span><h2>Common <em>Questions</em></h2></div><div class="reveal">{faqs.map((faq) => (<div class="faq-item"><button class="faq-question">{faq.q}</button><div class="faq-answer"><p>{faq.a}</p></div></div>))}</div></div></section>
+  <section class="cta-block"><div class="container"><h2 class="reveal">Want to know what's holding your website <em>back?</em></h2><p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;" class="reveal">We'll review your site and send you a specific list of what we'd fix. No pitch — just honest observations.</p><a href="/contact" class="btn btn--primary reveal">Request a Free Audit</a></div></section>
+  <script>document.querySelectorAll('.faq-question').forEach((btn) => { btn.addEventListener('click', () => { const item = btn.parentElement; if (!item) return; const wasOpen = item.classList.contains('open'); document.querySelectorAll('.faq-item.open').forEach((el) => el.classList.remove('open')); if (!wasOpen) item.classList.add('open'); }); });</script>
 </Base>
