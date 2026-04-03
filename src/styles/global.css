@@ -228,3 +228,7 @@ footer { padding:clamp(40px,6vw,60px) 0 clamp(28px,4vw,40px); border-top:1px sol
 @media (max-width:768px) {
   .ba-slider { aspect-ratio: 16/10; }
 }
+
+/* Slider grid */
+.slider-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-top:40px; }
+@media (max-width:768px) { .slider-grid { grid-template-columns:1fr; } }
