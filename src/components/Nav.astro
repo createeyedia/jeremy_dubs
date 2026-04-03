@@ -1,0 +1,35 @@
+---
+import CatMascot from './CatMascot.astro';
+
+interface Props {
+  active?: string;
+}
+
+const { active = '' } = Astro.props;
+---
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <CatMascot id="N" size={36} />
+      Cascade Creatives
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="/services" class:list={[{ active: active === 'services' }]}>Services</a>
+      <a href="/work" class:list={[{ active: active === 'work' }]}>Work</a>
+      <a href="/about" class:list={[{ active: active === 'about' }]}>About</a>
+      <a href="/contact" class="nav-cta">Start a Project</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav?.classList.toggle('scrolled', window.scrollY > 60));
+  document.getElementById('navToggle')?.addEventListener('click', () =>
+    document.getElementById('navLinks')?.classList.toggle('open')
+  );
+</script>

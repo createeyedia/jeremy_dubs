@@ -1,0 +1,57 @@
+---
+interface Props {
+  id: string;
+  size?: number;
+  class?: string;
+}
+
+const { id, size = 36, class: className = '' } = Astro.props;
+---
+
+<svg
+  class:list={['cc-cat', className]}
+  viewBox="0 0 80 80"
+  width={size}
+  height={size}
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <linearGradient id={`cg${id}`} x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c8ff00" />
+      <stop offset="40%" stop-color="#00d4ff" />
+      <stop offset="100%" stop-color="#ff6b9d" />
+    </linearGradient>
+    <filter id={`gl${id}`}>
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <g filter={`url(#gl${id})`}>
+    <path
+      d="M15 25L20 7.5c0-1.2 1.5-1.8 2.2-.8L30 16h20l7.8-9.3c.7-1 2.2-.4 2.2.8L65 25c5 6 5 14 0 20-3.7 5-10 8.7-17.5 10v3.7c0 2-1.7 3.7-3.7 3.7h-7.6c-2 0-3.7-1.7-3.7-3.7V55C25.7 53.7 19 50 15.5 45c-5-6-5-14 0-20z"
+      fill={`url(#cg${id})`}
+      opacity="0.9"
+    />
+    <g class="cat-blink">
+      <circle cx="30" cy="34" r="6" fill="#08090c" />
+      <circle cx="50" cy="34" r="6" fill="#08090c" />
+    </g>
+    <circle cx="32" cy="32" r="2.2" fill="#eef2ff">
+      <animate attributeName="cy" values="32;31;32" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="52" cy="32" r="2.2" fill="#eef2ff">
+      <animate attributeName="cy" values="32;31;32" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <ellipse cx="40" cy="44" rx="3" ry="2" fill="#ff6b9d" />
+    <path d="M35 47q5 3.5 10 0" stroke="#08090c" stroke-width="1.4" fill="none" stroke-linecap="round" />
+    <path
+      d="M32 42l-7 2.5M32 44.5l-7 0M32 47l-6-2M48 42l7 2.5M48 44.5l7 0M48 47l6-2"
+      stroke="#08090c"
+      stroke-width="0.8"
+      opacity="0.25"
+    />
+  </g>
+</svg>
