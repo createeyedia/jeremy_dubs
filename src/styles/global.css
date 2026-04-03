@@ -57,7 +57,7 @@ nav.scrolled { padding:10px 0; background:rgba(10,10,10,.95); }
 .nav-links a:hover,.nav-links a.active { color:#fff; }
 .nav-links a.nav-cta { font-size:.8rem!important; font-weight:600!important; color:var(--bg-deep)!important; background:var(--accent); padding:10px 24px; border:none!important; outline:none!important; border-radius:100px; text-decoration:none!important; box-shadow:none; transition:all .25s var(--ease)!important; }
 .nav-links a.nav-cta:hover { background:#fff!important; color:var(--bg-deep)!important; transform:translateY(-1px); box-shadow:0 4px 20px rgba(200,255,0,.2)!important; }
-.nav-toggle { display:none; background:none; border:none; cursor:pointer; padding:12px; -webkit-tap-highlight-color:transparent; }
+.nav-toggle { display:none; position:relative; background:none; border:none; cursor:pointer; padding:12px; -webkit-tap-highlight-color:transparent; }
 .nav-toggle span { display:block; width:22px; height:2px; background:#fff; margin:5px 0; transition:transform .3s var(--ease), opacity .3s; }
 
 @media (max-width:768px) {
