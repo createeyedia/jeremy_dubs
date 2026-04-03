@@ -27,21 +27,9 @@ const pestLogoUrl = '/img/cascade-pest-logo.png';
   </div>
 </section>
 
-<div class="trusted">
-  <div class="container">
-    <p class="trusted-label">Trusted by</p>
-    <div class="trusted-logos">
-      <span>Paradise Finance</span>
-      <span>All Star Lake Spa</span>
-      <span>Cascade Pest Control</span>
-      <span>Engel &amp; V&ouml;lkers</span>
-    </div>
-  </div>
-</div>
-
 <div class="marquee-wrap">
   <div class="marquee-track">
-    {['Web Design','Content Production','Social & Paid Ads','SEO','Video & Drone','Website Redesigns','Digital Strategy'].map(s => [s,s]).flat().map(s => (
+    {[...Array(2)].flatMap(() => ['Web Design','Content Production','Social & Paid Ads','SEO','Video & Drone','Website Redesigns','Digital Strategy']).map(s => (
       <><span>{s}</span><span class="sep"></span></>
     ))}
   </div>
