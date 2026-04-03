@@ -1,71 +1,51 @@
 ---
-import Base from '../layouts/Base.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<Base title="Services | Cascade Creatives — Web Design, Content Production & Digital Strategy" description="Custom web design, original content production, and AI-powered digital strategy for businesses, brands, and creators.">
-  <section class="page-hero">
-    <div class="container">
-      <span class="label">Services</span>
-      <h1>Design. Content. <em>Strategy.</em></h1>
-      <p>Everything your business needs to show up better online — from the website itself, to the content on it, to the strategy behind it.</p>
-    </div>
-  </section>
+<BaseLayout title="Services | Cascade Creatives" active="services">
 
-  <section id="web-design">
-    <div class="container container--narrow">
-      <div class="reveal">
-        <span class="label">01 — Primary</span>
-        <h2 style="margin: 0.5rem 0 1rem;">Web Design & <em>Development</em></h2>
-        <p style="font-size: 1.1rem; color: var(--text); margin-bottom: 1.5rem;">Custom websites built on modern frameworks — fast, clean, and designed to convert.</p>
-        <p style="color: var(--text-muted);">We design and build websites from scratch using Astro, static HTML, and Webflow — depending on what fits. Every site is custom-designed, performance-optimized, and built with SEO fundamentals baked in. No templates, no page builders, no bloated installs.</p>
-        <p style="color: var(--text-muted);">We also redesign and rebuild existing sites that have fallen behind — fixing what's broken, rewriting copy, restructuring content, and modernizing the experience.</p>
-        <div style="margin-top: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm);">
-          <strong style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent);">What's Included</strong>
-          <p style="color: var(--text-muted); margin: 0.5rem 0 0; font-size: 0.95rem;">Custom design · Responsive development · SEO & performance · Copy guidance · Content integration · Hosting setup · Post-launch support</p>
-        </div>
-        <div style="margin-top: 1.5rem;"><a href="/contact" class="btn btn--primary">Start a Web Project</a></div>
-      </div>
-    </div>
-  </section>
+<div class="page-hero">
+  <div class="container">
+    <p class="section-label animate-in">Services</p>
+    <h1 class="animate-in delay-1">Design. Content. <em>Strategy.</em></h1>
+    <p class="hero-sub animate-in delay-2">Everything your business needs to show up better online &mdash; from the website itself, to the content on it, to the strategy behind it.</p>
+  </div>
+</div>
 
-  <section id="content" style="background: var(--bg-elevated);">
-    <div class="container container--narrow">
-      <div class="reveal">
-        <span class="label">02 — Integrated</span>
-        <h2 style="margin: 0.5rem 0 1rem;">Content <em>Production</em></h2>
-        <p style="font-size: 1.1rem; color: var(--text); margin-bottom: 1.5rem;">Original photo, video, and drone content — produced for your website and marketing.</p>
-        <p style="color: var(--text-muted);">A website is only as good as what's on it. We produce professional video, photography, and aerial drone content — formatted for your site, social media, and paid ads. This isn't a separate service bolted on — it's integrated into the same engagement, so everything is consistent.</p>
-        <p style="color: var(--text-muted);">Our production team has over a decade of experience — commercials, brand films, real estate tours, event coverage, and social content. We edit in Premiere Pro and DaVinci Resolve, and we're FAA Part 107 licensed for drone work.</p>
-        <div style="margin-top: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm);">
-          <strong style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent);">What We Produce</strong>
-          <p style="color: var(--text-muted); margin: 0.5rem 0 0; font-size: 0.95rem;">Brand video · Social reels & ads · Product/service photography · Aerial drone coverage · Event coverage · Remote editing · Multi-format delivery</p>
-        </div>
-        <div style="margin-top: 1.5rem;"><a href="/contact" class="btn btn--primary">Book a Shoot</a></div>
-      </div>
-    </div>
-  </section>
+<div class="container">
+  <div class="service-block reveal">
+    <p class="service-num">01 &mdash; Primary</p>
+    <h2>Web Design &amp; <em>Development</em></h2>
+    <p>Custom websites built on modern frameworks &mdash; fast, clean, and designed to convert. We design and build websites from scratch using Astro, static HTML, and Webflow &mdash; depending on what fits. Every site is custom-designed, performance-optimized, and built with SEO fundamentals baked in.</p>
+    <p>We also redesign and rebuild existing sites that have fallen behind &mdash; fixing what&rsquo;s broken, rewriting copy, restructuring content, and modernizing the experience.</p>
+    <p class="service-includes"><strong>What&rsquo;s Included:</strong> <span>Custom design &middot; Responsive development &middot; SEO &amp; performance &middot; Copy guidance &middot; Content integration &middot; Hosting setup &middot; Post-launch support</span></p>
+    <a href="/contact" class="btn btn-primary">Start a Web Project &rarr;</a>
+  </div>
 
-  <section id="strategy">
-    <div class="container container--narrow">
-      <div class="reveal">
-        <span class="label">03 — Strategic</span>
-        <h2 style="margin: 0.5rem 0 1rem;">AI & Digital <em>Strategy</em></h2>
-        <p style="font-size: 1.1rem; color: var(--text); margin-bottom: 1.5rem;">Modernize how you work and how you show up online.</p>
-        <p style="color: var(--text-muted);">AI is changing how businesses create content, build websites, and operate online. We help companies understand what's actually useful — and implement it. Not hype, not theory. Practical AI integration into real workflows: content creation, development acceleration, automation, and digital presence strategy.</p>
-        <div style="margin-top: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm);">
-          <strong style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent);">What This Looks Like</strong>
-          <p style="color: var(--text-muted); margin: 0.5rem 0 0; font-size: 0.95rem;">AI workflow audit · Content automation setup · Digital presence review · Tool recommendations · Website strategy · Growth roadmap</p>
-        </div>
-        <div style="margin-top: 1.5rem;"><a href="/contact" class="btn btn--primary">Let's Talk Strategy</a></div>
-      </div>
-    </div>
-  </section>
+  <div class="service-block reveal">
+    <p class="service-num">02 &mdash; Integrated</p>
+    <h2>Content <em>Production</em></h2>
+    <p>A website is only as good as what&rsquo;s on it. We produce professional video, photography, and aerial drone content &mdash; formatted for your site, social media, and paid ads. This isn&rsquo;t a separate service bolted on &mdash; it&rsquo;s integrated into the same engagement.</p>
+    <p>Our production team has over a decade of experience &mdash; commercials, brand films, real estate tours, event coverage, and social content. FAA Part 107 licensed for drone work.</p>
+    <p class="service-includes"><strong>What We Produce:</strong> <span>Brand video &middot; Social reels &amp; ads &middot; Product/service photography &middot; Aerial drone coverage &middot; Event coverage &middot; Remote editing &middot; Multi-format delivery</span></p>
+    <a href="/contact" class="btn btn-primary">Book a Shoot &rarr;</a>
+  </div>
 
-  <section class="cta-block" style="background: var(--bg-elevated);">
-    <div class="container">
-      <h2 class="reveal">Not sure what you <em>need?</em></h2>
-      <p style="color: var(--text-muted); margin-bottom: 2rem;" class="reveal">Tell us what you're working on and we'll recommend the right approach.</p>
-      <a href="/contact" class="btn btn--primary reveal">Start a Conversation</a>
-    </div>
-  </section>
-</Base>
+  <div class="service-block reveal">
+    <p class="service-num">03 &mdash; Strategic</p>
+    <h2>AI &amp; Digital <em>Strategy</em></h2>
+    <p>AI is changing how businesses create content, build websites, and operate online. We help companies understand what&rsquo;s actually useful &mdash; and implement it. Not hype, not theory. Practical AI integration into real workflows.</p>
+    <p class="service-includes"><strong>What This Looks Like:</strong> <span>AI workflow audit &middot; Content automation setup &middot; Digital presence review &middot; Tool recommendations &middot; Website strategy &middot; Growth roadmap</span></p>
+    <a href="/contact" class="btn btn-primary">Let&rsquo;s Talk Strategy &rarr;</a>
+  </div>
+</div>
+
+<section class="cta-section reveal">
+  <div class="container">
+    <h2 class="section-title">Not sure what you <em>need?</em></h2>
+    <p class="section-sub">Tell us what you&rsquo;re working on and we&rsquo;ll recommend the right approach.</p>
+    <a href="/contact" class="btn btn-primary">Start a Conversation &rarr;</a>
+  </div>
+</section>
+
+</BaseLayout>
