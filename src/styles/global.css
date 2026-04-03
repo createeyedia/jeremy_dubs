@@ -232,3 +232,14 @@ footer { padding:clamp(40px,6vw,60px) 0 clamp(28px,4vw,40px); border-top:1px sol
 /* Slider grid */
 .slider-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-top:40px; }
 @media (max-width:768px) { .slider-grid { grid-template-columns:1fr; } }
+
+/* Nav phone link — mobile only */
+.nav-phone { display:none; }
+@media (max-width:768px) {
+  .nav-phone { display:block!important; font-family:var(--font-display)!important; font-size:1.2rem!important; color:var(--text-muted)!important; text-align:center; margin-top:16px; padding:12px 0!important; border-bottom:none!important; }
+}
+
+/* Footer contact */
+.footer-contact { display:flex; flex-direction:column; gap:6px; }
+.footer-contact a { font-size:.82rem; color:var(--accent); transition:color .25s; padding:2px 0; }
+.footer-contact a:hover { color:#fff; }
