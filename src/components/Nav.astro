@@ -28,8 +28,24 @@ const { active = '' } = Astro.props;
 
 <script>
   const nav = document.getElementById('nav');
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+
   window.addEventListener('scroll', () => nav?.classList.toggle('scrolled', window.scrollY > 60));
-  document.getElementById('navToggle')?.addEventListener('click', () =>
-    document.getElementById('navLinks')?.classList.toggle('open')
-  );
+
+  toggle?.addEventListener('click', () => {
+    const open = links?.classList.toggle('open');
+    toggle.classList.toggle('active');
+    // Lock body scroll when menu is open
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+
+  // Close menu when a link is clicked
+  links?.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      links.classList.remove('open');
+      toggle?.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
 </script>
