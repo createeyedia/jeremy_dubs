@@ -61,12 +61,12 @@ nav.scrolled { padding:10px 0; background:rgba(10,10,10,.95); }
 .nav-toggle span { display:block; width:22px; height:2px; background:#fff; margin:5px 0; transition:transform .3s var(--ease), opacity .3s; }
 
 @media (max-width:768px) {
-  .nav-links { display:none; flex-direction:column; position:fixed; inset:0; background:var(--bg-deepest); padding:100px 32px 40px; gap:0; z-index:99; }
+  .nav-links { display:none; flex-direction:column; position:fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%; background:#000000; padding:100px 32px 40px; gap:0; z-index:999; }
   .nav-links.open { display:flex; animation:fade-up .4s var(--ease); }
   .nav-links a { font-family:var(--font-display); font-size:2rem; color:var(--text); padding:16px 0; border-bottom:1px solid rgba(255,255,255,.04); }
   .nav-links a:last-child { border-bottom:none; }
   .nav-links .nav-cta { margin-top:24px; font-size:1rem!important; padding:16px 32px; text-align:center; width:100%; justify-content:center; display:flex; }
-  .nav-toggle { display:block; z-index:101; }
+  .nav-toggle { display:block; z-index:1000; touch-action:manipulation; }
   .nav-toggle.active span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
   .nav-toggle.active span:nth-child(2) { opacity:0; }
   .nav-toggle.active span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
@@ -223,3 +223,8 @@ footer { padding:clamp(40px,6vw,60px) 0 clamp(28px,4vw,40px); border-top:1px sol
 .footer-links a { font-size:.82rem; color:var(--text-muted); transition:color .25s; padding:4px 0; }
 .footer-links a:hover { color:#fff; }
 @media (max-width:480px) { .footer-inner{flex-direction:column} .footer-links{flex-direction:column; gap:12px} }
+
+/* Before/after slider grid */
+@media (max-width:768px) {
+  .ba-slider { aspect-ratio: 16/10; }
+}
