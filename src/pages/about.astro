@@ -1,14 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
-const capabilities = [
-  ['AI-Accelerated', 'We use AI tools across every phase — research, design, development, content — to move faster without sacrificing quality.'],
-  ['10+ Years in Production', 'Over a decade of commercial video, brand films, and visual storytelling — now applied to web design and digital strategy.'],
-  ['FAA Part 107 Licensed', 'Licensed drone operators for aerial content — real estate, events, commercial projects.'],
-  ['Modern Stack', 'Building on Astro, static HTML, and Webflow — fast, lightweight, and future-proof.'],
-  ['Design + Content', 'We produce original photo and video content as part of the design process — not as an afterthought.'],
-  ['Since 2013', 'Serving businesses since 2013. Based in Bellingham, WA — working with clients everywhere.'],
-];
+import CatMascot from '../components/CatMascot.astro';
 ---
 
 <BaseLayout title="About | Cascade Creatives" active="about">
@@ -17,27 +9,80 @@ const capabilities = [
   <div class="container">
     <p class="section-label animate-in">About</p>
     <h1 class="animate-in delay-1">Creative craft meets <em>modern tools.</em></h1>
-    <p class="hero-sub animate-in delay-2"><strong>Cascade Creatives</strong> is an AI-native creative studio that designs websites, produces content, and helps businesses build stronger digital presence. Founded by Jeremy Dubs — built on over a decade of creative production experience.</p>
   </div>
 </div>
 
+<!-- Founder section with headshot -->
+<section class="reveal">
+  <div class="container">
+    <div class="about-founder">
+      <div class="about-founder-photo">
+        <img src="/img/jeremy-headshot.jpg" alt="Jeremy Dubs — Founder, Cascade Creatives" />
+        <div class="about-founder-cat">
+          <CatMascot id="A" size={48} />
+        </div>
+      </div>
+      <div class="about-founder-text">
+        <p class="section-label">The Founder</p>
+        <h2 class="section-title" style="margin-bottom:16px">Jeremy Dubs</h2>
+        <p class="section-sub" style="margin-bottom:16px"><strong style="color:var(--text)">Cascade Creatives</strong> is an AI-native creative studio that designs websites, produces content, and helps businesses build stronger digital presence.</p>
+        <p class="section-sub">Over a decade of experience in commercial video, brand films, real estate tours, and event coverage — now applied to web design and digital strategy, powered by AI tools that let us move faster than traditional agencies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats strip -->
+<div class="about-stats reveal">
+  <div class="container">
+    <div class="about-stats-grid">
+      <div class="about-stat">
+        <span class="about-stat-num">10+</span>
+        <span class="about-stat-label">Years in production</span>
+      </div>
+      <div class="about-stat">
+        <span class="about-stat-num">2–3</span>
+        <span class="about-stat-label">Week delivery</span>
+      </div>
+      <div class="about-stat">
+        <span class="about-stat-num">FAA</span>
+        <span class="about-stat-label">Part 107 licensed</span>
+      </div>
+      <div class="about-stat">
+        <span class="about-stat-num">2013</span>
+        <span class="about-stat-label">Founded</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Story -->
 <section class="reveal">
   <div class="container">
     <p class="section-label">The Story</p>
     <h2 class="section-title">A decade of creative production, <em>now supercharged.</em></h2>
     <p class="section-sub" style="margin-bottom:20px">Cascade Creatives started in video production — shooting commercials, brand films, real estate tours, and event coverage. Over time, clients needed more than just video. They needed better websites, stronger messaging, and a digital presence that matched the quality of their actual business.</p>
-    <p class="section-sub" style="margin-bottom:20px">So we evolved. We built a practice that combines <strong style="color:var(--text)">modern web design, content production, and strategic thinking</strong> into one offering — powered by AI tools that let us move faster than traditional agencies.</p>
+    <p class="section-sub" style="margin-bottom:20px">So we evolved. We built a practice that combines <strong style="color:var(--text)">modern web design, content production, and strategic thinking</strong> into one offering.</p>
     <p class="section-sub">AI is a core part of how we work. We use it to accelerate research, development, content creation, and strategy — not to replace creative judgment, but to remove friction from the process.</p>
   </div>
 </section>
 
+<!-- Capabilities -->
 <section class="reveal">
   <div class="container">
     <p class="section-label">What We Bring</p>
     <h2 class="section-title">Tools, experience, and <em>perspective.</em></h2>
     <div class="about-grid">
-      {capabilities.map(([title, desc]) => (
+      {[
+        ['⚡', 'AI-Accelerated', 'We use AI tools across every phase — research, design, development, content — to move faster without sacrificing quality.'],
+        ['🎬', '10+ Years in Production', 'Over a decade of commercial video, brand films, and visual storytelling — now applied to web design and digital strategy.'],
+        ['🚁', 'FAA Part 107 Licensed', 'Licensed drone operators for aerial content — real estate, events, commercial projects.'],
+        ['⚙️', 'Modern Stack', 'Building on Astro, static HTML, and Webflow — fast, lightweight, and future-proof.'],
+        ['📸', 'Design + Content', 'We produce original photo and video content as part of the design process — not as an afterthought.'],
+        ['📍', 'Bellingham, WA', 'Serving businesses since 2013. Based in Bellingham — working with clients everywhere.'],
+      ].map(([icon, title, desc]) => (
         <div class="about-card">
+          <span class="about-card-icon">{icon}</span>
           <h4>{title}</h4>
           <p>{desc}</p>
         </div>
@@ -55,3 +100,78 @@ const capabilities = [
 </section>
 
 </BaseLayout>
+
+<style>
+  /* Founder layout */
+  .about-founder {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 60px;
+    align-items: center;
+  }
+  @media (max-width: 768px) {
+    .about-founder {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+  .about-founder-photo {
+    position: relative;
+  }
+  .about-founder-photo img {
+    width: 100%;
+    border-radius: 16px;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    filter: grayscale(20%);
+  }
+  .about-founder-cat {
+    position: absolute;
+    bottom: -20px;
+    right: -16px;
+    background: var(--bg-deep);
+    border-radius: 50%;
+    padding: 8px;
+  }
+
+  /* Stats strip */
+  .about-stats {
+    padding: clamp(32px, 6vw, 56px) 0;
+    border-top: 1px solid rgba(255,255,255,.04);
+    border-bottom: 1px solid rgba(255,255,255,.04);
+  }
+  .about-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align: center;
+  }
+  @media (max-width: 600px) {
+    .about-stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .about-stat-num {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 4px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .about-stat-label {
+    font-size: .78rem;
+    color: var(--text-muted);
+  }
+
+  /* Card icon */
+  .about-card-icon {
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 12px;
+  }
+</style>
