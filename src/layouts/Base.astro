@@ -1,42 +1,72 @@
 ---
-import { ClientRouter } from 'astro:transitions';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
-
 interface Props {
   title: string;
-  active?: string;
   description?: string;
+  canonical?: string;
+  ogImage?: string;
 }
-
 
 const {
   title,
-  active = '',
-  description = 'Cascade Creatives — Web design, content production, and digital strategy for businesses ready to show up better online.'
+  description = 'Cascade Creatives is an AI-native creative studio specializing in web design, content production, and digital strategy for businesses and brands.',
+  canonical,
+  ogImage = '/img/og-default.jpg',
 } = Astro.props;
+
+const siteUrl = 'https://cascadecreatives.com';
+const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).toString();
 ---
 
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content={description} />
-  <title>{title}</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
 
+    <!-- OG -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+    <meta property="og:url" content={canonicalUrl} />
 
-  <!-- OpenGraph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:image" content="https://cascadecreatives.com/img/og-image.png" />
-  <meta property="og:url" content="https://cascadecreatives.com" />
-  <meta property="og:site_name" content="Cascade Creatives" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
 
+    <!-- Favicon placeholder -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
 
-  <!-- Twitter Card -->
-
+    <!-- Scroll reveal -->
+    <script>
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      );
+      reveals.forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
