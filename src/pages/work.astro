@@ -1,35 +1,62 @@
 ---
-import Base from '../layouts/Base.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
 const projects = [
-  { title: 'Paradise Finance', category: 'Web Design', img: '/img/paradise-finance-thumb.jpg', href: '/case-studies' },
-  { title: 'All Star Lake Spa', category: 'Web Design', img: '/img/allstar-after.jpg', href: '/case-studies#allstar' },
-  { title: 'Cascade Pest Control', category: 'Video', img: '/img/cascade-pest-case.jpg', href: '/case-studies#cascadepest' },
-  { title: 'Silver Cloud Hotels', category: 'Video', img: 'https://vumbnail.com/316959450.jpg', href: 'https://vimeo.com/316959450' },
-  { title: 'NW Montessori', category: 'Brand Film', img: '/img/montessori-still-1.jpg', href: '/case-studies#montessori' },
-  { title: 'Bellevue Towers', category: 'Real Estate', img: 'https://vumbnail.com/287757023.jpg', href: 'https://vimeo.com/287757023' },
-  { title: 'SAMM Apartments', category: 'Real Estate', img: 'https://vumbnail.com/242191741.jpg', href: 'https://vimeo.com/242191741' },
-  { title: 'Medina Real Estate', category: 'Drone', img: 'https://vumbnail.com/851990318.jpg', href: 'https://vimeo.com/851990318' },
-  { title: 'Likewise — Social Ad', category: 'Social', img: 'https://vumbnail.com/285677156.jpg', href: 'https://vimeo.com/285677156' },
-  { title: 'Riviera Rendezvous', category: 'Event', img: 'https://vumbnail.com/275434535.jpg', href: 'https://vimeo.com/275434535' },
-  { title: 'Brewe Layman Law', category: 'Video', img: 'https://vumbnail.com/95992532.jpg', href: 'https://vimeo.com/95992532' },
-  { title: 'Kind Snacks — CHBP', category: 'Event', img: 'https://vumbnail.com/104476318.jpg', href: 'https://vimeo.com/104476318' },
-  { title: 'Cascade Pest — Seattle', category: 'Video', img: '/img/cascade-pest-still-2.jpg', href: 'https://vimeo.com/1016361535' },
-  { title: '686 — Lights Out', category: 'Brand Film', img: 'https://vumbnail.com/75112064.jpg', href: 'https://vimeo.com/75112064' },
-  { title: 'Likewise — Explainer', category: 'Brand Film', img: 'https://vumbnail.com/289601123.jpg', href: 'https://vimeo.com/289601123' },
-  { title: '10 Barrel Brewing', category: 'Brand Film', img: 'https://vumbnail.com/835304479.jpg', href: 'https://vimeo.com/835304479' },
-  { title: 'Karate West', category: 'Video', img: 'https://vumbnail.com/242675538.jpg', href: 'https://vimeo.com/242675538' },
+  ['/img/paradise-finance-thumb.jpg','Web Design','Paradise Finance'],
+  ['/img/allstar-after.jpg','Web Design','All Star Lake Spa'],
+  ['/img/cascade-pest-case.jpg','Video','Cascade Pest Control'],
+  ['https://vumbnail.com/316959450.jpg','Video','Silver Cloud Hotels'],
+  ['/img/montessori-still-1.jpg','Brand Film','NW Montessori'],
+  ['https://vumbnail.com/287757023.jpg','Real Estate','Bellevue Towers'],
+  ['https://vumbnail.com/242191741.jpg','Real Estate','SAMM Apartments'],
+  ['https://vumbnail.com/851990318.jpg','Drone','Medina Real Estate'],
+  ['https://vumbnail.com/285677156.jpg','Social','Likewise — Social Ad'],
+  ['https://vumbnail.com/275434535.jpg','Event','Riviera Rendezvous'],
+  ['https://vumbnail.com/95992532.jpg','Video','Brewe Layman Law'],
+  ['https://vumbnail.com/104476318.jpg','Event','Kind Snacks — CHBP'],
+  ['/img/cascade-pest-still-2.jpg','Video','Cascade Pest — Seattle'],
+  ['https://vumbnail.com/75112064.jpg','Brand Film','686 — Lights Out'],
+  ['https://vumbnail.com/289601123.jpg','Brand Film','Likewise — Explainer'],
+  ['https://vumbnail.com/835304479.jpg','Brand Film','10 Barrel Brewing'],
+  ['https://vumbnail.com/242675538.jpg','Video','Karate West'],
 ];
-const categories = ['All', ...new Set(projects.map((p) => p.category))];
 ---
-<Base title="Work | Cascade Creatives — Web Design & Creative Production" description="Web design, video production, and creative content for businesses and brands.">
-  <section class="page-hero"><div class="container"><span class="label">Portfolio</span><h1>Selected <em>Work</em></h1><p>Web design, video production, and content projects for businesses and brands.</p></div></section>
-  <section>
-    <div class="container">
-      <div class="filters" id="filters">{categories.map((cat) => (<button class:list={['filter-btn', { active: cat === 'All' }]} data-filter={cat}>{cat}</button>))}<span style="font-size: 0.8rem; color: var(--text-dim); align-self: center; margin-left: 0.5rem;" id="project-count">{projects.length} projects</span></div>
-      <div class="portfolio-grid" id="portfolio-grid">{projects.map((p) => (<a href={p.href} class="portfolio-item" data-category={p.category} target={p.href.startsWith('http') ? '_blank' : undefined} rel={p.href.startsWith('http') ? 'noopener' : undefined}><img src={p.img} alt={p.title} loading="lazy" /><div class="portfolio-item__overlay"><span class="portfolio-item__category">{p.category}</span><span class="portfolio-item__title">{p.title}</span></div></a>))}</div>
-      <div style="text-align: center; margin-top: 2.5rem;"><a href="https://vimeo.com/cascadecreatives" target="_blank" rel="noopener" class="btn btn--outline">View video reel on Vimeo</a></div>
+
+<BaseLayout title="Work | Cascade Creatives" active="work">
+
+<div class="page-hero">
+  <div class="container">
+    <p class="section-label animate-in">Portfolio</p>
+    <h1 class="animate-in delay-1">Selected <em>Work</em></h1>
+    <p class="hero-sub animate-in delay-2">Web design, video production, and content projects for businesses and brands.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="portfolio-grid">
+      {projects.map(([src, type, name]) => (
+        <div class="portfolio-item">
+          <img src={src} alt={name} loading="lazy" />
+          <div class="portfolio-overlay">
+            <p class="type">{type}</p>
+            <p class="name">{name}</p>
+          </div>
+        </div>
+      ))}
     </div>
-  </section>
-  <section class="cta-block" style="background: var(--bg-elevated);"><div class="container"><h2 class="reveal">Want to work <em>together?</em></h2><p style="color: var(--text-muted); margin-bottom: 2rem;" class="reveal">Tell us about your project and let's figure out the right approach.</p><a href="/contact" class="btn btn--primary reveal">Start a Project</a></div></section>
-  <script>const filterBtns = document.querySelectorAll('.filter-btn'); const items = document.querySelectorAll('.portfolio-item'); const countEl = document.getElementById('project-count'); filterBtns.forEach((btn) => { btn.addEventListener('click', () => { filterBtns.forEach((b) => b.classList.remove('active')); btn.classList.add('active'); const filter = btn.getAttribute('data-filter'); let visible = 0; items.forEach((item) => { const el = item as HTMLElement; if (filter === 'All' || item.getAttribute('data-category') === filter) { el.style.display = ''; visible++; } else { el.style.display = 'none'; } }); if (countEl) countEl.textContent = `${visible} project${visible !== 1 ? 's' : ''}`; }); });</script>
-</Base>
+    <div style="text-align:center;margin-top:40px">
+      <a href="https://vimeo.com/cascadecreatives" target="_blank" class="btn btn-ghost">View video reel on Vimeo &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section reveal">
+  <div class="container">
+    <h2 class="section-title">Want to work <em>together?</em></h2>
+    <p class="section-sub">Tell us about your project and let&rsquo;s figure out the right approach.</p>
+    <a href="/contact" class="btn btn-primary">Start a Project &rarr;</a>
+  </div>
+</section>
+
+</BaseLayout>
