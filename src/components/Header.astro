@@ -1,0 +1,25 @@
+---
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo"><span class="logo-name">Cascade Creatives</span></a>
+    <nav class="nav-desktop">
+      <a href="/services">Services</a>
+      <a href="/work">Work</a>
+      <a href="/about">About</a>
+      <a href="/contact" class="btn btn--primary btn--sm">Start a Project</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="nav-mobile" id="nav-mobile">
+    <a href="/services">Services</a>
+    <a href="/work">Work</a>
+    <a href="/about">About</a>
+    <a href="/contact">Start a Project</a>
+  </nav>
+</header>
+<script>
+  document.getElementById("nav-toggle")?.addEventListener("click", () => {
+    document.getElementById("nav-mobile")?.classList.toggle("open");
+  });
+</script>
