@@ -1,24 +1,25 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+// [thumbnail, type, name, vimeoId or null]
 const projects = [
-  ['/img/paradise-finance-thumb.jpg','Web Design','Paradise Finance'],
-  ['/img/allstar-after.jpg','Web Design','All Star Lake Spa'],
-  ['/img/cascade-pest-case.jpg','Video','Cascade Pest Control'],
-  ['https://vumbnail.com/316959450.jpg','Video','Silver Cloud Hotels'],
-  ['/img/montessori-still-1.jpg','Brand Film','NW Montessori'],
-  ['https://vumbnail.com/287757023.jpg','Real Estate','Bellevue Towers'],
-  ['https://vumbnail.com/242191741.jpg','Real Estate','SAMM Apartments'],
-  ['https://vumbnail.com/851990318.jpg','Drone','Medina Real Estate'],
-  ['https://vumbnail.com/285677156.jpg','Social','Likewise — Social Ad'],
-  ['https://vumbnail.com/275434535.jpg','Event','Riviera Rendezvous'],
-  ['https://vumbnail.com/95992532.jpg','Video','Brewe Layman Law'],
-  ['https://vumbnail.com/104476318.jpg','Event','Kind Snacks — CHBP'],
-  ['/img/cascade-pest-still-2.jpg','Video','Cascade Pest — Seattle'],
-  ['https://vumbnail.com/75112064.jpg','Brand Film','686 — Lights Out'],
-  ['https://vumbnail.com/289601123.jpg','Brand Film','Likewise — Explainer'],
-  ['https://vumbnail.com/835304479.jpg','Brand Film','10 Barrel Brewing'],
-  ['https://vumbnail.com/242675538.jpg','Video','Karate West'],
+  ['/img/paradise-finance-thumb.jpg','Web Design','Paradise Finance', null],
+  ['/img/allstar-after.jpg','Web Design','All Star Lake Spa', null],
+  ['/img/cascade-pest-case.jpg','Video','Cascade Pest Control', null],
+  ['https://vumbnail.com/316959450.jpg','Video','Silver Cloud Hotels', '316959450'],
+  ['/img/montessori-still-1.jpg','Brand Film','NW Montessori', null],
+  ['https://vumbnail.com/287757023.jpg','Real Estate','Bellevue Towers', '287757023'],
+  ['https://vumbnail.com/242191741.jpg','Real Estate','SAMM Apartments', '242191741'],
+  ['https://vumbnail.com/851990318.jpg','Drone','Medina Real Estate', '851990318'],
+  ['https://vumbnail.com/285677156.jpg','Social','Likewise — Social Ad', '285677156'],
+  ['https://vumbnail.com/275434535.jpg','Event','Riviera Rendezvous', '275434535'],
+  ['https://vumbnail.com/95992532.jpg','Video','Brewe Layman Law', '95992532'],
+  ['https://vumbnail.com/104476318.jpg','Event','Kind Snacks — CHBP', '104476318'],
+  ['/img/cascade-pest-still-2.jpg','Video','Cascade Pest — Seattle', null],
+  ['https://vumbnail.com/75112064.jpg','Brand Film','686 — Lights Out', '75112064'],
+  ['https://vumbnail.com/289601123.jpg','Brand Film','Likewise — Explainer', '289601123'],
+  ['https://vumbnail.com/835304479.jpg','Brand Film','10 Barrel Brewing', '835304479'],
+  ['https://vumbnail.com/242675538.jpg','Video','Karate West', '242675538'],
 ];
 ---
 
@@ -35,18 +36,23 @@ const projects = [
 <section>
   <div class="container">
     <div class="portfolio-grid">
-      {projects.map(([src, type, name]) => (
-        <div class="portfolio-item">
-          <img src={src} alt={name} loading="lazy" />
+      {projects.map(([src, type, name, vimeoId]) => (
+        <div class={`portfolio-item ${vimeoId ? 'has-video' : ''}`} data-vimeo={vimeoId || ''}>
+          <img src={src as string} alt={name as string} loading="lazy" />
           <div class="portfolio-overlay">
             <p class="type">{type}</p>
             <p class="name">{name}</p>
           </div>
+          {vimeoId && (
+            <button class="play-btn" aria-label={`Play ${name}`}>
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="23" stroke="#c8ff00" stroke-width="2" fill="rgba(0,0,0,0.5)" />
+                <polygon points="19,14 36,24 19,34" fill="#c8ff00" />
+              </svg>
+            </button>
+          )}
         </div>
       ))}
-    </div>
-    <div style="text-align:center;margin-top:40px">
-      <a href="https://vimeo.com/cascadecreatives" target="_blank" class="btn btn-ghost">View video reel on Vimeo &rarr;</a>
     </div>
   </div>
 </section>
