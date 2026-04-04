@@ -77,6 +77,28 @@ const {
     // Run on initial load and after each view transition
     initReveal();
     document.addEventListener('astro:after-swap', initReveal);
+
+    // Video click-to-play — swaps thumbnail for Vimeo iframe
+    function initVideoPlayers() {
+      document.querySelectorAll('.portfolio-item.has-video').forEach((item) => {
+        if ((item as any)._videoInit) return;
+        (item as any)._videoInit = true;
+
+        const vimeoId = item.getAttribute('data-vimeo');
+        if (!vimeoId) return;
+
+        item.addEventListener('click', () => {
+          if (item.classList.contains('playing')) return;
+          const embed = document.createElement('div');
+          embed.className = 'video-embed';
+          embed.innerHTML = `<iframe src="https://player.vimeo.com/video/${vimeoId}?autoplay=1&title=0&byline=0&portrait=0&color=c8ff00" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+          item.appendChild(embed);
+          item.classList.add('playing');
+        });
+      });
+    }
+    initVideoPlayers();
+    document.addEventListener('astro:after-swap', initVideoPlayers);
   </script>
 </body>
 </html>
