@@ -103,12 +103,12 @@ import BeforeAfter from '../components/BeforeAfter.astro';
     <!-- Video portfolio with business-context captions -->
     <div class="portfolio-grid" style="margin-top:24px">
       {[
-        ['/img/cascade-pest-case.jpg','Service overview video for website, ads, and recruitment','Cascade Pest Control', '278099968'],
-        ['https://vumbnail.com/316959450.jpg','Brand spot for a Pacific Northwest hospitality group','Silver Cloud Hotels', '316959450'],
-        ['/img/montessori-still-1.jpg','Enrollment video showing families what the school feels like','NW Montessori', '1080296239'],
-        ['https://vumbnail.com/851990318.jpg','Aerial footage for a luxury residential listing','Medina Real Estate', '851990318'],
-        ['https://vumbnail.com/287757023.jpg','Property video for a high-rise residential development','Bellevue Towers', '287757023'],
-        ['https://vumbnail.com/75112064.jpg','Cinematic brand film for an outerwear company','686 — Lights Out', '75112064'],
+        ['/img/cascade-pest-case.jpg','Video · Website & Ads','Cascade Pest Control', '278099968'],
+        ['https://vumbnail.com/316959450.jpg','Video · Hospitality','Silver Cloud Hotels', '316959450'],
+        ['/img/montessori-still-1.jpg','Video · Enrollment','NW Montessori', '1080296239'],
+        ['https://vumbnail.com/851990318.jpg','Drone · Luxury Residential','Medina Real Estate', '851990318'],
+        ['https://vumbnail.com/287757023.jpg','Video · Residential','Bellevue Towers', '287757023'],
+        ['https://vumbnail.com/75112064.jpg','Brand Film · Outerwear','686 — Lights Out', '75112064'],
       ].map(([src, type, name, vimeoId]) => (
         <div class={`portfolio-item ${vimeoId ? 'has-video' : ''}`} data-vimeo={vimeoId || ''}>
           <img src={src as string} alt={name as string} loading="lazy" />
