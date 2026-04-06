@@ -2,12 +2,11 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CatMascot from '../components/CatMascot.astro';
 import BeforeAfter from '../components/BeforeAfter.astro';
-
-const pestLogoUrl = '/img/cascade-pest-logo.png';
 ---
 
-<BaseLayout title="Cascade Creatives — Web Design, Content Production & Digital Strategy">
+<BaseLayout title="Web Design & Content for Businesses | Cascade Creatives">
 
+<!-- ═══ HERO ═══ -->
 <section class="home-hero">
   <div class="container">
     <div class="hero-content">
@@ -15,11 +14,11 @@ const pestLogoUrl = '/img/cascade-pest-logo.png';
         <CatMascot id="M" size={56} />
       </div>
       <div class="hero-badge animate-in"><span class="dot"></span>Design studio &middot; Production team &middot; One engagement</div>
-      <h1 class="animate-in delay-1">Most businesses have a website.<br />Very few have one that <em>works.</em></h1>
-      <p class="hero-sub animate-in delay-2">We design websites that convert, produce the content that goes on them, and handle the strategy behind both. One team, one point of contact, real results.</p>
+      <h1 class="animate-in delay-1">Your business deserves a website that actually <em>wins you customers.</em></h1>
+      <p class="hero-sub animate-in delay-2">Cascade Creatives builds modern websites, shoots the content that goes on them, and handles the strategy behind both &mdash; so your business looks as good online as it is in person. One team. One point of contact. Done in weeks, not months.</p>
       <div class="hero-actions animate-in delay-3">
-        <a href="/contact" class="btn btn-primary">Let&rsquo;s Talk &rarr;</a>
-        <a href="/work" class="btn btn-ghost">See What We&rsquo;ve Built</a>
+        <a href="/contact" class="btn btn-primary">Start a Project &rarr;</a>
+        <a href="/work" class="btn btn-ghost">See Our Work</a>
       </div>
     </div>
     <div class="hero-cat" aria-hidden="true">
@@ -28,70 +27,88 @@ const pestLogoUrl = '/img/cascade-pest-logo.png';
   </div>
 </section>
 
+<!-- ═══ MARQUEE — tightened to three pillars ═══ -->
 <div class="marquee-wrap">
   <div class="marquee-track">
-    {[...Array(2)].flatMap(() => ['Web Design','Content Production','Social & Paid Ads','SEO','Video & Drone','Website Redesigns','Digital Strategy']).map(s => (
+    {[...Array(4)].flatMap(() => ['Web Design','Visual Content','Digital Strategy']).map(s => (
       <><span>{s}</span><span class="sep"></span></>
     ))}
   </div>
 </div>
 
+<!-- ═══ TRUST STRIP ═══ -->
+<div class="trust-strip">
+  <div class="container">
+    <p>10+ years in production &middot; 50+ projects delivered &middot; Bellingham, WA &middot; Serving Whatcom &amp; Skagit County</p>
+  </div>
+</div>
+
+<!-- ═══ WHAT WE DO ═══ -->
 <section class="reveal">
   <div class="container">
     <p class="section-label">What We Do</p>
-    <h2 class="section-title">Design, content, and strategy &mdash;<br /><em>without the overhead.</em></h2>
-    <p class="section-sub">Most agencies separate these into three departments and three invoices. We handle all of it as one team, in one engagement.</p>
+    <h2 class="section-title">Website, content, and strategy &mdash;<br /><em>from one team, on one invoice.</em></h2>
+    <p class="section-sub">Most businesses hire a web designer, then a photographer, then a marketing person. We do all three &mdash; which means everything works together from day one.</p>
     <div class="services-grid">
       <div class="card">
         <p class="card-label">Websites</p>
-        <h3>Websites that actually perform.</h3>
-        <p>Custom-built for speed, clarity, and conversion. New builds ship in 2&ndash;3 weeks. Starting at $1,200.</p>
-        <div class="card-tags"><span>Custom design</span><span>Fast-loading</span><span>Google-ready</span><span>Mobile-friendly</span></div>
+        <h3>Websites built to convert.</h3>
+        <p>Custom-designed, fast-loading, and built for the way people actually find and hire businesses online. Most sites launch in 2&ndash;3 weeks. Starting at $1,200.</p>
+        <div class="card-tags"><span>Custom design</span><span>Fast-loading</span><span>SEO-ready</span><span>Mobile-first</span></div>
       </div>
       <div class="card">
         <p class="card-label">Content</p>
-        <h3>Real content. Not stock photos.</h3>
-        <p>We shoot original photo, video, and drone content &mdash; built for your site, your ads, and your Google listing.</p>
-        <div class="card-tags"><span>Video</span><span>Photography</span><span>Drone</span><span>Social media</span></div>
+        <h3>Original photos, video, and drone &mdash; not stock.</h3>
+        <p>We shoot the visuals your site, ads, and Google listing actually need. Real content builds trust faster than anything templated ever will.</p>
+        <div class="card-tags"><span>Video</span><span>Photography</span><span>Drone</span><span>Social content</span></div>
       </div>
       <div class="card">
         <p class="card-label">Strategy</p>
-        <h3>Not sure where to start? We&rsquo;ll tell you.</h3>
-        <p>We review your online presence and give you a clear roadmap &mdash; what to fix, what to build, and where to focus.</p>
-        <div class="card-tags"><span>Website audit</span><span>Google Business</span><span>Social review</span><span>Growth plan</span></div>
+        <h3>A clear plan before we build anything.</h3>
+        <p>We audit your website, Google Business profile, and online presence &mdash; then tell you exactly what to fix, what to build, and what to skip.</p>
+        <div class="card-tags"><span>Website audit</span><span>Google Business</span><span>Online presence review</span><span>Growth roadmap</span></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ═══ DIFFERENTIATOR ═══ -->
+<section class="differentiator reveal">
+  <div class="container">
+    <h2 class="section-title">One team handles your website and your content. <em>That&rsquo;s the whole point.</em></h2>
+    <p class="section-sub">Most businesses hire a web designer who asks for photos they don&rsquo;t have, then a photographer who doesn&rsquo;t know what the site needs. The result is a site full of stock images &mdash; or a six-month timeline while everyone gets on the same page. We handle both, so your site launches with real content, on time, and looking like a business that has its act together.</p>
+  </div>
+</section>
+
+<!-- ═══ PORTFOLIO ═══ -->
 <section class="reveal">
   <div class="container">
     <p class="section-label">Portfolio</p>
-    <h2 class="section-title">Recent work across web, video, and <em>content.</em></h2>
+    <h2 class="section-title">Real projects. <em>Real results.</em></h2>
 
     <!-- Before/After Sliders -->
     <div class="slider-grid">
       <div>
         <BeforeAfter before="/img/allstar-before.jpg" after="/img/allstar-after.jpg" alt="All Star Lake Spa" />
         <p style="font-family:var(--font-display);font-size:1.1rem;color:#fff;margin-top:12px">All Star Lake Spa <span style="font-size:.7rem;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-left:8px">Redesign</span></p>
-        <p style="font-size:.82rem;color:var(--text-muted);margin-top:4px;line-height:1.5">Spam-injected site with broken mobile layout. Rebuilt in 7 days with clean design, rewritten copy, and working booking flow.</p>
+        <p style="font-size:.82rem;color:var(--text-muted);margin-top:4px;line-height:1.5">Spam-injected site with broken mobile layout. Rebuilt in 7 days with clean design, rewritten copy, and working booking flow. Booking flow now works on mobile. Owner stopped losing walk-in leads from search.</p>
       </div>
       <div>
         <BeforeAfter before="/img/paradise-finance-before.jpg" after="/img/paradise-finance-thumb.jpg" alt="Paradise Finance" />
         <p style="font-family:var(--font-display);font-size:1.1rem;color:#fff;margin-top:12px">Paradise Finance <span style="font-size:.7rem;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-left:8px">Redesign</span></p>
-        <p style="font-size:.82rem;color:var(--text-muted);margin-top:4px;line-height:1.5">Replaced a 2001-era site with a modern, fast-loading presence that matches the quality of their 28 years of service.</p>
+        <p style="font-size:.82rem;color:var(--text-muted);margin-top:4px;line-height:1.5">Replaced a 2001-era site with a modern, fast-loading presence. Site now loads in under 2 seconds and matches the credibility of a 28-year-old firm.</p>
       </div>
     </div>
 
-    <!-- Regular portfolio grid -->
+    <!-- Video portfolio with business-context captions -->
     <div class="portfolio-grid" style="margin-top:24px">
       {[
-        ['/img/cascade-pest-case.jpg','Video + Content','Cascade Pest Control', '278099968'],
-        ['https://vumbnail.com/316959450.jpg','Commercial','Silver Cloud Hotels', '316959450'],
-        ['/img/montessori-still-1.jpg','Brand Film','NW Montessori', '1080296239'],
-        ['https://vumbnail.com/851990318.jpg','Drone & Aerial','Medina Real Estate', '851990318'],
-        ['https://vumbnail.com/287757023.jpg','Real Estate','Bellevue Towers', '287757023'],
-        ['https://vumbnail.com/75112064.jpg','Brand & Cinematic','686 — Lights Out', '75112064'],
+        ['/img/cascade-pest-case.jpg','Service overview video for website, ads, and recruitment','Cascade Pest Control', '278099968'],
+        ['https://vumbnail.com/316959450.jpg','Brand spot for a Pacific Northwest hospitality group','Silver Cloud Hotels', '316959450'],
+        ['/img/montessori-still-1.jpg','Enrollment video showing families what the school feels like','NW Montessori', '1080296239'],
+        ['https://vumbnail.com/851990318.jpg','Aerial footage for a luxury residential listing','Medina Real Estate', '851990318'],
+        ['https://vumbnail.com/287757023.jpg','Property video for a high-rise residential development','Bellevue Towers', '287757023'],
+        ['https://vumbnail.com/75112064.jpg','Cinematic brand film for an outerwear company','686 — Lights Out', '75112064'],
       ].map(([src, type, name, vimeoId]) => (
         <div class={`portfolio-item ${vimeoId ? 'has-video' : ''}`} data-vimeo={vimeoId || ''}>
           <img src={src as string} alt={name as string} loading="lazy" />
@@ -113,15 +130,16 @@ const pestLogoUrl = '/img/cascade-pest-logo.png';
   </div>
 </section>
 
+<!-- ═══ HOW WE WORK ═══ -->
 <section class="reveal">
   <div class="container">
     <p class="section-label">How We Work</p>
-    <h2 class="section-title">Less process. More <em>output.</em></h2>
+    <h2 class="section-title">Less process. More <em>progress.</em></h2>
     <div class="process-grid">
       {[
         ['01','We produce your content too.','Already have photos and video? We integrate them. Need new content? We shoot it. Either way, your site goes live with real visuals — not placeholders.'],
         ['02','You talk to the people doing the work.','No account managers. No layers. You work directly with the team building your site.'],
-        ['03','We use AI to move faster, not cut corners.','AI is part of how we work — research, development, content systems. Your project ships faster without sacrificing quality.'],
+        ['03','Faster timelines. Same quality.','We use modern tools — including AI where it genuinely helps — to move through research, planning, and development faster. You get a better site in less time, without the inflated timeline or invoice.'],
         ['04','Tight scope. Fast delivery. No surprises.','We tell you what\'s included, what it costs, and when it ships — before we start. Most sites launch in 2–3 weeks.'],
       ].map(([num, title, desc]) => (
         <div class="process-step">
@@ -133,21 +151,38 @@ const pestLogoUrl = '/img/cascade-pest-logo.png';
   </div>
 </section>
 
-<div class="testimonial reveal">
+<!-- ═══ TESTIMONIALS ═══ -->
+<div class="testimonials reveal">
   <div class="container">
-    <div class="testimonial-logo">
-      <img src={pestLogoUrl} alt="Cascade Pest Control" />
+    <p class="section-label" style="text-align:center;margin-bottom:40px">What Clients Say</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <img src="/img/cascade-pest-logo.png" alt="Cascade Pest Control" class="testimonial-logo" />
+        <blockquote>&ldquo;Jeremy always seeks to understand our vision to provide us with the best possible product.&rdquo;</blockquote>
+        <cite>&mdash; Kevin Peterson, Operations Manager &middot; Cascade Pest Control</cite>
+      </div>
+      <div class="testimonial-card">
+        <img src="/img/engel-volkers-logo.png" alt="Engel &amp; Völkers" class="testimonial-logo" />
+        <blockquote>&ldquo;Jeremy&rsquo;s video work has been a game changer for my marketing. He consistently delivers high quality aerial video and photography. My clients have come to know the quality and it is recognized as part of my high standard of service.&rdquo;</blockquote>
+        <cite>&mdash; Marcel Dolak, Realtor &middot; Engel &amp; V&ouml;lkers Kirkland</cite>
+      </div>
     </div>
-    <blockquote>&ldquo;Jeremy always seeks to understand our vision to provide us with the best possible product.&rdquo;</blockquote>
-    <cite>&mdash; Kevin Peterson, Operations Manager &middot; Cascade Pest Control</cite>
   </div>
 </div>
 
+<!-- ═══ PRICING STRIP ═══ -->
+<div class="pricing-strip reveal">
+  <div class="container" style="text-align:center">
+    <p class="pricing-strip-text">Most websites: <strong>$1,200&ndash;$3,500.</strong> Most timelines: <strong>2&ndash;3 weeks.</strong> No retainers. No surprises.</p>
+  </div>
+</div>
+
+<!-- ═══ FINAL CTA ═══ -->
 <section class="cta-section reveal">
   <div class="container">
     <p class="section-label">Ready?</p>
     <h2 class="section-title">Let&rsquo;s figure out what your business <em>actually needs.</em></h2>
-    <p class="section-sub">Tell us what you&rsquo;re working on. We&rsquo;ll come back with a clear plan, an honest price, and a timeline you can hold us to.</p>
+    <p class="section-sub">Tell us what you&rsquo;re working with. We&rsquo;ll come back with a clear plan, an honest price, and a timeline you can hold us to.</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px">
       <a href="/contact" class="btn btn-primary">Start a Conversation &rarr;</a>
       <a href="tel:3603186052" class="btn btn-ghost">(360) 318-6052</a>
