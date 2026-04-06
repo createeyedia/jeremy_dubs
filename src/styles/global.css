@@ -93,7 +93,7 @@ nav.scrolled { padding:10px 0; background:rgba(10,10,10,.95); }
 .home-hero h1 em { font-style:italic; background:var(--gradient); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 .hero-sub { font-size:clamp(.95rem,2.5vw,1.15rem); color:var(--text-muted); max-width:560px; line-height:1.7; margin-bottom:36px; }
 .hero-actions { display:flex; gap:12px; flex-wrap:wrap; }
-.hero-cat { z-index:1; opacity:.25; pointer-events:none; animation:float 6s ease-in-out infinite; width:clamp(280px, 30vw, 440px); justify-self:end; }
+.hero-cat { z-index:1; opacity:.25; pointer-events:none; animation:float 6s ease-in-out infinite; width:clamp(320px, 35vw, 500px); justify-self:end; align-self:center; }
 .hero-cat svg { width:100%; height:auto; }
 @media (max-width:1024px) { .hero-cat{display:none} .home-hero .container{grid-template-columns:1fr} }
 .hero-cat-mobile { display:none; margin-bottom:24px; opacity:.7; }
