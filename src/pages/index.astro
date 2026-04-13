@@ -100,14 +100,14 @@ import BeforeAfter from '../components/BeforeAfter.astro';
       </div>
     </div>
 
-    <!-- Video portfolio with business-context captions -->
+    <!-- Portfolio grid -->
     <div class="portfolio-grid" style="margin-top:24px">
       {[
         ['/img/cascade-pest-case.jpg','Video · Website & Ads','Cascade Pest Control', '278099968'],
         ['https://vumbnail.com/316959450.jpg','Video · Hospitality','Silver Cloud Hotels', '316959450'],
         ['/img/montessori-still-1.jpg','Video · Enrollment','NW Montessori', '1080296239'],
         ['https://vumbnail.com/851990318.jpg','Drone · Luxury Residential','Medina Real Estate', '851990318'],
-        ['https://vumbnail.com/287757023.jpg','Video · Residential','Bellevue Towers', '287757023'],
+        ['/img/hammerdown-thumb.jpg','Web Design · Contractors','Hammer Down LLC', null],
         ['https://vumbnail.com/75112064.jpg','Brand Film · Outerwear','686 — Lights Out', '75112064'],
       ].map(([src, type, name, vimeoId]) => (
         <div class={`portfolio-item ${vimeoId ? 'has-video' : ''}`} data-vimeo={vimeoId || ''}>
